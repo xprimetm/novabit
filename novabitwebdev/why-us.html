@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from novabit/why-us by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2026 10:57:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="light-theme.css?v=20260330n">
+    <script src="light-theme.js?v=20260330n"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3B82F6',
+                        secondary: '#10B981',
+                        accent: '#6366F1',
+                        warning: '#F59E0B',
+                        danger: '#EF4444',
+                        dark: {
+                            100: '#374151',
+                            200: '#1F2937',
+                            300: '#111827',
+                            400: '#0F172A',
+                            500: '#0B1120',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Alpine.js -->
+    <script defer src="../unpkg.com/alpinejs%403.15.8/dist/cdn.min.js"></script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom Styles -->
+    <style>
+        /* Alpine.js x-cloak directive */
+        [x-cloak] {
+            display: none !important;
+        }
+
+        /* Custom scrollbar for dark mode */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1F2937;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4B5563;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6B7280;
+        }
+
+        /* Form elements styling */
+        .form-input {
+            @apply  bg-dark-100 border-0 rounded-lg px-4 py-3 text-gray-100 font-medium focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-200;
+        }
+
+        .form-select {
+            @apply  bg-dark-100 border-0 rounded-lg px-4 py-3 text-gray-100 font-medium focus:ring-2 focus:ring-primary focus:outline-none transition-all duration-200;
+        }
+
+        .btn-primary {
+            @apply  bg-primary hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200;
+        }
+
+        .btn-secondary {
+            @apply  bg-dark-100 hover:bg-dark-200 text-white font-bold py-3 px-6 rounded-lg transition-all duration-200;
+        }
+
+        /* Navbar and mobile menu animations */
+        .navbar-dropdown {
+            @apply  transition-all duration-300 ease-in-out transform origin-top;
+        }
+
+        @keyframes  fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+
+        /* Light mode overrides */
+        html:not(.dark) {
+            @apply  bg-gray-100 text-gray-900;
+        }
+
+        html:not(.dark) body {
+            @apply  bg-gray-100 text-gray-900;
+        }
+
+        html:not(.dark) .bg-dark-400 {
+            @apply  bg-white;
+        }
+
+        html:not(.dark) .bg-dark-300 {
+            @apply  bg-gray-50;
+        }
+
+        html:not(.dark) .border-gray-800 {
+            @apply  border-gray-200;
+        }
+
+        html:not(.dark) .text-gray-200,
+        html:not(.dark) .text-gray-300,
+        html:not(.dark) .text-gray-400 {
+            @apply  text-gray-700;
+        }
+
+        html:not(.dark) .hover\:bg-dark-200:hover,
+        html:not(.dark) .hover\:bg-gray-700:hover {
+            @apply  hover:bg-gray-200;
+        }
+
+        html:not(.dark) .bg-dark-500 {
+            @apply  bg-gray-100;
+        }
+    </style>
+
+    <title>Novabit Capital | Crypto Investments, Market Access & Education</title>
+    <link rel="manifest" href="index.html">
+    <meta name="theme-color" content="#111827">    <meta property="x-session-id" content="ghJjEOrjZ3KUPun1UQksVUbvK88y21dgIhKtb8GT">
+    <meta property="og:site_name" content="Novabit Capital">
+    <meta property="og:description" content="Build long-term wealth with crypto investments, diversified market access, disciplined allocation, and practical education for new and experienced investors.">
+    <meta name="description" content="Build long-term wealth with crypto investments, diversified market access, disciplined allocation, and practical education for new and experienced investors.">
+    <meta name="keywords" content="crypto investments, bitcoin investing, ethereum investing, digital assets, long-term investing, portfolio diversification, recurring investing, asset allocation, stocks, ETFs">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Novabit Capital | Crypto Investments, Market Access & Education">
+    <meta property="og:image" content="img/share.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="temp/custom/img/novabit-symbol.png" type="image/png">
+
+    <!-- Preload key assets -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- jQuery (required for some components) -->
+    <script src="../code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- JavaScript utilities -->
+    <script>
+        // Utility function for mobile menu
+        document.addEventListener('alpine:init', () => {
+            Alpine.store('navigation', {
+                open: false,
+                toggle() {
+                    this.open = !this.open;
+                },
+                close() {
+                    this.open = false;
+                }
+            });
+
+            // Theme toggler
+            Alpine.store('darkMode', {
+                on: true,
+                toggle() {
+                    this.on = !this.on;
+                    if (this.on) {
+                        document.documentElement.classList.add('dark');
+                        document.body.classList.add('bg-gray-900');
+                        document.body.classList.remove('bg-gray-100');
+                    } else {
+                        document.documentElement.classList.remove('dark');
+                        document.body.classList.remove('bg-gray-900');
+                        document.body.classList.add('bg-gray-100');
+                    }
+                    localStorage.setItem('darkMode', this.on ? 'dark' : 'light');
+                }
+            });
+        });
+
+        // Initialize theme from local storage
+        document.addEventListener('DOMContentLoaded', () => {
+            const theme = localStorage.getItem('darkMode');
+            if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+                document.body.classList.remove('bg-gray-900');
+                document.body.classList.add('bg-gray-100');
+                if (window.Alpine) {
+                    Alpine.store('darkMode').on = false;
+                }
+            }
+        });
+    </script>
+</head>
+
+<body class="antialiased text-gray-900 bg-gray-50 font-sans min-h-screen flex flex-col">
+    <!-- Accessibility Skip Link -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:bg-blue-700 focus:text-white focus:fixed focus:px-4 focus:py-2 focus:top-2 focus:left-2 focus:z-50">
+        Skip to main content
+    </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Header -->
+<header class="bg-gray-900 border-b border-gray-800 relative z-50">
+    <!-- Top Navigation Bar -->
+    <div x-data="{ mobileMenuOpen: false }" class="max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+            <div class="header-main-row flex items-center justify-between h-16">
+                <div class="header-left-group flex items-center min-w-0">
+                <!-- Logo -->
+                <div class="header-brand flex-shrink-0">
+                    <a href="index.html" class="flex items-center">
+                        <img class="h-8 w-auto" src="temp/custom/img/novabit-logo-wordmark.png" alt="Novabit Capital">
+                    </a>
+                </div>
+
+                <!-- Main Navigation - Desktop -->
+                <nav class="header-nav-desktop hidden md:flex space-x-8" aria-label="Primary">
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" @click.away="open = false" class="group inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-200 hover:text-white focus:outline-none">
+                            <span>Markets</span>
+                            <svg class="ml-2 h-4 w-4 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-dark-300 ring-1 ring-black ring-opacity-5 z-50" style="display: none;">
+                            <a href="cryptocurrencies.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Cryptocurrencies</a>
+                            <a href="forex.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Macro Markets</a>
+                            <a href="shares.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Shares</a>
+                            <a href="indices.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Indices</a>
+                            <a href="etfs.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">ETFs</a>
+                        </div>
+                    </div>
+
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" @click.away="open = false" class="group inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-200 hover:text-white focus:outline-none">
+                            <span>Strategies</span>
+                            <svg class="ml-2 h-4 w-4 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-dark-300 ring-1 ring-black ring-opacity-5 z-50" style="display: none;">
+                            <a href="trade.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Portfolio Tools</a>
+                            <a href="copy.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Model Portfolios</a>
+                            <a href="automate.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Recurring Investing</a>
+                        </div>
+                    </div>
+
+                    <div class="relative" x-data="{ open: false }">
+                        <button @click="open = !open" @click.away="open = false" class="group inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-200 hover:text-white focus:outline-none">
+                            <span>Company</span>
+                            <svg class="ml-2 h-4 w-4 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div x-show="open" x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-dark-300 ring-1 ring-black ring-opacity-5 z-50" style="display: none;">
+                            <a href="about.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">About Us</a>
+                            <a href="why-us.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Why Us</a>
+                            <a href="faq.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">FAQ</a>
+                            <a href="regulation.html" class="block px-4 py-2 text-sm text-gray-200 hover:bg-dark-200">Legal & Regulation</a>
+                        </div>
+                    </div>
+
+                    <a href="for-traders.html" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-200 hover:text-white">Investor Education</a>
+                    <a href="contacts.html" class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-200 hover:text-white">Contact</a>
+                </nav>
+                </div>
+
+                <!-- Right Navigation -->
+                <div class="header-right-nav hidden md:flex items-center">
+                    <div class="header-app-links flex space-x-1 mr-4">
+                        <a href="#" class="text-gray-400 hover:text-gray-200 p-1" aria-label="Desktop Version">
+                            <i class="fas fa-desktop"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-200 p-1" aria-label="Windows App">
+                            <i class="fab fa-windows"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-200 p-1" aria-label="Android App">
+                            <i class="fab fa-android"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-gray-200 p-1" aria-label="iOS App">
+                            <i class="fab fa-apple"></i>
+                        </a>
+                    </div>
+
+                    <!-- Language Selector (Desktop) -->
+
+
+                    <!-- Dark/Light Mode Toggle -->
+                    <!--<button-->
+                    <!--    x-data-->
+                    <!--    @click="$store.darkMode.toggle()"-->
+                    <!--    class="p-2 text-gray-400 hover:text-gray-200 mr-4 rounded-md focus:outline-none focus:ring-2 focus:ring-gray-600"-->
+                    <!--    aria-label="Toggle dark/light mode"-->
+                    <!-->-->
+                    <!--    <i x-show="$store.darkMode.on" class="fas fa-sun"></i>-->
+                    <!--    <i x-show="!$store.darkMode.on" class="fas fa-moon"></i>-->
+                    <!--</button>-->
+
+                    <div class="flex items-center space-x-4">
+                        <a href="login.html" class="text-gray-200 hover:text-white flex items-center">
+                            <i class="fas fa-lock mr-1"></i>
+                            <span>Log in</span>
+                        </a>
+                        <a href="register.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
+                            Sign up
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button and theme toggle -->
+                <div class="header-mobile-toggle flex md:hidden items-center space-x-2">
+                    <!-- Mobile Theme Toggle -->
+                    <!--<button-->
+                    <!--    x-data-->
+                    <!--    @click="$store.darkMode.toggle()"-->
+                    <!--    class="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"-->
+                    <!--    aria-label="Toggle dark/light mode"-->
+                    <!-->-->
+                    <!--    <i x-show="$store.darkMode.on" class="fas fa-sun text-lg"></i>-->
+                    <!--    <i x-show="!$store.darkMode.on" class="fas fa-moon text-lg"></i>-->
+                    <!--</button>-->
+
+                    <!-- Mobile Menu Toggle -->
+                    <button @click="mobileMenuOpen = !mobileMenuOpen" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="sr-only">Open main menu</span>
+                        <svg x-show="!mobileMenuOpen" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <svg x-show="mobileMenuOpen" class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true" style="display: none;">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div x-show="mobileMenuOpen" class="md:hidden" id="mobile-menu" style="display: none;">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <!-- Mobile Navigation -->
+                <div x-data="{ open: false }" class="py-1">
+                    <button @click="open = !open" class="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">
+                        <span>Markets</span>
+                        <svg class="h-4 w-4 text-gray-400" :class="{'transform rotate-180': open}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="cryptocurrencies.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Cryptocurrencies</a>
+                        <a href="forex.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Macro Markets</a>
+                        <a href="shares.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Shares</a>
+                        <a href="indices.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Indices</a>
+                        <a href="etfs.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">ETFs</a>
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="py-1">
+                    <button @click="open = !open" class="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">
+                        <span>Strategies</span>
+                        <svg class="h-4 w-4 text-gray-400" :class="{'transform rotate-180': open}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="trade.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Portfolio Tools</a>
+                        <a href="copy.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Model Portfolios</a>
+                        <a href="automate.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Recurring Investing</a>
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="py-1">
+                    <button @click="open = !open" class="w-full flex justify-between items-center px-4 py-2 text-sm text-gray-200 hover:bg-gray-700">
+                        <span>Company</span>
+                        <svg class="h-4 w-4 text-gray-400" :class="{'transform rotate-180': open}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div x-show="open" class="pl-4">
+                        <a href="about.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">About Us</a>
+                        <a href="why-us.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Why Us</a>
+                        <a href="faq.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">FAQ</a>
+                        <a href="regulation.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Legal & Regulation</a>
+                    </div>
+                </div>
+
+                <a href="for-traders.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Investor Education</a>
+                <a href="contacts.html" class="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-700">Contact</a>
+
+                <!-- Language Selector (Mobile) -->
+
+                <div class="pt-4 pb-3 border-t border-gray-700">
+                    <div class="flex items-center justify-between px-4">
+                        <div class="flex items-center space-x-3">
+                            <a href="login.html" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                                <i class="fas fa-lock mr-1"></i> Log in
+                            </a>
+                            <a href="register.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">
+                                Sign up
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+ <!--  sub menu -->
+
+<!-- Market Ticker -->
+    
+
+<!-- Main Content Area -->
+<main id="main-content" class="flex-grow">
+    
+<!-- Hero Section -->
+<section class="relative bg-gray-900 overflow-hidden">
+    <!-- Dynamic Background -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+            <!-- Animated Grid Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="why-us-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                            <path d="M0 40V0h40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                            <circle cx="20" cy="20" r="1" fill="currentColor"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#why-us-grid)"/>
+                </svg>
+            </div>
+        </div>
+        <!-- Glowing Accents -->
+        <div class="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full filter blur-3xl"></div>
+        <div class="absolute bottom-1/4 left-1/4 w-96 h-96 bg-emerald-400/20 rounded-full filter blur-3xl"></div>
+    </div>
+
+    <div class="container mx-auto px-4 pt-24 pb-16 relative z-10">
+        <div class="max-w-4xl">
+            <!-- Header Content -->
+            <div class="space-y-6">
+                <div class="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20">
+                    <p class="text-sm font-medium text-blue-400">Choose Excellence</p>
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Why Choose <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Novabit Capital</span>
+                </h1>
+
+                <!-- Breadcrumb -->
+                <nav class="flex" aria-label="Breadcrumb">
+                    <ol class="inline-flex items-center space-x-1 md:space-x-3">
+                        <li class="inline-flex items-center">
+                            <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                                </svg>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <a href="#" class="text-gray-400 hover:text-white ml-1 md:ml-2 transition-colors">Company</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center">
+                                <svg class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-gray-300 ml-1 md:ml-2">Why Us</span>
+                            </div>
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@id": "index.html",
+                "name": "Novabit Capital"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+                "@id": "about.html",
+                "name": "Company"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+                "@id": "why-us.html",
+                "name": "Why Us"
+            }
+        }
+    ]
+}</script>
+
+</div></div></div></div>
+
+
+
+
+<!-- Features Grid Section -->
+<section class="py-16 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Reliable -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Reliable</h3>
+                        <p class="text-gray-300">Featuring the market's sharpest execution, Novabit Capital cTrader fills your orders in milliseconds without any requotes or price manipulation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intelligent -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Intelligent</h3>
+                        <p class="text-gray-300">Make informed decisions with portfolio research tools, market sentiment data, and in-platform insights that help you evaluate opportunities before investing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Transparent -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Transparent</h3>
+                        <p class="text-gray-300">Access transaction statistics, equity charts and detailed history of your deals for a crystal clear understanding of your performance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Intuitive -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Intuitive</h3>
+                        <p class="text-gray-300">Easy to use and navigate, Novabit Capital is designed for investors who want to move from research to allocation without unnecessary platform friction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Investors Choose Us Section -->
+<section class="py-16 bg-gray-900 relative overflow-hidden">
+    <!-- Background Effects -->
+    <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-400/5"></div>
+        <div class="absolute inset-0 opacity-10">
+            <svg class="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="trust-grid" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M0 40V0h40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+                        <circle cx="20" cy="20" r="1" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#trust-grid)"/>
+            </svg>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Why Investors Choose Us</span>
+            </h2>
+            <p class="text-lg text-gray-300">We prioritize your trust and security with our robust investment platform.</p>
+        </div>
+
+    </div>
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Globally Regulated -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Globally Regulated</h3>
+                        <p class="text-gray-300">We are regulated by top-tier financial authorities, ensuring your funds are safe and secure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- International Awards -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">40+ International Awards</h3>
+                        <p class="text-gray-300">Recognized globally for our excellence in investment services and customer support.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 24/7 Support -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-blue-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-blue-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">24/7 Support</h3>
+                        <p class="text-gray-300">Our dedicated support team is available 24/7 to assist with funding, withdrawals, portfolio questions, and platform guidance.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Secure Transactions -->
+            <div class="group" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="relative h-full">
+                    <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-400/5 rounded-xl transition-all duration-300 group-hover:scale-105"></div>
+                    <div class="relative h-full p-6 bg-gray-800 rounded-xl border border-gray-700 transition-all duration-300 hover:border-emerald-500/50">
+                        <div class="w-16 h-16 mx-auto mb-6 bg-emerald-500/10 rounded-xl flex items-center justify-center">
+                            <svg class="w-8 h-8 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0 0h3m-3 0H9m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-4">Secure Transactions</h3>
+                        <p class="text-gray-300">All transactions are secured with advanced encryption protocols, ensuring your data and funds are protected at all times.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+</main>
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="bg-dark-400 text-gray-300">
+    <!-- Upper Footer -->
+    <div class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div>
+                        <div class="flex items-center mb-6">
+                            <a href="index.html" class="flex items-center">
+                                <img class="h-8 w-auto" src="temp/custom/img/novabit-logo-wordmark.png" alt="Novabit Capital">
+                            </a>
+                        </div>
+                        
+                        <div class="flex space-x-4">
+                            <a href="https://discord.gg/GwvrH9dx8A" class="text-gray-400 hover:text-white">
+                                <span class="sr-only">Discord</span>
+                                <i class="fab fa-discord"></i>
+                            </a>
+                            <a href="https://whatsapp.com/channel/0029VbBhDNJ8qIzsBG84cs2f" class="text-gray-400 hover:text-white">
+                                <span class="sr-only">WhatsApp</span>
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.facebook.com/share/g/17oMuZ1Tx8/?mibextid=wwXIfr" class="text-gray-400 hover:text-white">
+                                <span class="sr-only">Facebook</span>
+                                <i class="fas fa-facebook"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Quick Links</h3>
+                        <ul class="space-y-3">
+                            <li><a href="about.html" class="text-sm text-gray-400 hover:text-white transition">About Us</a></li>
+                            <li><a href="why-us.html" class="text-sm text-gray-400 hover:text-white transition">Why Choose Us</a></li>
+                            <li><a href="for-traders.html" class="text-sm text-gray-400 hover:text-white transition">Investor Education</a></li>
+                            <li><a href="contacts.html" class="text-sm text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Markets -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Investing</h3>
+                        <ul class="space-y-3">
+                            <li><a href="cryptocurrencies.html" class="text-sm text-gray-400 hover:text-white transition">Cryptocurrencies</a></li>
+                            <li><a href="forex.html" class="text-sm text-gray-400 hover:text-white transition">Macro Markets</a></li>
+                            <li><a href="shares.html" class="text-sm text-gray-400 hover:text-white transition">Shares</a></li>
+                            <li><a href="indices.html" class="text-sm text-gray-400 hover:text-white transition">Indices</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Account -->
+                    <div>
+                        <h3 class="text-sm font-semibold text-white uppercase tracking-wider mb-4">Your Account</h3>
+                        <ul class="space-y-3">
+                            <li><a href="login.html" class="text-sm text-gray-400 hover:text-white transition">Log In</a></li>
+                            <li><a href="register.html" class="text-sm text-gray-400 hover:text-white transition">Create Account</a></li>
+                            <li><a href="login.html" class="text-sm text-gray-400 hover:text-white transition">Demo Account</a></li>
+                            <li><a href="contact.html" class="text-sm text-gray-400 hover:text-white transition">Help Center</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Platform Availability -->
+    <div class="border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-6">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-sm font-semibold text-white">Available On</h4>
+                    </div>
+                    <div class="flex items-center space-x-6">
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white" aria-label="Web Platform">
+                            <i class="fas fa-desktop mr-2"></i>
+                            <span class="text-sm">Web</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white" aria-label="Windows App">
+                            <i class="fab fa-windows mr-2"></i>
+                            <span class="text-sm">Windows</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white" aria-label="Android App">
+                            <i class="fab fa-android mr-2"></i>
+                            <span class="text-sm">Android</span>
+                        </a>
+                        <a href="#" class="flex items-center text-gray-400 hover:text-white" aria-label="iOS App">
+                            <i class="fab fa-apple mr-2"></i>
+                            <span class="text-sm">iOS</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer & Legal -->
+    <div class="bg-dark-500 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="py-6">
+                <div class="text-xs text-gray-400">
+                    <p class="mb-4 leading-relaxed">
+                        <span class="font-semibold text-gray-300">INVESTMENT WARNING:</span> Crypto assets and digital investment products can be volatile, speculative, and may involve limited regulatory protections. Diversify across asset classes, verify custody and platform security, avoid hype-driven decisions, and never invest money you cannot afford to lose.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mb-4">
+                        <a href="terms.html" class="text-blue-400 hover:text-blue-300 transition">Terms & Conditions</a>
+                        <a href="privacy.html" class="text-blue-400 hover:text-blue-300 transition">Privacy Policy</a>
+                        <a href="regulation.html" class="text-blue-400 hover:text-blue-300 transition">Legal Documents</a>
+                    </div>
+                    <p>Â© <script>document.write(new Date().getFullYear())</script> Novabit Capital. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="gtranslate_wrapper"></div>
+<script>
+    window.gtranslateSettings = {
+        default_language: "en",
+        alt_flags:{"en":"usa"},
+        wrapper_selector: ".gtranslate_wrapper",
+        flag_style: "3d",
+        switcher_horizontal_position: "inline",
+        float_switcher_open_direction: "bottom",
+    };
+</script>
+<script src="cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+</footer>
+<!-- Additional Scripts -->
+</body>
+
+<!-- Mirrored from novabit/why-us by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 13 Mar 2026 10:57:45 GMT -->
+</html>

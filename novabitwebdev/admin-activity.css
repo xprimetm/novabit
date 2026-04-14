@@ -1,0 +1,40 @@
+.cards{grid-template-columns:repeat(6,minmax(0,1fr))}
+.activity-stack{display:grid;gap:1rem}
+.activity-filter-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.activity-live-chip{display:inline-flex;align-items:center;gap:.5rem;padding:.55rem .8rem;border-radius:999px;border:1px solid rgba(40,192,195,.16);background:rgba(239,250,250,.95);color:#0d7478;font-size:.72rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.activity-live-dot{width:.52rem;height:.52rem;border-radius:999px;background:#13b7bb;box-shadow:0 0 0 .24rem rgba(40,192,195,.16)}
+.activity-live-chip.is-offline{border-color:rgba(245,185,76,.18);background:rgba(255,251,242,.96);color:#9a6506}
+.activity-live-chip.is-offline .activity-live-dot{background:#f59e0b;box-shadow:0 0 0 .24rem rgba(245,185,76,.14)}
+.activity-user-filter{display:grid;gap:.16rem;padding:.88rem .95rem;border-radius:1rem;border:1px solid rgba(40,192,195,.14);background:rgba(240,251,251,.96)}
+.activity-user-filter strong{color:#132a32;font-size:.9rem}
+.activity-user-filter span{color:#60747d;font-size:.78rem;line-height:1.55}
+.activity-summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.activity-summary-panel{min-height:100%}
+.activity-feed-wrap table{min-width:78rem}
+.activity-row-button{display:inline-flex;align-items:center;justify-content:center;min-height:2rem;padding:.4rem .72rem;border-radius:999px;border:1px solid rgba(40,192,195,.18);background:rgba(239,250,250,.96);color:#0d7478;font-size:.72rem;font-weight:900;cursor:pointer}
+.activity-badges,.activity-user-badges{display:flex;align-items:center;gap:.35rem;flex-wrap:wrap}
+.badge.info{background:rgba(40,192,195,.12);color:#0d7478}
+.badge.warning{background:rgba(245,185,76,.16);color:#9a6506}
+.badge.critical{background:rgba(214,62,77,.12);color:#b02d3c}
+.badge.reviewed{background:rgba(49,208,139,.14);color:#136f4c}
+.badge.actioned{background:rgba(40,192,195,.14);color:#0d7478}
+.badge.flagged{background:rgba(245,185,76,.16);color:#9a6506}
+.badge.new{background:rgba(100,116,139,.14);color:#425867}
+.activity-user-trigger{display:inline-flex;align-items:center;gap:.42rem;padding:.24rem .48rem;border-radius:999px;border:1px solid rgba(40,192,195,.14);background:rgba(243,252,251,.95);color:#0d7478;font-size:.68rem;font-weight:900;cursor:pointer}
+.activity-alert-list,.activity-history-list,.activity-meta-list{display:grid;gap:.72rem}
+.activity-alert-card,.activity-history-card,.activity-meta-item,.activity-detail-block{display:grid;gap:.22rem;padding:.92rem 1rem;border-radius:1rem;border:1px solid rgba(110,110,115,.09);background:rgba(255,255,255,.82)}
+.activity-alert-card strong,.activity-history-card strong,.activity-meta-item strong{color:#142830;font-size:.9rem;line-height:1.35}
+.activity-alert-card p,.activity-history-card p,.activity-meta-item span{margin:0;color:#60747d;font-size:.78rem;line-height:1.55}
+.activity-alert-card.critical{border-color:rgba(214,62,77,.18);background:rgba(255,247,248,.98)}
+.activity-alert-card.warning{border-color:rgba(245,185,76,.18);background:rgba(255,251,243,.98)}
+.activity-modal-overlay{z-index:110}
+.activity-modal-dialog{width:min(100%,68rem)}
+.activity-modal-grid,.activity-detail-shell{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+.activity-detail-json{margin:0;padding:.9rem 1rem;min-height:10rem;max-height:20rem;overflow:auto;border-radius:1rem;background:#0f172a;color:#e2f7f7;font:600 .74rem/1.6 "SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;white-space:pre-wrap;word-break:break-word}
+.activity-note-field textarea{width:100%;padding:.82rem .9rem;border-radius:1rem;border:1px solid rgba(110,110,115,.14);background:#fff;color:#172a32;outline:none;resize:vertical}
+.activity-note-field textarea:focus{border-color:rgba(40,192,195,.24)}
+.activity-empty-inline{color:#60747d;font-size:.78rem;line-height:1.55}
+.activity-alert-list .empty,.activity-meta-list .empty{min-height:9rem}
+@media(max-width:1180px){.cards{grid-template-columns:repeat(3,minmax(0,1fr))}.activity-feed-wrap table{min-width:70rem}}
+@media(max-width:840px){.activity-filter-grid,.activity-summary-grid,.activity-modal-grid,.activity-detail-shell{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:720px){.cards{grid-template-columns:1fr}.activity-feed-wrap table{min-width:62rem}.activity-row-button,.activity-user-trigger{width:100%;justify-content:center}}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en" class="light bg-gray-300 h-full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novabit Capital - Activity Monitor</title>
+    <link href="temp/custom/img/novabit-symbol.png" rel="icon" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="light-theme.css?v=20260330n">
+    <link rel="stylesheet" href="admin-people.css?v=20260412e">
+    <link rel="stylesheet" href="admin-activity.css?v=20260412b">
+</head>
+<body>
+    <main class="main">
+        <section class="gate" id="gate">
+            <div class="gate-card">
+                <p class="eyebrow">Admin Access</p>
+                <h1>Activity Monitor</h1>
+                <p class="copy">Sign in with the admin account to review live investor activity, funding actions, and security events.</p>
+                <form class="form" id="login-form">
+                    <div class="fields">
+                        <label class="field"><span>Admin Username</span><input id="login-id" type="text" autocomplete="username" placeholder="novabitadmin"></label>
+                        <label class="field"><span>Password</span><input id="login-pass" type="password" autocomplete="current-password" placeholder="Enter password"></label>
+                    </div>
+                    <button class="btn" type="submit" id="login-btn">Sign In</button>
+                </form>
+                <p class="status" id="login-status">Sign in to continue.</p>
+            </div>
+        </section>
+
+        <div class="shell admin-shell" id="shell" hidden>
+            <aside class="admin-sidebar">
+                <section class="admin-brand admin-brand--console admin-brand--rail">
+                    <div class="admin-brand__workspace">
+                        <div><p class="admin-eyebrow">Novabit Admin</p></div>
+                        <span class="admin-brand__env">Live</span>
+                    </div>
+                    <img src="temp/custom/img/novabit-logo-wordmark.png" alt="Novabit Capital">
+                </section>
+
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Overview</p>
+                    <nav class="admin-nav admin-nav--console admin-sidebar-nav" aria-label="Overview">
+                        <a href="admin-dashboard.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h8V3H3v10Z"></path><path d="M13 21h8V11h-8v10Z"></path><path d="M13 3h8v4h-8V3Z"></path><path d="M3 17h8v4H3v-4Z"></path></svg><span class="admin-nav__label">Dashboard</span></a>
+                        <a href="admin-deposits.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M8 13h3"></path></svg><span class="admin-nav__label">Deposit Queue</span></a>
+                        <a href="admin-kyc.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">KYC Queue</span></a>
+                        <a href="admin-users.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Users</span></a>
+                        <a href="admin-investors.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Investor Profiles</span></a>
+                        <a href="admin-celebrity.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V7a2 2 0 0 0-2-2h-5"></path><path d="M14 17H6a2 2 0 0 1-2-2v-5"></path><path d="m9 12 2 2 4-4"></path><path d="M8 3h4a2 2 0 0 1 2 2v4H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M3 12h4a2 2 0 0 1 2 2v4H5a2 2 0 0 1-2-2v-4Z"></path></svg><span class="admin-nav__label">Celebrity</span></a>
+                        <a href="admin-activity.html" class="admin-sidebar-link is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h3l2-5 4 10 2-5h5"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg><span class="admin-nav__label">Activity Monitor</span></a>
+                    </nav>
+                </div>
+
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Approvals</p>
+                    <div class="admin-role-menu admin-sidebar-collapsible is-open">
+                        <button type="button" class="admin-role-toggle admin-sidebar-link admin-sidebar-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path></svg>
+                            <span class="admin-nav__label">Deposit Approvals</span>
+                            <svg class="admin-role-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div class="admin-role-submenu admin-sidebar-submenu">
+                            <a href="admin-deposits.html?filter=all" class="admin-role-subitem admin-sidebar-sublink">All Proofs</a>
+                            <a href="admin-deposits.html?filter=pending" class="admin-role-subitem admin-sidebar-sublink">Approve Queue</a>
+                            <a href="admin-deposits.html?filter=approved" class="admin-role-subitem admin-sidebar-sublink">Approved</a>
+                            <a href="admin-deposits.html?filter=cancelled" class="admin-role-subitem admin-sidebar-sublink">Cancelled</a>
+                            <a href="admin-deposits.html?filter=rejected" class="admin-role-subitem admin-sidebar-sublink">Rejected</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Operations</p>
+                    <nav class="admin-nav admin-nav--console admin-sidebar-nav" aria-label="Operations">
+                        <a href="admin-treasury.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path></svg><span class="admin-nav__label">Treasury Queue</span></a>
+                        <a href="admin-lifecycle.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">Account Lifecycle</span></a>
+                        <a href="admin-investments.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M6 3h12l1 4H5l1-4Z"></path><path d="M5 7v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M10 11h4"></path></svg><span class="admin-nav__label">Investment States</span></a>
+                        <a href="admin-support.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"></path></svg><span class="admin-nav__label">Risk &amp; Support</span></a>
+                    </nav>
+                </div>
+
+                <div class="admin-sidebar-footer">
+                    <div class="admin-auth-session admin-auth-session--rail">
+                        <div>
+                            <p class="admin-eyebrow">Session</p>
+                            <strong>Novabit Admin</strong>
+                            <p>Live feed updates stream here as user activity is recorded.</p>
+                        </div>
+                        <div class="admin-auth-actions admin-auth-actions--rail">
+                            <button class="admin-button ghost" type="button" id="refresh-btn">Refresh Feed</button>
+                        </div>
+                    </div>
+                    <button type="button" id="logout-btn" class="admin-signout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M13 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8"></path></svg><span>Sign Out</span></button>
+                </div>
+            </aside>
+
+            <section class="content admin-content">
+                <div class="top">
+                    <div class="title">
+                        <p class="eyebrow">Security</p>
+                        <h1>Activity Monitor</h1>
+                        <p class="copy">Live login, funding, KYC, and dashboard actions with review controls for suspicious events.</p>
+                    </div>
+                    <div class="actions">
+                        <button class="btn ghost" type="button" id="clear-user-filter-btn" hidden>Clear User Filter</button>
+                        <button class="btn" type="button" id="apply-filter-btn">Apply Filters</button>
+                    </div>
+                </div>
+
+                <section class="cards">
+                    <article class="card"><span>Total</span><strong id="stat-total">0</strong></article>
+                    <article class="card"><span>Logins</span><strong id="stat-logins">0</strong></article>
+                    <article class="card"><span>Security</span><strong id="stat-security">0</strong></article>
+                    <article class="card"><span>Investments</span><strong id="stat-investments">0</strong></article>
+                    <article class="card"><span>Interactions</span><strong id="stat-interactions">0</strong></article>
+                    <article class="card"><span>Flagged</span><strong id="stat-flagged">0</strong></article>
+                </section>
+
+                <section class="activity-stack">
+                    <section class="panel activity-filter-panel">
+                        <div class="panel-head">
+                            <div class="panel-title">
+                                <p class="eyebrow">Filters</p>
+                                <p class="copy">Last 24 hours by default, with live updates still applied in view.</p>
+                            </div>
+                            <div class="activity-live-chip" id="live-chip"><span class="activity-live-dot"></span><span>Live</span></div>
+                        </div>
+                        <div class="activity-filter-grid">
+                            <label class="field"><span>Activity Type</span><select id="filter-type"><option value="">All activity</option><option value="login_success">Login success</option><option value="login_failed">Failed login</option><option value="deposit_submitted">Deposit submitted</option><option value="withdrawal_submitted">Withdrawal submitted</option><option value="deposit_reviewed">Deposit reviewed</option><option value="withdrawal_reviewed">Withdrawal reviewed</option><option value="kyc_submitted">KYC submitted</option><option value="kyc_reviewed">KYC reviewed</option><option value="email_verified">Email verified</option><option value="password_reset_requested">Password reset</option><option value="dashboard_view">Dashboard view</option><option value="dashboard_click">Dashboard click</option><option value="profile_updated">Profile update</option><option value="security_event">Security event</option></select></label>
+                            <label class="field"><span>Review State</span><select id="filter-review"><option value="all">All states</option><option value="new">New</option><option value="reviewed">Reviewed</option><option value="flagged">Flagged</option><option value="actioned">Actioned</option></select></label>
+                            <label class="field"><span>Window</span><select id="filter-hours"><option value="1">Last 1 hour</option><option value="6">Last 6 hours</option><option value="24" selected>Last 24 hours</option><option value="72">Last 72 hours</option><option value="168">Last 7 days</option><option value="720">Last 30 days</option></select></label>
+                            <label class="field"><span>Search</span><input id="filter-search" type="search" placeholder="User, email, or activity"></label>
+                            <label class="field"><span>From</span><input id="filter-from" type="datetime-local"></label>
+                            <label class="field"><span>To</span><input id="filter-to" type="datetime-local"></label>
+                        </div>
+                        <div class="activity-user-filter" id="user-filter-bar" hidden>
+                            <strong id="user-filter-label">User filter active</strong>
+                            <span id="user-filter-copy">Showing activity for one account only.</span>
+                        </div>
+                    </section>
+
+                    <p class="status" id="activity-status">Loading live activity feed.</p>
+
+                    <section class="activity-summary-grid">
+                        <section class="panel activity-summary-panel">
+                            <div class="panel-head">
+                                <div class="panel-title">
+                                    <p class="eyebrow">Alerts</p>
+                                    <p class="copy">Critical, failed, and flagged items waiting for review.</p>
+                                </div>
+                            </div>
+                            <div class="activity-alert-list" id="activity-alerts"><div class="empty">No alerts yet.</div></div>
+                        </section>
+                        <section class="panel activity-summary-panel">
+                            <div class="panel-head">
+                                <div class="panel-title">
+                                    <p class="eyebrow">Stream</p>
+                                    <p class="copy">Connection status and last refresh.</p>
+                                </div>
+                            </div>
+                            <div class="activity-meta-list">
+                                <div class="activity-meta-item"><span>Status</span><strong id="stream-status">Connecting</strong></div>
+                                <div class="activity-meta-item"><span>Last refresh</span><strong id="stream-refresh">Waiting</strong></div>
+                                <div class="activity-meta-item"><span>Source</span><strong>Server-sent events</strong></div>
+                            </div>
+                        </section>
+                    </section>
+
+                    <section class="panel activity-feed-panel">
+                        <div class="panel-head">
+                            <div class="panel-title">
+                                <p class="eyebrow">Live Feed</p>
+                                <p class="copy" id="activity-count">0 activities</p>
+                            </div>
+                            <div class="toolbar">
+                                <button class="btn ghost" type="button" id="clear-filter-btn">Clear Filters</button>
+                            </div>
+                        </div>
+                        <div class="table-wrap activity-feed-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Activity</th>
+                                        <th>User</th>
+                                        <th>Location</th>
+                                        <th>Device</th>
+                                        <th>Time</th>
+                                        <th>Review</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="activity-feed-body">
+                                    <tr><td colspan="7"><div class="empty">No activity loaded yet.</div></td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <div class="confirm-overlay activity-modal-overlay" id="activity-modal" hidden>
+        <div class="confirm-dialog activity-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="activity-modal-title">
+            <div class="confirm-header">
+                <div class="confirm-icon">ACT</div>
+                <div class="confirm-head-copy">
+                    <h2 class="confirm-title" id="activity-modal-title">Activity details</h2>
+                    <p class="confirm-copy" id="activity-modal-copy">Review the selected event and mark the next action.</p>
+                </div>
+            </div>
+            <div class="activity-modal-grid">
+                <div class="confirm-summary">
+                    <p class="confirm-label">User</p>
+                    <strong class="confirm-user" id="modal-user">Unknown user</strong>
+                    <p class="confirm-detail" id="modal-meta">No details loaded.</p>
+                </div>
+                <div class="confirm-summary">
+                    <p class="confirm-label">Location</p>
+                    <strong class="confirm-user" id="modal-location">Unknown</strong>
+                    <p class="confirm-detail" id="modal-device">Unknown device</p>
+                </div>
+            </div>
+            <div class="activity-detail-shell">
+                <div class="activity-detail-block">
+                    <p class="confirm-label">Activity details</p>
+                    <pre class="activity-detail-json" id="modal-details">{}</pre>
+                </div>
+                <div class="activity-detail-block">
+                    <p class="confirm-label">User history</p>
+                    <div class="activity-history-list" id="modal-history"><div class="empty">No user history loaded.</div></div>
+                </div>
+            </div>
+            <label class="field activity-note-field">
+                <span>Admin Note</span>
+                <textarea id="modal-note" rows="3" placeholder="Add a review note if needed."></textarea>
+            </label>
+            <div class="confirm-actions">
+                <button type="button" class="confirm-btn ghost" id="modal-contact-btn">Contact User</button>
+                <button type="button" class="confirm-btn warning" id="modal-flag-btn">Flag Suspicious</button>
+                <button type="button" class="confirm-btn neutral" id="modal-review-btn">Mark Reviewed</button>
+                <button type="button" class="confirm-btn success" id="modal-action-btn">Mark Actioned</button>
+                <button type="button" class="confirm-btn ghost" id="modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-activity.js?v=20260412b"></script>
+</body>
+</html>

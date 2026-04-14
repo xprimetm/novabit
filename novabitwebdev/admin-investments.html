@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="en" class="light bg-gray-300 h-full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novabit Capital - Investment States</title>
+    <link href="temp/custom/img/novabit-symbol.png" rel="icon" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="light-theme.css?v=20260330n">
+    <style>
+        .admin-main{position:relative;overflow:hidden;padding:2rem 1rem 3rem}.admin-main:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at top left,rgba(40,192,195,.12),transparent 24%),radial-gradient(circle at top right,rgba(0,113,227,.1),transparent 22%)}.admin-shell{position:relative;z-index:1;max-width:92rem;margin:0 auto;display:grid;grid-template-columns:290px minmax(0,1fr);gap:1.5rem}.admin-sidebar,.admin-card,.admin-hero,.admin-stat,.admin-panel{border:1px solid var(--apple-border);background:var(--apple-surface);box-shadow:var(--apple-shadow-card);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px)}.admin-sidebar{position:sticky;top:2rem;display:flex;flex-direction:column;gap:1rem;height:fit-content;border-radius:2rem;padding:1.25rem}.admin-brand,.admin-side-highlight{border-radius:1.6rem;padding:1.2rem;background:radial-gradient(circle at top right,rgba(40,192,195,.12),transparent 40%),linear-gradient(180deg,rgba(255,255,255,.94),rgba(245,247,250,.96));border:1px solid var(--apple-border-strong)}.admin-brand{display:flex;flex-direction:column;align-items:center;text-align:center}.admin-brand img{display:block;height:2.2rem;width:auto;margin:0 auto}.admin-eyebrow{margin:0 0 .65rem;font-size:.68rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--nova-brand-teal)}.admin-brand h1,.admin-panel h3,.admin-hero h2{margin:0;color:var(--apple-text);letter-spacing:-.04em}.admin-brand h1{margin-top:.95rem;font-size:1.65rem;line-height:1.02}.admin-copy,.admin-meta,.admin-panel p,.admin-table td,.admin-queue-copy{margin:0;color:var(--apple-text-secondary);font-size:.92rem;line-height:1.65}.admin-nav{display:grid;gap:.4rem;padding:.25rem}.admin-nav a{display:flex;align-items:center;justify-content:space-between;gap:.85rem;padding:.9rem 1rem;border-radius:999px;color:var(--apple-text-secondary);border:1px solid transparent;font-size:.95rem;font-weight:600;transition:transform .18s ease,color .18s ease,background-color .18s ease,border-color .18s ease}.admin-nav a:hover,.admin-nav a.is-active{transform:translateX(3px);color:var(--apple-text);background:rgba(0,113,227,.08);border-color:rgba(0,113,227,.12)}.admin-nav svg,.admin-icon{width:1rem;height:1rem;color:var(--nova-brand-teal);flex:0 0 auto}.admin-side-highlight{margin-top:auto}.admin-side-highlight strong,.admin-card strong{display:block;color:var(--apple-text);letter-spacing:-.05em}.admin-side-highlight strong{margin-top:.9rem;font-size:2rem;line-height:1}.admin-content{min-width:0;display:grid;gap:1.5rem}.admin-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem}.admin-toolbar-left,.admin-toolbar-right{display:flex;align-items:center;gap:.85rem}.admin-search{display:flex;align-items:center;gap:.75rem;min-width:min(30rem,100%);height:3.4rem;padding:0 1rem;border-radius:1.2rem;border:1px solid var(--apple-border);background:var(--apple-surface);box-shadow:var(--apple-shadow-soft)}.admin-search input{width:100%;border:0;background:transparent;color:var(--apple-text);font-size:.95rem;outline:none}.admin-search input::placeholder{color:var(--apple-text-tertiary)}.admin-pill,.admin-button,.admin-mini-pill,.admin-status{display:inline-flex;align-items:center;gap:.5rem;border-radius:999px;font-weight:700}.admin-pill{padding:.8rem 1rem;border:1px solid var(--apple-border);background:var(--apple-surface);color:var(--apple-text-secondary);font-size:.84rem}.admin-pill:before,.admin-status:before{content:"";border-radius:999px;background:currentColor}.admin-pill:before{width:.5rem;height:.5rem;color:#31d08b;box-shadow:0 0 0 .35rem rgba(49,208,139,.1)}.admin-button{border:0;cursor:pointer;padding:.9rem 1.1rem;color:#fff;background:linear-gradient(135deg,var(--nova-brand-teal),var(--apple-blue));box-shadow:0 18px 36px -24px var(--nova-brand-teal-shadow);font-size:.84rem;letter-spacing:.01em;transition:transform .18s ease,box-shadow .18s ease}.admin-button:hover{transform:translateY(-1px)}.admin-button.ghost{color:var(--apple-text);background:rgba(255,255,255,.74);border:1px solid var(--apple-border);box-shadow:none}.admin-hero{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(18rem,.9fr);gap:1.25rem;border-radius:2rem;padding:1.6rem;background:radial-gradient(circle at top right,rgba(40,192,195,.16),transparent 34%),linear-gradient(180deg,rgba(255,255,255,.96),rgba(246,247,250,.96))}.admin-hero h2{margin-top:.3rem;font-size:clamp(2.25rem,4vw,3.4rem);line-height:.98}.admin-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.4rem}.admin-signal,.admin-stack,.admin-list,.admin-bars,.admin-content{display:grid}.admin-signal,.admin-stack,.admin-list,.admin-bars{gap:.95rem}.admin-card,.admin-stat,.admin-panel{border-radius:1.6rem;padding:1.15rem}.admin-card strong{margin-top:.7rem;font-size:1.9rem;line-height:1}.admin-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.admin-stat-head,.admin-panel-head,.admin-foot,.admin-queue{display:flex;align-items:center;justify-content:space-between;gap:.75rem}.admin-stat-badge{display:inline-flex;align-items:center;justify-content:center;width:2.8rem;height:2.8rem;border-radius:1rem;background:rgba(40,192,195,.12);border:1px solid rgba(40,192,195,.14)}.admin-status{padding:.5rem .75rem;font-size:.74rem}.admin-status:before{width:.44rem;height:.44rem}.admin-status.is-green{color:#188456;background:rgba(49,208,139,.1)}.admin-status.is-amber{color:#b47506;background:rgba(245,185,76,.12)}.admin-status.is-red{color:#d63e4d;background:rgba(255,107,122,.1)}.admin-status.is-teal{color:#117677;background:rgba(40,192,195,.12)}.admin-label{margin:1rem 0 .35rem;color:var(--apple-text-tertiary);font-size:.68rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}.admin-value{margin:0;color:var(--apple-text);font-size:clamp(2rem,3vw,2.7rem);line-height:1;letter-spacing:-.05em}.admin-foot{margin-top:.75rem;color:var(--apple-text-secondary);font-size:.84rem}.admin-change{font-weight:700}.admin-change.up{color:#188456}.admin-change.warn{color:#b47506}.admin-columns{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(20rem,.98fr);gap:1rem}.admin-columns.is-single-column{grid-template-columns:minmax(0,1fr)}.admin-panel{border-radius:1.8rem;padding:1.25rem}.admin-panel-head{margin-bottom:1rem}.admin-panel h3{font-size:1.3rem}.admin-mini-pill{padding:.55rem .8rem;color:var(--nova-brand-teal);background:rgba(40,192,195,.1);border:1px solid rgba(40,192,195,.14);font-size:.75rem}.admin-bar{display:grid;grid-template-columns:8.5rem minmax(0,1fr) auto;align-items:center;gap:.85rem}.admin-track{height:.8rem;border-radius:999px;overflow:hidden;background:rgba(110,110,115,.1)}.admin-fill{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--nova-brand-teal),var(--apple-blue))}.admin-table{width:100%;border-collapse:collapse}.admin-table th,.admin-table td{text-align:left;padding:.95rem .8rem;border-bottom:1px solid rgba(110,110,115,.08);font-size:.9rem}.admin-table th{color:var(--apple-text-tertiary);font-size:.68rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}.admin-user{display:flex;align-items:center;gap:.75rem}.admin-avatar{display:inline-flex;align-items:center;justify-content:center;width:2.4rem;height:2.4rem;border-radius:.9rem;background:linear-gradient(135deg,rgba(40,192,195,.24),rgba(0,113,227,.22));color:var(--apple-text);font-weight:800;font-size:.85rem}.admin-queue{align-items:flex-start;padding:1rem;border-radius:1.25rem;background:rgba(255,255,255,.64);border:1px solid rgba(110,110,115,.08)}.admin-queue strong{display:block;color:var(--apple-text);font-size:.95rem;line-height:1.45}.admin-amount{white-space:nowrap;color:var(--apple-text);font-weight:800;letter-spacing:-.04em}.admin-footer{margin-top:.25rem;color:var(--apple-text-tertiary);font-size:.84rem;text-align:center}@media (max-width:1280px){.admin-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.admin-columns,.admin-hero{grid-template-columns:1fr}}@media (max-width:1024px){.admin-shell{grid-template-columns:1fr}.admin-sidebar{position:static;top:auto}.admin-toolbar{flex-direction:column;align-items:stretch}.admin-toolbar-left,.admin-toolbar-right{justify-content:space-between;flex-wrap:wrap}.admin-search{min-width:0;width:100%}}@media (max-width:720px){.admin-main{padding:1.4rem .9rem 2.5rem}.admin-stats{grid-template-columns:1fr}.admin-bar{grid-template-columns:1fr;gap:.5rem}.admin-queue{flex-direction:column}.admin-amount{white-space:normal}.admin-table,.admin-table thead,.admin-table tbody,.admin-table tr,.admin-table th,.admin-table td{display:block;width:100%}.admin-table thead{display:none}.admin-table tr{padding:.8rem 0;border-bottom:1px solid rgba(110,110,115,.08)}.admin-table th,.admin-table td{border:0;padding:.35rem 0}}
+        .admin-side-group{display:grid;gap:.42rem}.admin-side-group-label{margin:0 .15rem;font-size:.67rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--apple-text-tertiary)}.admin-brand--console{align-items:flex-start;text-align:left;gap:.8rem;padding:1rem 1.05rem;border-radius:1.35rem}.admin-brand--console img{height:1.8rem;margin:0}.admin-brand__workspace{display:flex;align-items:center;justify-content:space-between;gap:.8rem;width:100%}.admin-brand__workspace strong{display:block;color:var(--apple-text);font-size:1rem;letter-spacing:-.03em}.admin-brand__workspace span{display:block;margin-top:.18rem;color:var(--apple-text-secondary);font-size:.76rem;line-height:1.4}.admin-brand__env{display:inline-flex;align-items:center;padding:.32rem .62rem;border-radius:999px;background:rgba(49,208,139,.12);color:#188456;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.admin-nav--console{padding:0;gap:.24rem}.admin-nav--console a{justify-content:flex-start;padding:.78rem .85rem;border-radius:.95rem;gap:.72rem;transform:none}.admin-nav--console a:hover,.admin-nav--console a.is-active{transform:none}.admin-nav--console a svg{width:1rem;height:1rem}.admin-nav__label{flex:1;min-width:0}.admin-side-accounts{display:grid;gap:.75rem;padding:1rem;border-radius:1.35rem;border:1px solid var(--apple-border-strong);background:radial-gradient(circle at top right,rgba(40,192,195,.12),transparent 42%),linear-gradient(180deg,rgba(255,255,255,.94),rgba(245,247,250,.96))}.admin-side-account-list{display:grid;gap:.5rem}.admin-side-account{display:flex;align-items:flex-start;justify-content:space-between;gap:.7rem;padding:.68rem .75rem;border-radius:.95rem;border:1px solid rgba(110,110,115,.08);background:rgba(255,255,255,.76)}.admin-side-account-copy{display:grid;gap:.14rem;min-width:0}.admin-side-account-name{margin:0;color:var(--apple-text);font-size:.84rem;font-weight:700;letter-spacing:-.02em}.admin-side-account-meta{margin:0;color:var(--apple-text-secondary);font-size:.73rem;line-height:1.4}.admin-side-account-status{display:inline-flex;align-items:center;gap:.35rem;white-space:nowrap;padding:.35rem .62rem;border-radius:999px;background:rgba(49,208,139,.12);color:#188456;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.admin-side-account-status::before{content:"";width:.42rem;height:.42rem;border-radius:999px;background:currentColor;box-shadow:0 0 0 .28rem rgba(49,208,139,.12)}.admin-side-highlight--console{padding:1rem 1.05rem;border-radius:1.35rem}.admin-side-highlight--console strong{margin-top:.75rem;font-size:1.7rem}.admin-state-item,.admin-investment-card{padding:1rem;border-radius:1.25rem;border:1px solid rgba(110,110,115,.1);background:rgba(255,255,255,.72);box-shadow:var(--apple-shadow-soft)}.admin-state-item{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem}.admin-state-copy{display:grid;gap:.22rem;min-width:0}.admin-state-title{margin:0;color:var(--apple-text);font-size:1rem;font-weight:700;letter-spacing:-.03em}.admin-state-meta{margin:0;color:var(--apple-text-secondary);font-size:.85rem;line-height:1.55}.admin-state-list{display:grid;gap:.75rem}.admin-state-count{display:grid;justify-items:end;gap:.3rem;text-align:right}.admin-state-value{color:var(--apple-text);font-size:1.25rem;font-weight:800;letter-spacing:-.04em}.admin-state-trend{font-size:.74rem;font-weight:700}.admin-state-trend.up{color:#188456}.admin-state-trend.warn{color:#b47506}.admin-state-trend.down{color:#d63e4d}.admin-investment-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem}.admin-investment-card strong{display:block;margin-top:.5rem;color:var(--apple-text);font-size:1.4rem;letter-spacing:-.04em}.admin-investment-card .admin-meta{margin-top:.35rem}.admin-toolbar-title{display:grid;gap:.2rem;min-width:min(20rem,100%)}.admin-toolbar-title h2{margin:0;color:var(--apple-text);font-size:1.7rem;line-height:1;letter-spacing:-.05em}.admin-toolbar-title .admin-meta{font-size:.82rem}@media (max-width:1280px){.admin-investment-grid{grid-template-columns:1fr}}@media (max-width:1024px){.admin-investment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media (max-width:720px){.admin-state-item,.admin-side-account,.admin-brand__workspace{flex-direction:column;align-items:flex-start}.admin-state-count{justify-items:start;text-align:left}.admin-investment-grid{grid-template-columns:1fr}.admin-toolbar-title{min-width:0}}
+        .admin-review-hub{display:grid;gap:1rem}
+        .admin-review-head{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+        .admin-review-head p{max-width:42rem}
+        .admin-review-access{display:grid;gap:.85rem}
+        .admin-auth-form,.admin-auth-session{display:grid;gap:.8rem}
+        .admin-auth-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.75rem}
+        .admin-auth-field,.admin-review-note{display:grid;gap:.5rem}
+        .admin-auth-field span,.admin-review-note label{color:var(--apple-text-tertiary);font-size:.68rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase}
+        .admin-auth-field input,.admin-review-note textarea{width:100%;border:1px solid rgba(110,110,115,.14);background:rgba(255,255,255,.92);color:var(--apple-text);font:inherit;outline:none;transition:border-color .18s ease,box-shadow .18s ease}
+        .admin-auth-field input{height:3.15rem;padding:0 1rem;border-radius:1rem}
+        .admin-auth-field input:focus,.admin-review-note textarea:focus{border-color:rgba(40,192,195,.34);box-shadow:0 0 0 .22rem rgba(40,192,195,.12)}
+        .admin-auth-actions{display:flex;align-items:center;gap:.65rem;flex-wrap:wrap}
+        .admin-auth-session{grid-template-columns:minmax(0,1fr) auto;align-items:center;padding:1rem 1.05rem;border-radius:1.2rem;border:1px solid rgba(40,192,195,.12);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(242,251,250,.96))}
+        .admin-auth-session strong{display:block;color:var(--apple-text);font-size:1.02rem;letter-spacing:-.03em}
+        .admin-auth-session p{margin:.22rem 0 0;color:var(--apple-text-secondary);font-size:.82rem;line-height:1.55}
+        .admin-review-status{margin:0;padding:.8rem .95rem;border-radius:1rem;border:1px solid rgba(40,192,195,.12);background:rgba(243,252,251,.95);color:var(--apple-text-secondary);font-size:.84rem;line-height:1.55;grid-column:1/-1}
+        .admin-review-status.is-error{border-color:rgba(214,62,77,.16);background:rgba(255,245,246,.96);color:#b02d3c}
+        .admin-review-status.is-success{border-color:rgba(49,208,139,.18);background:rgba(242,252,247,.96);color:#188456}
+        .admin-access-gate{position:relative;z-index:1;max-width:34rem;margin:0 auto;display:grid;place-items:center;min-height:min(calc(100vh - 7rem),54rem)}
+        .admin-access-card{display:grid;gap:1rem;width:min(100%,34rem);padding:1.4rem;border-radius:2rem;border:1px solid var(--apple-border-strong);background:radial-gradient(circle at top right,rgba(40,192,195,.16),transparent 38%),linear-gradient(180deg,rgba(255,255,255,.98),rgba(244,248,250,.98));box-shadow:0 32px 70px -46px rgba(8,39,44,.3);backdrop-filter:saturate(180%) blur(18px);-webkit-backdrop-filter:saturate(180%) blur(18px)}
+        .admin-access-head{display:grid;gap:.52rem}
+        .admin-access-title{margin:0;color:var(--apple-text);font-size:clamp(2rem,4vw,2.8rem);line-height:.96;letter-spacing:-.05em}
+        .admin-access-copy{margin:0;color:var(--apple-text-secondary);font-size:.95rem;line-height:1.7}
+        .admin-access-form{display:grid;gap:.85rem}
+        .admin-access-status{grid-column:auto}
+        .admin-review-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}
+        .admin-review-summary-card{display:grid;gap:.28rem;padding:1rem 1.05rem;border-radius:1.2rem;border:1px solid rgba(110,110,115,.08);background:rgba(255,255,255,.78);box-shadow:var(--apple-shadow-soft)}
+        .admin-review-summary-card span{color:var(--apple-text-tertiary);font-size:.68rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+        .admin-review-summary-card strong{color:var(--apple-text);font-size:1.6rem;letter-spacing:-.05em}
+        .admin-review-grid{display:grid;grid-template-columns:minmax(18rem,.9fr) minmax(0,1.1fr);gap:1rem}
+        .admin-review-list-shell,.admin-review-detail-shell{display:grid;gap:.85rem}
+        .admin-review-list{display:grid;gap:.72rem;max-height:48rem;overflow:auto;padding-right:.12rem}
+        .admin-review-item{display:grid;gap:.7rem;padding:1rem 1.05rem;border-radius:1.2rem;border:1px solid rgba(110,110,115,.1);background:rgba(255,255,255,.76);cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+        .admin-review-item:hover{transform:translateY(-1px);border-color:rgba(40,192,195,.18);box-shadow:0 18px 34px -30px rgba(8,39,44,.18)}
+        .admin-review-item.is-active{border-color:rgba(40,192,195,.28);background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(242,251,250,.96));box-shadow:0 22px 38px -32px rgba(8,39,44,.2)}
+        .admin-review-item-head,.admin-review-item-foot,.admin-review-meta-grid,.admin-review-actions{display:flex;align-items:center;justify-content:space-between;gap:.7rem;flex-wrap:wrap}
+        .admin-review-item strong{color:var(--apple-text);font-size:.98rem;letter-spacing:-.03em}
+        .admin-review-item p{margin:0;color:var(--apple-text-secondary);font-size:.82rem;line-height:1.55}
+        .admin-review-badges{display:flex;flex-wrap:wrap;gap:.42rem}
+        .admin-review-chip{display:inline-flex;align-items:center;justify-content:center;padding:.36rem .62rem;border-radius:999px;border:1px solid rgba(40,192,195,.14);background:rgba(243,252,251,.96);color:#117677;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+        .admin-review-detail{display:grid;gap:1rem;min-height:24rem}
+        .admin-review-empty{display:grid;place-items:center;min-height:16rem;padding:1.25rem;border-radius:1.25rem;border:1px dashed rgba(110,110,115,.16);background:rgba(255,255,255,.58);color:var(--apple-text-secondary);text-align:center;line-height:1.65}
+        .admin-review-proof{display:grid;gap:1rem;padding:1rem;border-radius:1.25rem;border:1px solid rgba(110,110,115,.08);background:rgba(255,255,255,.78);box-shadow:var(--apple-shadow-soft)}
+        .admin-review-proof img{display:block;width:100%;max-height:26rem;object-fit:contain;border-radius:1.15rem;border:1px solid rgba(110,110,115,.08);background:#fff}
+        .admin-review-proof-head{display:flex;align-items:flex-start;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+        .admin-review-proof-head h4{margin:0;color:var(--apple-text);font-size:1.2rem;line-height:1.1;letter-spacing:-.04em}
+        .admin-review-proof-head p,.admin-review-note p{margin:0;color:var(--apple-text-secondary);font-size:.84rem;line-height:1.55}
+        .admin-review-meta-grid{align-items:stretch}
+        .admin-review-meta{flex:1 1 14rem;display:grid;gap:.3rem;padding:.85rem .92rem;border-radius:1rem;border:1px solid rgba(110,110,115,.08);background:rgba(246,248,250,.92)}
+        .admin-review-meta span{color:var(--apple-text-tertiary);font-size:.65rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+        .admin-review-meta strong{color:var(--apple-text);font-size:.92rem;line-height:1.45;word-break:break-word}
+        .admin-review-note textarea{min-height:7rem;padding:.9rem 1rem;border-radius:1rem;resize:vertical}
+        .admin-button.danger{background:linear-gradient(135deg,#ff6b7a,#d63e4d);box-shadow:0 18px 36px -24px rgba(214,62,77,.45)}
+        .admin-review-reviewed{padding:.85rem .92rem;border-radius:1rem;border:1px solid rgba(110,110,115,.08);background:rgba(246,248,250,.92)}
+        .admin-review-reviewed strong{display:block;color:var(--apple-text);font-size:.88rem}
+        .admin-review-reviewed p{margin:.28rem 0 0;color:var(--apple-text-secondary);font-size:.82rem;line-height:1.55}
+        @media (max-width:1280px){.admin-review-summary,.admin-review-grid{grid-template-columns:1fr}}
+        @media (max-width:1024px){.admin-auth-fields,.admin-auth-session{grid-template-columns:1fr}}
+        @media (max-width:720px){.admin-review-head,.admin-review-item-head,.admin-review-proof-head,.admin-review-item-foot{flex-direction:column;align-items:flex-start}.admin-review-summary,.admin-auth-fields{grid-template-columns:1fr}}
+        .admin-status.is-slate{color:#425867;background:rgba(66,88,103,.12)}
+        .admin-button.warn{background:linear-gradient(135deg,#f4b94c,#c78308);box-shadow:0 18px 36px -24px rgba(199,131,8,.4)}
+        .admin-side-group--roles{order:-2}
+        .admin-role-menu{display:grid;gap:.42rem}
+        .admin-role-toggle,.admin-role-subitem{width:100%;border:1px solid transparent;background:transparent;color:var(--apple-text-secondary);font:inherit;cursor:pointer}
+        .admin-role-toggle{display:flex;align-items:center;gap:.72rem;padding:.78rem .85rem;border-radius:.95rem;transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+        .admin-role-toggle:hover,.admin-role-toggle.is-active{color:var(--apple-text);background:rgba(0,113,227,.08);border-color:rgba(0,113,227,.12)}
+        .admin-role-toggle svg{width:1rem;height:1rem;color:var(--nova-brand-teal);flex:0 0 auto}
+        .admin-role-count,.admin-role-badge{display:inline-flex;align-items:center;justify-content:center;min-width:1.65rem;padding:.26rem .48rem;border-radius:999px;background:rgba(40,192,195,.12);color:#0d6970;font-size:.68rem;font-weight:800;line-height:1}
+        .admin-role-chevron{margin-left:auto;color:var(--apple-text-tertiary);transition:transform .18s ease}
+        .admin-role-menu.is-open .admin-role-chevron{transform:rotate(180deg)}
+        .admin-role-submenu{display:grid;gap:.3rem;padding:.14rem 0 .14rem 1.15rem}
+        .admin-role-submenu[hidden]{display:none}
+        .admin-role-subitem{display:flex;align-items:center;justify-content:space-between;gap:.6rem;padding:.62rem .78rem;border-radius:.9rem;transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+        .admin-role-subitem:hover,.admin-role-subitem.is-active{color:var(--apple-text);background:rgba(40,192,195,.1);border-color:rgba(40,192,195,.14)}
+        .admin-review-summary{grid-template-columns:repeat(5,minmax(0,1fr))}
+        .admin-review-summary-card.is-approved{border-color:rgba(49,208,139,.18);background:rgba(242,252,247,.96)}
+        .admin-review-summary-card.is-cancelled{border-color:rgba(66,88,103,.12);background:rgba(246,248,250,.96)}
+        .admin-review-summary-card.is-rejected{border-color:rgba(214,62,77,.14);background:rgba(255,246,247,.96)}
+        .admin-review-head-actions{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}
+        .admin-review-section-pill{background:rgba(255,255,255,.88);color:var(--apple-text)}
+        .admin-review-detail-stack,.admin-review-section,.admin-review-note-grid,.admin-review-transaction-list,.admin-review-timeline{display:grid;gap:.85rem}
+        .admin-review-section-head{display:flex;align-items:center;justify-content:space-between;gap:.75rem;flex-wrap:wrap}
+        .admin-review-section-title{margin:0;color:var(--apple-text);font-size:.86rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+        .admin-review-user-grid,.admin-review-transaction-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.8rem}
+        .admin-review-meta.is-wide{grid-column:1/-1}
+        .admin-review-transaction-row{display:grid;grid-template-columns:10rem minmax(0,1fr);gap:.85rem;align-items:flex-start;padding:.82rem .9rem;border-radius:1rem;border:1px solid rgba(110,110,115,.08);background:rgba(246,248,250,.92)}
+        .admin-review-transaction-row span{color:var(--apple-text-tertiary);font-size:.66rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+        .admin-review-transaction-row strong{color:var(--apple-text);font-size:.9rem;line-height:1.55;word-break:break-word}
+        .admin-review-reviewed.is-cancelled{border-color:rgba(66,88,103,.12);background:rgba(246,248,250,.96)}
+        .admin-review-reviewed.is-rejected{border-color:rgba(214,62,77,.14);background:rgba(255,246,247,.96)}
+        .admin-review-reviewed.is-approved{border-color:rgba(49,208,139,.18);background:rgba(242,252,247,.96)}
+        .admin-review-actions{justify-content:flex-start}
+        .admin-review-actions .admin-button{flex:1 1 11.5rem}
+        @media (max-width:1280px){.admin-review-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+        @media (max-width:720px){.admin-review-summary,.admin-review-user-grid,.admin-review-transaction-grid{grid-template-columns:1fr}.admin-review-transaction-row{grid-template-columns:1fr}}
+        .admin-shell{grid-template-columns:272px minmax(0,1fr);align-items:start}
+        .admin-sidebar{top:1.5rem;height:calc(100vh - 3rem);overflow-y:auto;padding:1rem;gap:1rem;border-radius:1.55rem;border-color:rgba(40,192,195,.12);background:radial-gradient(circle at top right,rgba(40,192,195,.12),transparent 32%),linear-gradient(180deg,rgba(255,255,255,.96),rgba(244,248,250,.98));box-shadow:0 30px 66px -44px rgba(8,39,44,.28)}
+        .admin-sidebar::-webkit-scrollbar{width:.55rem}
+        .admin-sidebar::-webkit-scrollbar-thumb{border-radius:999px;background:rgba(40,192,195,.18)}
+        .admin-brand--rail{padding:.95rem .95rem 1rem;border-radius:1.12rem;border-color:rgba(40,192,195,.12);background:radial-gradient(circle at top right,rgba(40,192,195,.14),transparent 42%),linear-gradient(180deg,rgba(255,255,255,.98),rgba(243,249,250,.98))}
+        .admin-brand--rail .admin-eyebrow{color:var(--nova-brand-teal)}
+        .admin-brand--rail .admin-brand__workspace strong{color:var(--apple-text)}
+        .admin-brand--rail .admin-brand__workspace span{color:var(--apple-text-secondary)}
+        .admin-brand--rail img{height:1.7rem;opacity:.96}
+        .admin-side-group--roles{order:0}
+        .admin-sidebar-section{gap:.5rem}
+        .admin-sidebar-title,.admin-side-group-label{margin:0 .2rem;color:var(--apple-text-tertiary);font-size:.67rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase}
+        .admin-sidebar-nav{gap:.22rem}
+        .admin-sidebar-link,.admin-sidebar-toggle,.admin-sidebar-sublink{display:flex;align-items:center;gap:.74rem;min-height:2.9rem;padding:.78rem .82rem;border-radius:.95rem;border:1px solid transparent;background:transparent;color:var(--apple-text-secondary);font-size:.95rem;font-weight:500;text-decoration:none;transition:background-color .18s ease,border-color .18s ease,color .18s ease,transform .18s ease}
+        .admin-sidebar-link svg,.admin-sidebar-toggle svg,.admin-sidebar-sublink svg{flex:0 0 auto;width:1rem;height:1rem;color:rgba(13,105,112,.78)}
+        .admin-sidebar-link:hover,.admin-sidebar-toggle:hover,.admin-sidebar-sublink:hover{transform:none;color:var(--apple-text);background:rgba(40,192,195,.09);border-color:rgba(40,192,195,.12)}
+        .admin-sidebar-link.is-active,.admin-sidebar-toggle.is-active{color:#ffffff;background:linear-gradient(135deg,var(--nova-brand-teal),#1e88a8);border-color:rgba(40,192,195,.2);box-shadow:0 18px 34px -24px rgba(40,192,195,.28)}
+        .admin-sidebar-link.is-active svg,.admin-sidebar-toggle.is-active svg{color:#ffffff}
+        .admin-sidebar-collapsible{display:grid;gap:.28rem}
+        .admin-sidebar-submenu{display:grid;gap:.22rem;padding:.08rem 0 0 .78rem}
+        .admin-sidebar-sublink{min-height:2.55rem;padding:.68rem .76rem;font-size:.88rem;color:#58717d}
+        .admin-sidebar-sublink.is-active{color:var(--apple-text);background:rgba(40,192,195,.11);border-color:rgba(40,192,195,.14)}
+        .admin-nav-badge,.admin-role-count,.admin-role-badge{display:inline-flex;align-items:center;justify-content:center;min-width:1.72rem;padding:.28rem .52rem;border-radius:999px;font-size:.68rem;font-weight:800;line-height:1}
+        .admin-nav-badge{margin-left:auto}
+        .admin-role-count,.admin-role-badge{background:rgba(40,192,195,.12);color:#0d6970}
+        .badge-green{background:#22c55e;color:#fff}
+        .badge-red{background:#ef4444;color:#fff}
+        .badge-amber{background:#f59e0b;color:#fff}
+        .badge-purple{background:#a855f7;color:#fff}
+        .badge-blue{background:#3b82f6;color:#fff}
+        .badge-slate{background:#475569;color:#fff}
+        .admin-role-toggle,.admin-role-subitem{width:100%;cursor:pointer}
+        .admin-role-toggle{justify-content:flex-start}
+        .admin-role-toggle .admin-role-chevron{margin-left:0;color:var(--apple-text-tertiary)}
+        .admin-role-toggle .admin-nav-badge{margin-left:auto}
+        .admin-role-subitem{justify-content:space-between}
+        .admin-sidebar-footer{margin-top:auto;display:grid;gap:.72rem;padding-top:1rem;border-top:1px solid rgba(40,192,195,.12)}
+        .admin-auth-session--rail{grid-template-columns:1fr;padding:.92rem;border-radius:1.05rem;border-color:rgba(40,192,195,.12);background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(242,251,250,.98))}
+        .admin-auth-session--rail strong{color:var(--apple-text)}
+        .admin-auth-session--rail p{color:var(--apple-text-secondary)}
+        .admin-auth-actions--rail{display:grid;grid-template-columns:1fr}
+        .admin-auth-actions--rail .admin-button{width:100%;justify-content:center}
+        .admin-auth-session--rail .admin-button.ghost{background:rgba(255,255,255,.86);border-color:rgba(40,192,195,.14);color:var(--apple-text)}
+        .admin-signout{display:flex;align-items:center;gap:.75rem;justify-content:flex-start;min-height:3rem;padding:.82rem .9rem;border-radius:1rem;border:1px solid rgba(248,113,113,.16);background:rgba(255,246,247,.95);color:#ef4444;font:inherit;font-weight:700;cursor:pointer;transition:background-color .18s ease,border-color .18s ease}
+        .admin-signout:hover{background:rgba(255,240,242,.98);border-color:rgba(248,113,113,.24)}
+        .admin-signout svg{width:1rem;height:1rem;flex:0 0 auto}
+        @media (max-width:1024px){.admin-sidebar{height:auto}}
+        @media (max-width:720px){.admin-shell{grid-template-columns:1fr}.admin-sidebar{padding:.92rem}.admin-sidebar-submenu{padding-left:.58rem}}
+    </style>
+</head>
+<body class="antialiased text-gray-900 bg-gray-50 font-sans min-h-screen flex flex-col" data-admin-current="investments" data-admin-view="investments" data-admin-page-eyebrow="Investments" data-admin-page-title="Investment States" data-admin-page-copy="Monitor plan states, maturity, payout processing, and restrictions from a dedicated investment page.">
+    <a href="#admin-content" class="sr-only focus:not-sr-only focus:bg-blue-700 focus:text-white focus:fixed focus:px-4 focus:py-2 focus:top-2 focus:left-2 focus:z-50">Skip to admin content</a>
+    <main class="admin-main" id="admin-content">
+        <div class="admin-access-gate" id="admin-access-gate">
+            <section class="admin-access-card" aria-labelledby="admin-access-title">
+                <div class="admin-access-head">
+                    <p class="admin-eyebrow">Admin Access</p>
+                    <h1 class="admin-access-title" id="admin-access-title">Admin Dashboard</h1>
+                    <p class="admin-access-copy">Sign in with the admin username and password before opening the Novabit operations workspace.</p>
+                </div>
+                <form class="admin-access-form" id="admin-login-form">
+                    <div class="admin-auth-fields">
+                        <label class="admin-auth-field" for="admin-login-identifier">
+                            <span>Admin Username</span>
+                            <input id="admin-login-identifier" type="text" autocomplete="username" placeholder="novabitadmin">
+                        </label>
+                        <label class="admin-auth-field" for="admin-login-password">
+                            <span>Password</span>
+                            <input id="admin-login-password" type="password" autocomplete="current-password" placeholder="Enter password">
+                        </label>
+                    </div>
+                    <div class="admin-auth-actions">
+                        <button class="admin-button" type="submit" id="admin-login-button">Sign In</button>
+                    </div>
+                </form>
+                <p class="admin-review-status admin-access-status" id="admin-access-status">Sign in with the admin account to continue.</p>
+            </section>
+        </div>
+        <div class="admin-shell" id="admin-shell" hidden>
+            <aside class="admin-sidebar">
+                <section class="admin-brand admin-brand--console admin-brand--rail">
+                    <div class="admin-brand__workspace">
+                        <div>
+                            <p class="admin-eyebrow">Novabit Admin</p>
+                        </div>
+                        <span class="admin-brand__env">Live</span>
+                    </div>
+                    <img src="temp/custom/img/novabit-logo-wordmark.png" alt="Novabit Capital">
+                </section>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Overview</p>
+                    <nav class="admin-nav admin-nav--console admin-sidebar-nav" aria-label="Overview">
+                        <a href="admin-dashboard.html" class="is-active admin-sidebar-link" data-admin-anchor="overview"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h8V3H3v10Z"></path><path d="M13 21h8V11h-8v10Z"></path><path d="M13 3h8v4h-8V3Z"></path><path d="M3 17h8v4H3v-4Z"></path></svg><span class="admin-nav__label">Dashboard</span></a>
+                        <a href="admin-deposits.html" class="admin-sidebar-link" data-admin-anchor="payments"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M8 13h3"></path></svg><span class="admin-nav__label">Deposit Queue</span><span class="admin-nav-badge badge-red" data-admin-filter-count="pending">0</span></a>
+                        <a href="admin-kyc.html" class="admin-sidebar-link" data-admin-anchor="kyc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">KYC Queue</span></a>
+                        <a href="admin-users.html" class="admin-sidebar-link" data-admin-anchor="users"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Users</span></a>
+                        <a href="admin-investors.html" class="admin-sidebar-link" data-admin-anchor="investors"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Investor Profiles</span></a>
+                        <a href="admin-celebrity.html" class="admin-sidebar-link" data-admin-anchor="celebrity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V7a2 2 0 0 0-2-2h-5"></path><path d="M14 17H6a2 2 0 0 1-2-2v-5"></path><path d="m9 12 2 2 4-4"></path><path d="M8 3h4a2 2 0 0 1 2 2v4H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M3 12h4a2 2 0 0 1 2 2v4H5a2 2 0 0 1-2-2v-4Z"></path></svg><span class="admin-nav__label">Celebrity</span></a>
+                    </nav>
+                </div>
+                <div class="admin-side-group admin-sidebar-section admin-side-group--roles">
+                    <p class="admin-side-group-label admin-sidebar-title">Approvals</p>
+                    <div class="admin-role-menu admin-sidebar-collapsible is-open" data-admin-role-menu>
+                        <button type="button" class="admin-role-toggle admin-sidebar-link admin-sidebar-toggle" id="admin-approvals-toggle" aria-expanded="true" aria-controls="admin-approval-filters">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path></svg>
+                            <span class="admin-nav__label">Deposit Approvals</span>
+                            <span class="admin-nav-badge badge-amber" data-admin-filter-count="pending">0</span>
+                            <svg class="admin-role-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div class="admin-role-submenu admin-sidebar-submenu" id="admin-approval-filters">
+                            <a href="admin-deposits.html?filter=all" class="admin-role-subitem admin-sidebar-sublink is-active" data-admin-filter="all">All Proofs <span class="admin-role-badge" data-admin-filter-count="total">0</span></a>
+                            <a href="admin-deposits.html?filter=pending" class="admin-role-subitem admin-sidebar-sublink" data-admin-filter="pending">Approve Queue <span class="admin-role-badge" data-admin-filter-count="pending">0</span></a>
+                            <a href="admin-deposits.html?filter=approved" class="admin-role-subitem admin-sidebar-sublink" data-admin-filter="approved">Approved <span class="admin-role-badge" data-admin-filter-count="approved">0</span></a>
+                            <a href="admin-deposits.html?filter=cancelled" class="admin-role-subitem admin-sidebar-sublink" data-admin-filter="cancelled">Cancelled <span class="admin-role-badge" data-admin-filter-count="cancelled">0</span></a>
+                            <a href="admin-deposits.html?filter=rejected" class="admin-role-subitem admin-sidebar-sublink" data-admin-filter="rejected">Rejected <span class="admin-role-badge" data-admin-filter-count="rejected">0</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Operations</p>
+                    <nav class="admin-nav admin-nav--console admin-sidebar-nav" aria-label="Operations">
+                        <a href="admin-treasury.html" class="admin-sidebar-link" data-admin-anchor="treasury"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path></svg><span class="admin-nav__label">Treasury Queue</span></a>
+                        <a href="admin-lifecycle.html" class="admin-sidebar-link" data-admin-anchor="lifecycle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">Account Lifecycle</span></a>
+                        <a href="admin-investments.html" class="admin-sidebar-link" data-admin-anchor="investments"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M6 3h12l1 4H5l1-4Z"></path><path d="M5 7v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M10 11h4"></path></svg><span class="admin-nav__label">Investment States</span></a>
+                        <a href="admin-support.html" class="admin-sidebar-link" data-admin-anchor="support"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"></path></svg><span class="admin-nav__label">Risk &amp; Support</span></a>
+                    </nav>
+                </div>
+                <div class="admin-sidebar-footer">
+                    <div class="admin-auth-session admin-auth-session--rail" id="admin-session-card" hidden>
+                        <div>
+                            <p class="admin-eyebrow" style="margin:0 0 .38rem;">Session</p>
+                            <strong data-admin-auth-name>Novabit Admin</strong>
+                            <p data-admin-auth-meta>Admin session is active.</p>
+                        </div>
+                        <div class="admin-auth-actions admin-auth-actions--rail">
+                            <button class="admin-button ghost" type="button" id="admin-load-payments">Refresh Queue</button>
+                        </div>
+                    </div>
+                    <button type="button" id="admin-logout-button" class="admin-signout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M13 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8"></path></svg><span>Sign Out</span></button>
+                </div>
+            </aside>
+            <section class="admin-content">
+                <div class="admin-toolbar">
+                    <div class="admin-toolbar-left">
+                        <div class="admin-toolbar-title">
+                            <p class="admin-eyebrow" data-admin-page-eyebrow>Overview</p>
+                            <h2 data-admin-page-title>Admin Dashboard</h2>
+                            <p class="admin-meta" data-admin-page-copy>Live.</p>
+                        </div>
+                        <label class="admin-search" aria-label="Search admin records"><svg class="admin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"></circle><path d="m21 21-4.3-4.3"></path></svg><input type="search" placeholder="Search users, payouts, tickets"></label>
+                    </div>
+                    <div class="admin-toolbar-right">
+                        <span class="admin-pill">Live</span>
+                        <button class="admin-button ghost" type="button">Today</button>
+                        <button class="admin-button" type="button">New task</button>
+                    </div>
+                </div>
+                <section class="admin-panel admin-review-hub" id="payments" data-admin-section="payments">
+                    <div class="admin-review-head">
+                        <div>
+                            <p class="admin-eyebrow">Approvals</p>
+                            <h3>Payment Proof Queue</h3>
+                            <p class="admin-meta">Review uploaded receipts, confirm the route and amount, then approve or reject the payment from one workspace.</p>
+                        </div>
+                        <span class="admin-mini-pill">Live review</span>
+                    </div>
+                    <div class="admin-review-access">
+                        <form class="admin-auth-form" id="admin-review-login-form" hidden>
+                            <div class="admin-auth-fields">
+                                <label class="admin-auth-field" for="admin-review-login-identifier">
+                                    <span>Admin Username</span>
+                                    <input id="admin-review-login-identifier" type="text" autocomplete="username" placeholder="novabitadmin">
+                                </label>
+                                <label class="admin-auth-field" for="admin-review-login-password">
+                                    <span>Password</span>
+                                    <input id="admin-review-login-password" type="password" autocomplete="current-password" placeholder="Enter password">
+                                </label>
+                            </div>
+                            <div class="admin-auth-actions">
+                                <button class="admin-button" type="submit" id="admin-review-login-button">Sign In</button>
+                            </div>
+                        </form>
+                        <p class="admin-review-status" id="admin-payment-status">Sign in with the admin account to review payment proofs.</p>
+                    </div>
+                    <div class="admin-review-summary" id="admin-review-summary" hidden>
+                        <article class="admin-review-summary-card"><span>Total proofs</span><strong data-admin-summary="total">0</strong></article>
+                        <article class="admin-review-summary-card"><span>Pending</span><strong data-admin-summary="pending">0</strong></article>
+                        <article class="admin-review-summary-card is-approved"><span>Approved</span><strong data-admin-summary="approved">0</strong></article>
+                        <article class="admin-review-summary-card is-cancelled"><span>Cancelled</span><strong data-admin-summary="cancelled">0</strong></article>
+                        <article class="admin-review-summary-card is-rejected"><span>Rejected</span><strong data-admin-summary="rejected">0</strong></article>
+                    </div>
+                    <div class="admin-review-grid" id="admin-review-grid" hidden>
+                        <div class="admin-review-list-shell">
+                            <div class="admin-panel-head">
+                                <div>
+                                    <h3>Queue</h3>
+                                    <p class="admin-meta">Deposits stay sorted by review state, with the selected approval role controlling the list.</p>
+                                </div>
+                                <div class="admin-review-head-actions"><span class="admin-mini-pill admin-review-section-pill" id="admin-queue-scope">All Proofs</span><span class="admin-mini-pill" id="admin-queue-count">0 items</span></div>
+                            </div>
+                            <div class="admin-review-list" id="admin-payment-list">
+                                <div class="admin-review-empty">No payment proofs loaded yet.</div>
+                            </div>
+                        </div>
+                        <div class="admin-review-detail-shell">
+                            <div class="admin-panel-head">
+                                <div>
+                                    <h3>Transaction Detail</h3>
+                                    <p class="admin-meta">Inspect the depositor profile, proof, route, and review history before you complete the transaction decision.</p>
+                                </div>
+                                <span class="admin-mini-pill admin-review-section-pill" id="admin-detail-scope">Receipt</span>
+                            </div>
+                            <div class="admin-review-detail" id="admin-payment-detail">
+                                <div class="admin-review-empty">Select a payment proof to inspect the receipt and complete the review.</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="admin-hero" id="overview" data-admin-section="overview">
+                    <div>
+                        <p class="admin-eyebrow">Summary</p>
+                        <div class="admin-actions"><button class="admin-button" type="button">Export</button><button class="admin-button ghost" type="button">Support</button></div>
+                    </div>
+                    <div class="admin-signal">
+                        <article class="admin-card"><p class="admin-eyebrow">Net flow</p><h2 style="font-size:1.4rem;">$8.42M in 24h</h2><strong>+11.9%</strong><p class="admin-meta">Above average.</p></article>
+                        <article class="admin-card"><p class="admin-eyebrow">Support SLA</p><h2 style="font-size:1.4rem;">94.7% SLA</h2><strong>17</strong><p class="admin-meta">Priority open.</p></article>
+                    </div>
+                </section>
+                <section class="admin-stats" data-admin-section="stats">
+                    <article class="admin-stat"><div class="admin-stat-head"><span class="admin-stat-badge"><svg class="admin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></span><span class="admin-status is-green">Healthy</span></div><p class="admin-label">Active investors</p><p class="admin-value">12,480</p><div class="admin-foot"><span>46 countries</span><span class="admin-change up">+6.2%</span></div></article>
+                    <article class="admin-stat"><div class="admin-stat-head"><span class="admin-stat-badge"><svg class="admin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path></svg></span><span class="admin-status is-teal">Realtime</span></div><p class="admin-label">Deposits cleared</p><p class="admin-value">$28.9M</p><div class="admin-foot"><span>Month to date</span><span class="admin-change up">+9.8%</span></div></article>
+                    <article class="admin-stat"><div class="admin-stat-head"><span class="admin-stat-badge"><svg class="admin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6"></path><path d="M12 16v6"></path><path d="M4.93 4.93l4.24 4.24"></path><path d="M14.83 14.83l4.24 4.24"></path><path d="M2 12h6"></path><path d="M16 12h6"></path><path d="m4.93 19.07 4.24-4.24"></path><path d="m14.83 9.17 4.24-4.24"></path></svg></span><span class="admin-status is-amber">Needs review</span></div><p class="admin-label">KYC pending</p><p class="admin-value">214</p><div class="admin-foot"><span>42 over 6h</span><span class="admin-change warn">+12 cases</span></div></article>
+                    <article class="admin-stat"><div class="admin-stat-head"><span class="admin-stat-badge"><svg class="admin-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"></path></svg></span><span class="admin-status is-red">Attention</span></div><p class="admin-label">Priority queue</p><p class="admin-value">17</p><div class="admin-foot"><span>2 unresolved</span><span class="admin-change warn">At risk</span></div></article>
+                </section>
+                <section class="admin-columns">
+                    <div class="admin-stack">
+                        <article class="admin-panel" id="growth" data-admin-section="acquisition"><div class="admin-panel-head"><div><h3>Acquisition</h3><p class="admin-meta">Channel mix.</p></div><span class="admin-mini-pill">Live mix</span></div><div class="admin-bars"><div class="admin-bar"><span class="admin-meta">Organic web</span><div class="admin-track"><span class="admin-fill" style="width:71%;"></span></div><strong>71%</strong></div><div class="admin-bar"><span class="admin-meta">Referral</span><div class="admin-track"><span class="admin-fill" style="width:56%;"></span></div><strong>56%</strong></div><div class="admin-bar"><span class="admin-meta">Partners</span><div class="admin-track"><span class="admin-fill" style="width:48%;"></span></div><strong>48%</strong></div><div class="admin-bar"><span class="admin-meta">Coupon</span><div class="admin-track"><span class="admin-fill" style="width:33%;"></span></div><strong>33%</strong></div></div></article>
+                        <article class="admin-panel" id="compliance" data-admin-section="investors"><div class="admin-panel-head"><div><h3>New registrations</h3><p class="admin-meta">Recent.</p></div><span class="admin-mini-pill">3 min ago</span></div><table class="admin-table"><thead><tr><th>Investor</th><th>Source</th><th>Country</th><th>Status</th></tr></thead><tbody><tr><td><div class="admin-user"><span class="admin-avatar">AB</span><div><strong>Ana Brooks</strong><div class="admin-meta">ana.brooks@novabitmail.com</div></div></div></td><td>Organic web</td><td>Canada</td><td><span class="admin-status is-green">Approved</span></td></tr><tr><td><div class="admin-user"><span class="admin-avatar">MJ</span><div><strong>Marcus James</strong><div class="admin-meta">coupon: LAMALAMA</div></div></div></td><td>Coupon</td><td>United Kingdom</td><td><span class="admin-status is-amber">KYC pending</span></td></tr><tr><td><div class="admin-user"><span class="admin-avatar">EO</span><div><strong>Esther Obi</strong><div class="admin-meta">device mismatch detected</div></div></div></td><td>Referral</td><td>Nigeria</td><td><span class="admin-status is-red">Manual review</span></td></tr><tr><td><div class="admin-user"><span class="admin-avatar">RL</span><div><strong>Rina Lopez</strong><div class="admin-meta">returning lead</div></div></div></td><td>Partner</td><td>Spain</td><td><span class="admin-status is-teal">Awaiting deposit</span></td></tr></tbody></table></article>
+                    </div>
+                    <div class="admin-stack">
+                        <article class="admin-panel" id="finance" data-admin-section="treasury"><div class="admin-panel-head"><div><h3>Finance queue</h3><p class="admin-meta">Pending approvals.</p></div><span class="admin-mini-pill">9 pending</span></div><div class="admin-list"><div class="admin-queue"><div><strong>USDT withdrawal • Ref W-10428</strong><div class="admin-queue-copy">Wallet change before payout. Confirm first.</div></div><div class="admin-amount">$18,400</div></div><div class="admin-queue"><div><strong>BTC payout • Ref W-10431</strong><div class="admin-queue-copy">First large payout. Re-check source wallet.</div></div><div class="admin-amount">$42,900</div></div><div class="admin-queue"><div><strong>Card dispute • Ref D-59311</strong><div class="admin-queue-copy">Duplicate debit reported. Hold reversal.</div></div><div class="admin-amount">$4,200</div></div></div></article>
+                        <article class="admin-panel" id="support" data-admin-section="support"><div class="admin-panel-head"><div><h3>Risk alerts</h3><p class="admin-meta">Needs review.</p></div><span class="admin-mini-pill">3 critical</span></div><div class="admin-list"><div class="admin-queue"><div><strong>Coupon traffic spike</strong><div class="admin-queue-copy">Matching fingerprints across six accounts.</div></div><span class="admin-status is-red">Critical</span></div><div class="admin-queue"><div><strong>Retries on suspended profile</strong><div class="admin-queue-copy">Two payout attempts after review hold.</div></div><span class="admin-status is-amber">Escalate</span></div><div class="admin-queue"><div><strong>Support queue imbalance</strong><div class="admin-queue-copy">Spanish tickets exceed shift capacity.</div></div><span class="admin-status is-teal">Ops action</span></div></div></article>
+                    </div>
+                </section>
+                <section class="admin-columns">
+                    <div class="admin-stack">
+                        <article class="admin-panel" id="lifecycle" data-admin-section="lifecycle"><div class="admin-panel-head"><div><h3>Account states</h3><p class="admin-meta">Live states.</p></div><span class="admin-mini-pill">Lifecycle</span></div><div class="admin-state-list"><div class="admin-state-item"><div class="admin-state-copy"><h4 class="admin-state-title">Pending approval</h4><p class="admin-state-meta">Awaiting verification.</p></div><div class="admin-state-count"><span class="admin-state-value">214</span><span class="admin-state-trend warn">42 aging</span></div></div><div class="admin-state-item"><div class="admin-state-copy"><h4 class="admin-state-title">Active</h4><p class="admin-state-meta">Live and funded.</p></div><div class="admin-state-count"><span class="admin-state-value">12,480</span><span class="admin-state-trend up">+6.2% week</span></div></div><div class="admin-state-item"><div class="admin-state-copy"><h4 class="admin-state-title">Suspended</h4><p class="admin-state-meta">Blocked for review.</p></div><div class="admin-state-count"><span class="admin-state-value">38</span><span class="admin-state-trend down">9 today</span></div></div><div class="admin-state-item"><div class="admin-state-copy"><h4 class="admin-state-title">Cancelling</h4><p class="admin-state-meta">Exit in progress.</p></div><div class="admin-state-count"><span class="admin-state-value">27</span><span class="admin-state-trend warn">5 over SLA</span></div></div><div class="admin-state-item"><div class="admin-state-copy"><h4 class="admin-state-title">Closed</h4><p class="admin-state-meta">Settled and archived.</p></div><div class="admin-state-count"><span class="admin-state-value">311</span><span class="admin-state-trend up">Clean archive</span></div></div><div class="admin-state-item"><div class="admin-state-copy"><h4 class="admin-state-title">Manual review</h4><p class="admin-state-meta">Held for exception review.</p></div><div class="admin-state-count"><span class="admin-state-value">64</span><span class="admin-state-trend warn">Cross-team</span></div></div></div></article>
+                    </div>
+                    <div class="admin-stack">
+                        <article class="admin-panel" id="investments" data-admin-section="investments"><div class="admin-panel-head"><div><h3>Portfolio states</h3><p class="admin-meta">Map.</p></div><span class="admin-mini-pill">Map</span></div><div class="admin-investment-grid"><article class="admin-investment-card"><p class="admin-eyebrow">Funding pending</p><strong>186</strong><p class="admin-meta">Approved, not funded.</p></article><article class="admin-investment-card"><p class="admin-eyebrow">Active plans</p><strong>4,982</strong><p class="admin-meta">Live funded plans.</p></article><article class="admin-investment-card"><p class="admin-eyebrow">Matured returns</p><strong>418</strong><p class="admin-meta">Ready to settle.</p></article><article class="admin-investment-card"><p class="admin-eyebrow">Payout processing</p><strong>73</strong><p class="admin-meta">In treasury workflow.</p></article><article class="admin-investment-card"><p class="admin-eyebrow">Cancellation requests</p><strong>27</strong><p class="admin-meta">Pending closure.</p></article><article class="admin-investment-card"><p class="admin-eyebrow">Restricted accounts</p><strong>38</strong><p class="admin-meta">Action limited.</p></article></div></article>
+                    </div>
+                </section>
+                <p class="admin-footer">Novabit admin console.</p>
+            </section>
+        </div>
+    </main>
+    <script>
+        (function () {
+            const resolveApiUrl = function () {
+                if (!window.location || window.location.protocol === "file:") return "http://localhost:4000/api/v1";
+                return window.location.origin.replace(/\/+$/, "") + "/api/v1";
+            };
+
+            const api = resolveApiUrl();
+            const body = document.body;
+            const currentAdminPage = body.getAttribute("data-admin-current") || "overview";
+            const pageViewTokens = (body.getAttribute("data-admin-view") || currentAdminPage)
+                .split(",")
+                .map(function (token) { return token.trim(); })
+                .filter(Boolean);
+            const requestedQueueFilter = (new URLSearchParams(window.location.search).get("filter") || "").trim().toLowerCase();
+            const IDLE_TIMEOUT_MS = 30 * 60 * 1000;
+            const IDLE_CHECK_INTERVAL_MS = 15000;
+            const SESSION_REFRESH_THROTTLE_MS = 4 * 60 * 1000;
+            const ACTIVITY_STORAGE_SYNC_MS = 5000;
+            const ACTIVITY_STORAGE_KEY = "novabit_admin_last_activity";
+            const LOGOUT_STORAGE_KEY = "novabit_admin_logout";
+            const adminAccessGate = document.getElementById("admin-access-gate");
+            const adminShell = document.getElementById("admin-shell");
+            const adminLoginForm = document.getElementById("admin-login-form");
+            const adminLoginIdentifier = document.getElementById("admin-login-identifier");
+            const adminLoginPassword = document.getElementById("admin-login-password");
+            const adminLoginButton = document.getElementById("admin-login-button");
+            const adminAccessStatus = document.getElementById("admin-access-status");
+            const adminSessionCard = document.getElementById("admin-session-card");
+            const adminSessionName = document.querySelector("[data-admin-auth-name]");
+            const adminSessionMeta = document.querySelector("[data-admin-auth-meta]");
+            const adminLoadButton = document.getElementById("admin-load-payments");
+            const adminLogoutButton = document.getElementById("admin-logout-button");
+            const adminPaymentStatus = document.getElementById("admin-payment-status");
+            const adminToolbarTitle = document.querySelector(".admin-toolbar-title");
+            const adminPageEyebrow = adminToolbarTitle ? adminToolbarTitle.querySelector("[data-admin-page-eyebrow]") : null;
+            const adminPageTitle = adminToolbarTitle ? adminToolbarTitle.querySelector("[data-admin-page-title]") : null;
+            const adminPageCopy = adminToolbarTitle ? adminToolbarTitle.querySelector("[data-admin-page-copy]") : null;
+            const adminSummarySection = document.getElementById("admin-review-summary");
+            const adminGridSection = document.getElementById("admin-review-grid");
+            const adminQueueScope = document.getElementById("admin-queue-scope");
+            const adminQueueCount = document.getElementById("admin-queue-count");
+            const adminPaymentList = document.getElementById("admin-payment-list");
+            const adminPaymentDetail = document.getElementById("admin-payment-detail");
+            const adminDetailScope = document.getElementById("admin-detail-scope");
+            const adminApprovalsToggle = document.getElementById("admin-approvals-toggle");
+            const adminApprovalFilters = document.getElementById("admin-approval-filters");
+            const adminRoleMenu = document.querySelector("[data-admin-role-menu]");
+            const adminFilterButtons = Array.from(document.querySelectorAll("[data-admin-filter]"));
+            const adminAnchorLinks = Array.from(document.querySelectorAll("[data-admin-anchor]"));
+            const adminSectionNodes = Array.from(document.querySelectorAll("[data-admin-section]"));
+            const adminColumnGroups = Array.from(document.querySelectorAll(".admin-columns"));
+            const adminSummaryNodes = Array.from(document.querySelectorAll("[data-admin-summary]")).reduce(function (accumulator, node) {
+                const key = node.getAttribute("data-admin-summary");
+                if (key) accumulator[key] = node;
+                return accumulator;
+            }, {});
+            const adminFilterCountNodes = Array.from(document.querySelectorAll("[data-admin-filter-count]")).reduce(function (accumulator, node) {
+                const key = node.getAttribute("data-admin-filter-count");
+                if (!key) return accumulator;
+                if (!accumulator[key]) accumulator[key] = [];
+                accumulator[key].push(node);
+                return accumulator;
+            }, {});
+            let authUser = null;
+            let authSessionMode = null;
+            let paymentQueue = [];
+            let selectedSubmissionId = "";
+            let activeSidebarAnchor = currentAdminPage;
+            let activeQueueFilter = currentAdminPage === "payments" && ["all", "pending", "approved", "cancelled", "rejected"].includes(requestedQueueFilter)
+                ? requestedQueueFilter
+                : "all";
+            let approvalMenuExpanded = true;
+            let reviewInFlight = false;
+            let loginInFlight = false;
+            let logoutInProgress = false;
+            let lastActivityAt = Date.now();
+            let lastActivityPersistedAt = 0;
+            let lastSessionRefreshAt = 0;
+
+            const escapeHtml = function (value) {
+                return String(value == null ? "" : value).replace(/[&<>\"']/g, function (character) {
+                    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;", "'": "&#39;" }[character] || character;
+                });
+            };
+
+            const parse = async function (response) {
+                const text = await response.text();
+                if (!text) return {};
+                try {
+                    return JSON.parse(text);
+                } catch (_error) {
+                    return { message: text };
+                }
+            };
+
+            const extractApiMessage = function (payload, fallback) {
+                if (!payload || typeof payload !== "object") return fallback;
+                if (typeof payload.message === "string" && payload.message.trim()) return payload.message.trim();
+                if (typeof payload.error === "string" && payload.error.trim()) return payload.error.trim();
+                return fallback;
+            };
+
+            const toDate = function (value) {
+                const date = value ? new Date(value) : null;
+                return date && !Number.isNaN(date.getTime()) ? date : null;
+            };
+
+            const formatDateTime = function (value) {
+                const date = toDate(value);
+                return date ? date.toLocaleString() : "Unavailable";
+            };
+
+            const formatCurrency = function (value) {
+                const amount = Number(value);
+                if (!Number.isFinite(amount)) return "$0.00";
+                return new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "USD",
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                }).format(amount);
+            };
+
+            const formatMethodLabel = function (value) {
+                if (value === "card") return "Card Checkout";
+                if (value === "fan") return "Celebrity Fan Card";
+                return "Crypto Transfer";
+            };
+
+            const formatStatusLabel = function (value) {
+                if (value === "approved") return "Approved";
+                if (value === "cancelled") return "Cancelled";
+                if (value === "rejected") return "Rejected";
+                return "Pending";
+            };
+
+            const getStatusClass = function (value) {
+                if (value === "approved") return "is-green";
+                if (value === "cancelled") return "is-slate";
+                if (value === "rejected") return "is-red";
+                return "is-amber";
+            };
+
+            const formatFilterLabel = function (value) {
+                if (value === "pending") return "Approve Queue";
+                if (value === "approved") return "Approved";
+                if (value === "cancelled") return "Cancelled";
+                if (value === "rejected") return "Rejected";
+                return "All Proofs";
+            };
+
+            const formatReviewActionLabel = function (value) {
+                if (value === "approved") return "Approve Deposit";
+                if (value === "cancelled") return "Cancel Transaction";
+                return "Reject Proof";
+            };
+
+            const sortSubmissions = function (entries) {
+                const rank = { pending: 0, rejected: 1, cancelled: 2, approved: 3 };
+                return Array.isArray(entries)
+                    ? entries.slice().sort(function (left, right) {
+                        const statusDelta = (rank[left && left.status] ?? 9) - (rank[right && right.status] ?? 9);
+                        if (statusDelta !== 0) return statusDelta;
+                        return new Date(right && right.createdAt ? right.createdAt : 0).getTime() - new Date(left && left.createdAt ? left.createdAt : 0).getTime();
+                    })
+                    : [];
+            };
+
+            const getFilteredQueue = function () {
+                return activeQueueFilter === "all"
+                    ? paymentQueue.slice()
+                    : paymentQueue.filter(function (submission) {
+                        return submission && submission.status === activeQueueFilter;
+                    });
+            };
+
+            const getSelectedSubmission = function () {
+                return paymentQueue.find(function (submission) { return submission.id === selectedSubmissionId; }) || null;
+            };
+
+            const applyPageMeta = function () {
+                if (adminPageEyebrow) {
+                    adminPageEyebrow.textContent = body.getAttribute("data-admin-page-eyebrow") || "Overview";
+                }
+                if (adminPageTitle) {
+                    adminPageTitle.textContent = body.getAttribute("data-admin-page-title") || "Admin Dashboard";
+                }
+                if (adminPageCopy) {
+                    adminPageCopy.textContent = body.getAttribute("data-admin-page-copy") || "Live.";
+                }
+            };
+
+            const applyPageLayout = function () {
+                const allowed = new Set(pageViewTokens);
+
+                adminSectionNodes.forEach(function (node) {
+                    const sectionKey = node.getAttribute("data-admin-section") || "";
+                    node.hidden = allowed.size > 0 && !allowed.has(sectionKey);
+                });
+
+                adminColumnGroups.forEach(function (group) {
+                    const stacks = Array.from(group.querySelectorAll(".admin-stack"));
+                    const visibleStacks = stacks.filter(function (stack) {
+                        const visibleChildren = stack.querySelectorAll("[data-admin-section]:not([hidden])");
+                        stack.hidden = visibleChildren.length === 0;
+                        return visibleChildren.length > 0;
+                    });
+                    group.hidden = visibleStacks.length === 0;
+                    group.classList.toggle("is-single-column", visibleStacks.length <= 1);
+                });
+            };
+
+            const setActiveAnchor = function (anchorId) {
+                activeSidebarAnchor = anchorId || "overview";
+                adminAnchorLinks.forEach(function (link) {
+                    const linkAnchor = link.getAttribute("data-admin-anchor") || "";
+                    link.classList.toggle("is-active", linkAnchor === activeSidebarAnchor);
+                });
+                updateApprovalMenuState();
+            };
+
+            const syncActiveAnchorFromHash = function () {
+                if (currentAdminPage === "payments") {
+                    setActiveAnchor("payments");
+                    return;
+                }
+                setActiveAnchor(currentAdminPage);
+            };
+
+            const syncSelectedSubmission = function (options) {
+                const visibleQueue = getFilteredQueue();
+
+                if (!visibleQueue.length) {
+                    if (!options || options.allowEmptySelection !== false) {
+                        selectedSubmissionId = "";
+                    }
+                    return;
+                }
+
+                if (!visibleQueue.some(function (submission) { return submission.id === selectedSubmissionId; })) {
+                    selectedSubmissionId = visibleQueue[0].id;
+                }
+            };
+
+            const updateApprovalMenuState = function () {
+                if (adminRoleMenu) {
+                    adminRoleMenu.classList.toggle("is-open", approvalMenuExpanded);
+                }
+
+                if (adminApprovalsToggle) {
+                    adminApprovalsToggle.setAttribute("aria-expanded", approvalMenuExpanded ? "true" : "false");
+                    adminApprovalsToggle.classList.toggle("is-active", activeSidebarAnchor === "payments");
+                }
+
+                if (adminApprovalFilters) {
+                    adminApprovalFilters.hidden = !approvalMenuExpanded;
+                }
+
+                adminFilterButtons.forEach(function (button) {
+                    const filter = button.getAttribute("data-admin-filter") || "all";
+                    button.classList.toggle("is-active", currentAdminPage === "payments" && filter === activeQueueFilter);
+                });
+
+                if (adminQueueScope) {
+                    adminQueueScope.textContent = formatFilterLabel(activeQueueFilter);
+                }
+            };
+
+            const setQueueFilter = function (filter, options) {
+                activeQueueFilter = filter || "all";
+                approvalMenuExpanded = true;
+                setActiveAnchor("payments");
+                syncSelectedSubmission();
+                updateApprovalMenuState();
+                renderQueueList();
+                renderQueueDetail();
+
+                if (options && options.scroll !== false) {
+                    const paymentsSection = document.getElementById("payments");
+                    if (paymentsSection) {
+                        paymentsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                }
+            };
+
+            const writeStoredTimestamp = function (key, value) {
+                try {
+                    window.localStorage.setItem(key, String(value));
+                } catch {}
+            };
+
+            const readStoredTimestamp = function (key) {
+                try {
+                    return Number(window.localStorage.getItem(key));
+                } catch {
+                    return Number.NaN;
+                }
+            };
+
+            const syncActivityFromStorage = function () {
+                const stored = readStoredTimestamp(ACTIVITY_STORAGE_KEY);
+                if (Number.isFinite(stored) && stored > 0) {
+                    lastActivityAt = Math.max(lastActivityAt, stored);
+                    lastActivityPersistedAt = Math.max(lastActivityPersistedAt, stored);
+                }
+            };
+
+            const setStatusMessage = function (message, type) {
+                [adminAccessStatus, adminPaymentStatus].forEach(function (node) {
+                    if (!node) return;
+                    node.textContent = message;
+                    node.classList.remove("is-error", "is-success");
+                    if (type === "error") node.classList.add("is-error");
+                    if (type === "success") node.classList.add("is-success");
+                });
+            };
+
+            const setReviewWorkspaceVisible = function (isVisible) {
+                if (adminSummarySection) adminSummarySection.hidden = !isVisible;
+                if (adminGridSection) adminGridSection.hidden = !isVisible;
+            };
+
+            const toHtmlLines = function (values) {
+                const parts = Array.isArray(values)
+                    ? values.filter(function (value) { return value != null && String(value).trim() !== ""; })
+                    : [];
+                return parts.length
+                    ? parts.map(function (value) { return escapeHtml(value); }).join("<br>")
+                    : "Unavailable";
+            };
+
+            const updateSummary = function (summary) {
+                const safeSummary = summary || { total: 0, pending: 0, approved: 0, cancelled: 0, rejected: 0 };
+                Object.keys(adminSummaryNodes).forEach(function (key) {
+                    if (adminSummaryNodes[key]) adminSummaryNodes[key].textContent = String(Number(safeSummary[key]) || 0);
+                });
+
+                Object.keys(adminFilterCountNodes).forEach(function (key) {
+                    const value = Number(safeSummary[key]) || 0;
+                    adminFilterCountNodes[key].forEach(function (node) {
+                        node.textContent = String(value);
+                    });
+                });
+
+                if (adminQueueCount) {
+                    const total = Number(safeSummary.total) || 0;
+                    const visible = getFilteredQueue().length;
+                    if (activeQueueFilter === "all") {
+                        adminQueueCount.textContent = String(total) + " item" + (total === 1 ? "" : "s");
+                    } else {
+                        adminQueueCount.textContent = String(visible) + " of " + String(total) + " item" + (total === 1 ? "" : "s");
+                    }
+                }
+
+                updateApprovalMenuState();
+            };
+
+            const resetQueueState = function () {
+                paymentQueue = [];
+                selectedSubmissionId = "";
+                activeQueueFilter = currentAdminPage === "payments" && ["all", "pending", "approved", "cancelled", "rejected"].includes(requestedQueueFilter)
+                    ? requestedQueueFilter
+                    : "all";
+                approvalMenuExpanded = true;
+                updateSummary();
+                renderQueueList();
+                renderQueueDetail();
+            };
+
+            const setAuthenticatedState = function (user, sessionMode) {
+                authUser = user || null;
+                authSessionMode = sessionMode || null;
+
+                if (adminAccessGate) adminAccessGate.hidden = Boolean(authUser);
+                if (adminShell) adminShell.hidden = !authUser;
+                if (adminLoginForm) adminLoginForm.hidden = Boolean(authUser);
+                if (adminSessionCard) adminSessionCard.hidden = !authUser;
+
+                if (!authUser) {
+                    if (adminSessionName) adminSessionName.textContent = "Novabit Admin";
+                    if (adminSessionMeta) adminSessionMeta.textContent = "Admin session is inactive.";
+                    if (adminDetailScope) adminDetailScope.textContent = "Receipt";
+                    activeSidebarAnchor = currentAdminPage;
+                    setReviewWorkspaceVisible(false);
+                    resetQueueState();
+                    return;
+                }
+
+                const sessionMeta = [];
+                if (authUser.username) sessionMeta.push("@" + authUser.username);
+                if (authUser.email) sessionMeta.push(authUser.email);
+                sessionMeta.push("30-minute idle session");
+                if (authSessionMode) sessionMeta.push(authSessionMode + " persistence");
+
+                if (adminSessionName) {
+                    adminSessionName.textContent = authUser.name || authUser.username || "Novabit Admin";
+                }
+
+                if (adminSessionMeta) {
+                    adminSessionMeta.textContent = sessionMeta.join(" | ");
+                }
+
+                if (adminLoginIdentifier && !adminLoginIdentifier.value.trim()) {
+                    adminLoginIdentifier.value = authUser.username || authUser.email || "";
+                }
+
+                if (adminLoginPassword) {
+                    adminLoginPassword.value = "";
+                }
+
+                syncActiveAnchorFromHash();
+                updateApprovalMenuState();
+                setReviewWorkspaceVisible(true);
+            };
+
+            const buildReviewMetaCard = function (label, htmlValue, options) {
+                return '<div class="admin-review-meta' + (options && options.wide ? ' is-wide' : '') + '"><span>' + escapeHtml(label) + '</span><strong>' + (htmlValue || "Unavailable") + '</strong></div>';
+            };
+
+            const buildTransactionRow = function (label, htmlValue) {
+                return '<div class="admin-review-transaction-row"><span>' + escapeHtml(label) + '</span><strong>' + (htmlValue || "Unavailable") + '</strong></div>';
+            };
+
+            const renderQueueList = function () {
+                if (!adminPaymentList) return;
+
+                if (!authUser) {
+                    adminPaymentList.innerHTML = '<div class="admin-review-empty">Sign in to load payment proofs.</div>';
+                    return;
+                }
+
+                const visibleQueue = getFilteredQueue();
+
+                if (!visibleQueue.length) {
+                    adminPaymentList.innerHTML = '<div class="admin-review-empty">' + escapeHtml(paymentQueue.length
+                        ? "No payment proofs match the selected approval role yet."
+                        : "No payment proofs are waiting in the queue.") + '</div>';
+                    return;
+                }
+
+                adminPaymentList.innerHTML = visibleQueue.map(function (submission) {
+                    const isActive = submission.id === selectedSubmissionId;
+                    const assetLabel = submission.assetSymbol
+                        ? submission.assetSymbol + (submission.network ? " - " + submission.network : "")
+                        : formatMethodLabel(submission.fundingMethod);
+                    const depositorMeta = [
+                        submission.userEmail || "No email",
+                        submission.userUsername ? "@" + submission.userUsername : "",
+                        submission.userCountry || ""
+                    ].filter(Boolean).join(" | ");
+                    const routeLabel = submission.routeAddress
+                        ? submission.routeAddress.slice(0, 10) + "..." + submission.routeAddress.slice(-6)
+                        : "No route saved";
+
+                    return '<button type="button" class="admin-review-item' + (isActive ? ' is-active' : '') + '" data-payment-item="' + escapeHtml(submission.id) + '">' +
+                        '<div class="admin-review-item-head"><div><strong>' + escapeHtml(submission.userName || submission.userEmail || "Investor") + '</strong><p>' + escapeHtml(submission.planName || "Plan payment") + ' - ' + escapeHtml(submission.reference) + '</p></div><span class="admin-status ' + getStatusClass(submission.status) + '">' + escapeHtml(formatStatusLabel(submission.status)) + '</span></div>' +
+                        '<div class="admin-review-badges"><span class="admin-review-chip">' + escapeHtml(formatMethodLabel(submission.fundingMethod)) + '</span><span class="admin-review-chip">' + escapeHtml(assetLabel) + '</span></div>' +
+                        '<div class="admin-review-item-foot"><p>' + escapeHtml(formatDateTime(submission.createdAt)) + '<br>' + escapeHtml(depositorMeta || routeLabel) + '</p><strong>' + escapeHtml(formatCurrency(submission.amount)) + '</strong></div>' +
+                    '</button>';
+                }).join("");
+
+                adminPaymentList.querySelectorAll("[data-payment-item]").forEach(function (button) {
+                    button.addEventListener("click", function () {
+                        trackActivity();
+                        selectedSubmissionId = button.getAttribute("data-payment-item") || "";
+                        renderQueueList();
+                        renderQueueDetail();
+                    });
+                });
+            };
+
+            const renderQueueDetail = function () {
+                if (!adminPaymentDetail) return;
+
+                if (!authUser) {
+                    if (adminDetailScope) adminDetailScope.textContent = "Receipt";
+                    adminPaymentDetail.innerHTML = '<div class="admin-review-empty">Sign in to inspect uploaded receipts.</div>';
+                    return;
+                }
+
+                const submission = getSelectedSubmission();
+
+                if (!submission) {
+                    if (adminDetailScope) adminDetailScope.textContent = formatFilterLabel(activeQueueFilter);
+                    adminPaymentDetail.innerHTML = '<div class="admin-review-empty">Select a payment proof to inspect the receipt and complete the review.</div>';
+                    return;
+                }
+
+                const routeLabel = submission.routeAddress || "No route saved";
+                const assetLabel = submission.assetName
+                    ? submission.assetName + (submission.assetSymbol ? " (" + submission.assetSymbol + ")" : "")
+                    : submission.assetSymbol || formatMethodLabel(submission.fundingMethod);
+                const reviewNote = submission.reviewNote || "";
+                const isPending = submission.status === "pending";
+                const reviewClass = submission.status === "approved"
+                    ? " is-approved"
+                    : submission.status === "cancelled"
+                        ? " is-cancelled"
+                        : submission.status === "rejected"
+                            ? " is-rejected"
+                            : "";
+                const investorIdentity = toHtmlLines([
+                    submission.userName || "Investor",
+                    submission.userEmail || "No email"
+                ]);
+                const accountIdentity = toHtmlLines([
+                    submission.userUsername ? "@" + submission.userUsername : "No username saved",
+                    submission.userPhone || "No phone saved"
+                ]);
+                const residencyIdentity = toHtmlLines([
+                    submission.userCountry || "Country not provided",
+                    submission.userCreatedAt ? "Joined " + formatDateTime(submission.userCreatedAt) : "Join date unavailable"
+                ]);
+                const routeIdentity = toHtmlLines([
+                    assetLabel,
+                    routeLabel
+                ]);
+                const reviewTimeline = toHtmlLines(isPending
+                    ? ["Awaiting admin decision", "No review action recorded yet"]
+                    : [
+                        formatStatusLabel(submission.status) + " by " + (submission.reviewedBy || "Admin"),
+                        formatDateTime(submission.reviewedAt || submission.createdAt)
+                    ]);
+
+                if (adminDetailScope) {
+                    adminDetailScope.textContent = isPending ? "Pending Receipt" : formatStatusLabel(submission.status);
+                }
+
+                adminPaymentDetail.innerHTML = '<article class="admin-review-proof">' +
+                    '<div class="admin-review-proof-head"><div><h4>' + escapeHtml(submission.planName || "Plan payment") + '</h4><p>' + escapeHtml(submission.reference) + ' - ' + escapeHtml(formatMethodLabel(submission.fundingMethod)) + '</p></div><span class="admin-status ' + getStatusClass(submission.status) + '">' + escapeHtml(formatStatusLabel(submission.status)) + '</span></div>' +
+                    '<img src="' + escapeHtml(submission.proofImageDataUrl) + '" alt="Payment proof for ' + escapeHtml(submission.reference) + '">' +
+                    '<div class="admin-review-detail-stack">' +
+                        '<section class="admin-review-section">' +
+                            '<div class="admin-review-section-head"><p class="admin-review-section-title">Depositor Profile</p><span class="admin-review-chip">' + escapeHtml(submission.userId.slice(0, 8).toUpperCase()) + '</span></div>' +
+                            '<div class="admin-review-user-grid">' +
+                                buildReviewMetaCard("Investor", investorIdentity) +
+                                buildReviewMetaCard("Account", accountIdentity) +
+                                buildReviewMetaCard("Residence", residencyIdentity) +
+                                buildReviewMetaCard("Amount", escapeHtml(formatCurrency(submission.amount))) +
+                            '</div>' +
+                        '</section>' +
+                        '<section class="admin-review-section">' +
+                            '<div class="admin-review-section-head"><p class="admin-review-section-title">Transaction Record</p><span class="admin-review-chip">' + escapeHtml(formatMethodLabel(submission.fundingMethod)) + '</span></div>' +
+                            '<div class="admin-review-transaction-list">' +
+                                buildTransactionRow("Reference", escapeHtml(submission.reference)) +
+                                buildTransactionRow("Plan", escapeHtml(submission.planName || "Plan payment")) +
+                                buildTransactionRow("Method", escapeHtml(formatMethodLabel(submission.fundingMethod))) +
+                                buildTransactionRow("Route", routeIdentity) +
+                                buildTransactionRow("Proof File", toHtmlLines([submission.proofFileName || "Receipt image", submission.proofMimeType || ""])) +
+                                buildTransactionRow("Submitted", escapeHtml(formatDateTime(submission.createdAt))) +
+                                buildTransactionRow("Client Note", escapeHtml(submission.proofNote || "No user note was attached to this receipt.")) +
+                            '</div>' +
+                        '</section>' +
+                        '<div class="admin-review-note-grid">' +
+                            '<div class="admin-review-note"><label for="admin-review-note">Admin Note</label><textarea id="admin-review-note" placeholder="Add an approval, cancellation, or rejection note."' + (isPending ? "" : " disabled") + '>' + escapeHtml(reviewNote) + '</textarea><p>Leave a clear internal note before you complete the transaction decision.</p></div>' +
+                            '<div class="admin-review-reviewed' + reviewClass + '"><strong>' + escapeHtml(isPending ? "Awaiting review" : formatStatusLabel(submission.status) + " recorded") + '</strong><p>' + reviewTimeline + '<br>' + escapeHtml(reviewNote || "No review note was added.") + '</p></div>' +
+                        '</div>' +
+                        (isPending
+                            ? '<div class="admin-review-actions"><button type="button" class="admin-button" data-admin-review="approved">' + escapeHtml(formatReviewActionLabel("approved")) + '</button><button type="button" class="admin-button warn" data-admin-review="cancelled">' + escapeHtml(formatReviewActionLabel("cancelled")) + '</button><button type="button" class="admin-button danger" data-admin-review="rejected">' + escapeHtml(formatReviewActionLabel("rejected")) + '</button></div>'
+                            : '') +
+                    '</div>' +
+                '</article>';
+
+                adminPaymentDetail.querySelectorAll("[data-admin-review]").forEach(function (button) {
+                    button.addEventListener("click", function () {
+                        trackActivity();
+                        void reviewSubmission(button.getAttribute("data-admin-review") || "");
+                    });
+                });
+            };
+
+            const refreshSession = async function () {
+                if (!authUser || logoutInProgress) return false;
+
+                try {
+                    const response = await fetch(api + "/auth/admin/session/refresh", {
+                        method: "POST",
+                        credentials: "include",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: "{}"
+                    });
+
+                    if (response.status === 401) {
+                        await performLogout({
+                            skipRemote: true,
+                            broadcast: true,
+                            message: "Admin session expired. Sign in again.",
+                            status: "error"
+                        });
+                        return false;
+                    }
+
+                    if (!response.ok) {
+                        return false;
+                    }
+
+                    lastSessionRefreshAt = Date.now();
+                    return true;
+                } catch {
+                    return false;
+                }
+            };
+
+            const trackActivity = function (options) {
+                if (!authUser || logoutInProgress) return;
+
+                const now = Date.now();
+                const force = Boolean(options && options.force);
+                const shouldRefresh = !options || options.refresh !== false;
+
+                lastActivityAt = now;
+
+                if (force || now - lastActivityPersistedAt >= ACTIVITY_STORAGE_SYNC_MS) {
+                    lastActivityPersistedAt = now;
+                    writeStoredTimestamp(ACTIVITY_STORAGE_KEY, now);
+                }
+
+                if (shouldRefresh && !document.hidden && (force || now - lastSessionRefreshAt >= SESSION_REFRESH_THROTTLE_MS)) {
+                    void refreshSession();
+                }
+            };
+
+            const loadQueue = async function (options) {
+                const preferredSelection = options && options.selectionId ? options.selectionId : selectedSubmissionId;
+
+                if (!authUser) {
+                    setReviewWorkspaceVisible(false);
+                    resetQueueState();
+                    setStatusMessage("Sign in with the admin account to review payment proofs.");
+                    return;
+                }
+
+                if (adminLoadButton) {
+                    adminLoadButton.disabled = true;
+                    adminLoadButton.textContent = "Refreshing...";
+                }
+
+                try {
+                    const response = await fetch(api + "/dashboard/admin/payment-submissions", {
+                        credentials: "include",
+                        headers: {
+                            Accept: "application/json"
+                        }
+                    });
+                    const result = await parse(response);
+
+                    if (response.status === 401) {
+                        await performLogout({
+                            skipRemote: true,
+                            broadcast: true,
+                            message: "Admin session expired. Sign in again.",
+                            status: "error"
+                        });
+                        return;
+                    }
+
+                    if (!response.ok || !result.authorized) {
+                        throw new Error(extractApiMessage(result, "Unable to load the payment approval queue."));
+                    }
+
+                    paymentQueue = sortSubmissions(result.submissions);
+                    if (paymentQueue.some(function (submission) { return submission.id === preferredSelection; })) {
+                        selectedSubmissionId = preferredSelection || "";
+                    }
+                    updateSummary(result.summary);
+                    syncSelectedSubmission();
+
+                    setReviewWorkspaceVisible(true);
+                    renderQueueList();
+                    renderQueueDetail();
+                    if (!options || options.announce !== false) {
+                        setStatusMessage(activeQueueFilter === "all"
+                            ? "Queue updated. " + String((result.summary && result.summary.pending) || 0) + " payment proof(s) are pending review."
+                            : formatFilterLabel(activeQueueFilter) + " updated. " + String(getFilteredQueue().length) + " transaction(s) are in view.", "success");
+                    }
+                } catch (error) {
+                    resetQueueState();
+                    setStatusMessage(error instanceof Error ? error.message : "Unable to load the payment approval queue.", "error");
+                } finally {
+                    if (adminLoadButton) {
+                        adminLoadButton.disabled = false;
+                        adminLoadButton.textContent = "Refresh Queue";
+                    }
+                }
+            };
+
+            const reviewSubmission = async function (status) {
+                const submission = getSelectedSubmission();
+                const noteField = document.getElementById("admin-review-note");
+                const reviewNote = noteField ? noteField.value.trim() : "";
+
+                if (!authUser || !submission || reviewInFlight) return;
+                if (status !== "approved" && status !== "cancelled" && status !== "rejected") return;
+
+                reviewInFlight = true;
+                if (adminPaymentDetail) {
+                    adminPaymentDetail.querySelectorAll("[data-admin-review]").forEach(function (button) {
+                        button.disabled = true;
+                        if (button.getAttribute("data-admin-review") === status) {
+                            button.textContent = status === "approved"
+                                ? "Approving..."
+                                : status === "cancelled"
+                                    ? "Cancelling..."
+                                    : "Rejecting...";
+                        }
+                    });
+                }
+
+                try {
+                    const response = await fetch(api + "/dashboard/admin/payment-submissions/" + encodeURIComponent(submission.id) + "/review", {
+                        method: "POST",
+                        credentials: "include",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            status: status,
+                            reviewNote: reviewNote || null
+                        })
+                    });
+                    const result = await parse(response);
+
+                    if (response.status === 401) {
+                        await performLogout({
+                            skipRemote: true,
+                            broadcast: true,
+                            message: "Admin session expired. Sign in again.",
+                            status: "error"
+                        });
+                        return;
+                    }
+
+                    if (!response.ok || !result.reviewed || !result.submission) {
+                        throw new Error(extractApiMessage(result, "Unable to submit this review."));
+                    }
+
+                    activeQueueFilter = result.submission.status || "all";
+                    approvalMenuExpanded = true;
+                    setActiveAnchor("payments");
+                    updateApprovalMenuState();
+                    await loadQueue({ selectionId: result.submission.id, announce: false });
+                    setStatusMessage(formatStatusLabel(status) + " " + result.submission.reference + " for " + formatCurrency(result.submission.amount) + ".", "success");
+                } catch (error) {
+                    setStatusMessage(error instanceof Error ? error.message : "Unable to submit this review.", "error");
+                } finally {
+                    reviewInFlight = false;
+                }
+            };
+
+            const performLogout = async function (options) {
+                if (logoutInProgress) return;
+                logoutInProgress = true;
+
+                const skipRemote = Boolean(options && options.skipRemote);
+                const shouldBroadcast = !options || options.broadcast !== false;
+                const message = options && typeof options.message === "string"
+                    ? options.message
+                    : "Admin session closed.";
+                const status = options && typeof options.status === "string"
+                    ? options.status
+                    : "success";
+                const preservedIdentifier = authUser && (authUser.username || authUser.email)
+                    ? (authUser.username || authUser.email)
+                    : (adminLoginIdentifier ? adminLoginIdentifier.value.trim() : "");
+
+                if (!skipRemote) {
+                    try {
+                        await fetch(api + "/auth/admin/logout", {
+                            method: "POST",
+                            credentials: "include",
+                            headers: {
+                                Accept: "application/json",
+                                "Content-Type": "application/json"
+                            },
+                            body: "{}"
+                        });
+                    } catch {}
+                }
+
+                if (shouldBroadcast) {
+                    writeStoredTimestamp(LOGOUT_STORAGE_KEY, Date.now());
+                }
+
+                authUser = null;
+                authSessionMode = null;
+                lastSessionRefreshAt = 0;
+                lastActivityAt = Date.now();
+                lastActivityPersistedAt = 0;
+
+                if (adminLoginIdentifier) {
+                    adminLoginIdentifier.value = preservedIdentifier;
+                }
+
+                if (adminLoginPassword) {
+                    adminLoginPassword.value = "";
+                }
+
+                setAuthenticatedState(null, null);
+                setStatusMessage(message, status);
+                logoutInProgress = false;
+            };
+
+            const handleLogin = async function () {
+                if (loginInFlight) return;
+
+                const identifier = adminLoginIdentifier ? adminLoginIdentifier.value.trim() : "";
+                const password = adminLoginPassword ? adminLoginPassword.value : "";
+
+                if (!identifier || !password) {
+                    setStatusMessage("Enter the admin username and password to continue.", "error");
+                    return;
+                }
+
+                loginInFlight = true;
+
+                if (adminLoginButton) {
+                    adminLoginButton.disabled = true;
+                    adminLoginButton.textContent = "Signing In...";
+                }
+
+                try {
+                    const response = await fetch(api + "/auth/admin/login", {
+                        method: "POST",
+                        credentials: "include",
+                        headers: {
+                            Accept: "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            emailOrUsername: identifier,
+                            password: password
+                        })
+                    });
+                    const result = await parse(response);
+
+                    if (!response.ok || !result.success || !result.user) {
+                        throw new Error(extractApiMessage(result, "Unable to sign in to the admin console."));
+                    }
+
+                    setAuthenticatedState(result.user, result.sessionMode || null);
+                    lastActivityAt = Date.now();
+                    lastActivityPersistedAt = 0;
+                    lastSessionRefreshAt = Date.now();
+                    trackActivity({ force: true, refresh: false });
+                    setStatusMessage("Admin session active. Loading the payment queue now.", "success");
+                    await loadQueue();
+                } catch (error) {
+                    setAuthenticatedState(null, null);
+                    setStatusMessage(error instanceof Error ? error.message : "Unable to sign in to the admin console.", "error");
+                } finally {
+                    loginInFlight = false;
+                    if (adminLoginButton) {
+                        adminLoginButton.disabled = false;
+                        adminLoginButton.textContent = "Sign In";
+                    }
+                }
+            };
+
+            const restoreSession = async function () {
+                setStatusMessage("Checking admin session...");
+
+                try {
+                    const response = await fetch(api + "/auth/admin/me", {
+                        credentials: "include",
+                        headers: {
+                            Accept: "application/json"
+                        }
+                    });
+                    const result = await parse(response);
+
+                    if (!response.ok) {
+                        throw new Error(extractApiMessage(result, "Unable to restore the admin session."));
+                    }
+
+                    if (!result.authenticated || !result.user) {
+                        setAuthenticatedState(null, null);
+                        setStatusMessage("Sign in with the admin account to review payment proofs.");
+                        return;
+                    }
+
+                    syncActivityFromStorage();
+                    if (Date.now() - lastActivityAt >= IDLE_TIMEOUT_MS) {
+                        await performLogout({
+                            broadcast: true,
+                            message: "Admin session ended after 30 minutes of inactivity.",
+                            status: "error"
+                        });
+                        return;
+                    }
+
+                    setAuthenticatedState(result.user, result.sessionMode || null);
+                    lastSessionRefreshAt = Date.now();
+                    trackActivity({ force: true, refresh: false });
+                    setStatusMessage("Admin session restored.", "success");
+                    await loadQueue();
+                } catch (error) {
+                    setAuthenticatedState(null, null);
+                    setStatusMessage(error instanceof Error ? error.message : "Unable to restore the admin session.", "error");
+                }
+            };
+
+            const enforceIdleTimeout = function () {
+                if (!authUser || logoutInProgress) return;
+                syncActivityFromStorage();
+                if (Date.now() - lastActivityAt < IDLE_TIMEOUT_MS) return;
+                void performLogout({
+                    broadcast: true,
+                    message: "Admin session ended after 30 minutes of inactivity.",
+                    status: "error"
+                });
+            };
+
+            if (adminLoginForm) {
+                adminLoginForm.addEventListener("submit", function (event) {
+                    event.preventDefault();
+                    void handleLogin();
+                });
+            }
+
+            adminAnchorLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    trackActivity();
+                    setActiveAnchor(link.getAttribute("data-admin-anchor") || "overview");
+                });
+            });
+
+            if (adminApprovalsToggle) {
+                adminApprovalsToggle.addEventListener("click", function () {
+                    approvalMenuExpanded = !approvalMenuExpanded;
+                    updateApprovalMenuState();
+                });
+            }
+
+            adminFilterButtons.forEach(function (button) {
+                button.addEventListener("click", function (event) {
+                    trackActivity();
+                    const filter = button.getAttribute("data-admin-filter") || "all";
+                    if (button.tagName === "A" && currentAdminPage !== "payments") {
+                        return;
+                    }
+                    if (button.tagName === "A") {
+                        event.preventDefault();
+                    }
+                    setQueueFilter(filter, { scroll: true });
+                    if (button.tagName === "A" && window.history && typeof window.history.replaceState === "function") {
+                        const nextUrl = new URL(button.href, window.location.href);
+                        window.history.replaceState({}, "", nextUrl.toString());
+                    }
+                });
+            });
+
+            if (adminLoadButton) {
+                adminLoadButton.addEventListener("click", function () {
+                    trackActivity();
+                    void loadQueue();
+                });
+            }
+
+            if (adminLogoutButton) {
+                adminLogoutButton.addEventListener("click", function () {
+                    trackActivity({ force: true, refresh: false });
+                    void performLogout({
+                        broadcast: true,
+                        message: "Admin session closed.",
+                        status: "success"
+                    });
+                });
+            }
+
+            ["pointerdown", "touchstart", "scroll", "wheel"].forEach(function (eventName) {
+                window.addEventListener(eventName, function () {
+                    trackActivity();
+                }, { passive: true });
+            });
+
+            window.addEventListener("focus", function () {
+                if (!authUser) return;
+                syncActivityFromStorage();
+                if (Date.now() - lastActivityAt >= IDLE_TIMEOUT_MS) {
+                    void performLogout({
+                        broadcast: true,
+                        message: "Admin session ended after 30 minutes of inactivity.",
+                        status: "error"
+                    });
+                    return;
+                }
+                trackActivity({ force: true });
+            });
+
+            document.addEventListener("visibilitychange", function () {
+                if (!authUser || document.visibilityState !== "visible") return;
+                syncActivityFromStorage();
+                if (Date.now() - lastActivityAt >= IDLE_TIMEOUT_MS) {
+                    void performLogout({
+                        broadcast: true,
+                        message: "Admin session ended after 30 minutes of inactivity.",
+                        status: "error"
+                    });
+                    return;
+                }
+                trackActivity({ force: true });
+            });
+
+            window.addEventListener("storage", function (event) {
+                if (event.key === ACTIVITY_STORAGE_KEY && event.newValue) {
+                    const value = Number(event.newValue);
+                    if (Number.isFinite(value) && value > 0) {
+                        lastActivityAt = Math.max(lastActivityAt, value);
+                        lastActivityPersistedAt = Math.max(lastActivityPersistedAt, value);
+                    }
+                    return;
+                }
+
+                if (event.key === LOGOUT_STORAGE_KEY && event.newValue && authUser && !logoutInProgress) {
+                    void performLogout({
+                        skipRemote: true,
+                        broadcast: false,
+                        message: "Admin session ended in another tab.",
+                        status: "error"
+                    });
+                }
+            });
+
+            document.addEventListener("keydown", function (event) {
+                if (authUser) {
+                    trackActivity();
+                }
+
+                if (event.key === "Escape" && adminLoginPassword && document.activeElement === adminLoginPassword) {
+                    adminLoginPassword.blur();
+                }
+            });
+
+            window.setInterval(enforceIdleTimeout, IDLE_CHECK_INTERVAL_MS);
+            applyPageMeta();
+            applyPageLayout();
+            setAuthenticatedState(null, null);
+            updateApprovalMenuState();
+            syncActiveAnchorFromHash();
+            void restoreSession();
+        })();
+    </script>
+</body>
+</html>

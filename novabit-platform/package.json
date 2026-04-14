@@ -1,0 +1,26 @@
+{
+  "name": "novabit-platform",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/api"
+  ],
+  "scripts": {
+    "dev:html": "node scripts/serve-html.mjs",
+    "dev:api": "npm run start:dev --workspace apps/api",
+    "build:api": "npm run build --workspace apps/api",
+    "start": "npm run start:prod --workspace apps/api",
+    "lint:api": "npm run lint --workspace apps/api",
+    "typecheck:api": "npm run typecheck --workspace apps/api",
+    "test:api": "npm run test --workspace apps/api",
+    "test:api:e2e": "npm run test:e2e --workspace apps/api",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down"
+  },
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.103.0"
+  }
+}

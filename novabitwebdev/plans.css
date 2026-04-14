@@ -1,0 +1,179 @@
+.plans-page {
+    --plans-brand: #28c0c3;
+    --plans-brand-deep: #0f6f7a;
+    --plans-brand-dark: #0a4a57;
+    --plans-ink: #102832;
+    --plans-copy: #4f6770;
+    background:
+        radial-gradient(circle at top left, rgba(40, 192, 195, 0.18), transparent 22rem),
+        radial-gradient(circle at top right, rgba(15, 111, 122, 0.11), transparent 28rem),
+        linear-gradient(180deg, #f8fcfc 0%, #eef8f7 48%, #f7fbfd 100%);
+}
+
+.plans-page body {
+    background: transparent;
+    color: var(--plans-ink);
+    font-family: "Inter", sans-serif;
+}
+
+.plans-shell {
+    width: min(1180px, calc(100% - 2rem));
+    margin: 0 auto;
+}
+
+.plans-display {
+    font-family: "Space Grotesk", "Inter", sans-serif;
+}
+
+.plans-glass {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(40, 192, 195, 0.16);
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 32px 62px -42px rgba(8, 39, 44, 0.24);
+    backdrop-filter: blur(20px);
+}
+
+.plans-glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.34), transparent 38%, transparent 68%, rgba(255, 255, 255, 0.18));
+    pointer-events: none;
+}
+
+.plans-hero-panel {
+    background:
+        radial-gradient(circle at top left, rgba(40, 192, 195, 0.22), transparent 24rem),
+        linear-gradient(135deg, rgba(255, 255, 255, 1), rgba(236, 249, 248, 0.97));
+}
+
+.plans-featured-panel {
+    background:
+        radial-gradient(circle at top right, rgba(40, 192, 195, 0.28), transparent 20rem),
+        radial-gradient(circle at bottom left, rgba(79, 243, 247, 0.18), transparent 18rem),
+        linear-gradient(135deg, rgba(233, 248, 247, 0.98), rgba(223, 245, 244, 0.96));
+    border-color: rgba(40, 192, 195, 0.22);
+    box-shadow: 0 32px 62px -42px rgba(8, 39, 44, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+.plans-featured-panel .plans-featured-label {
+    color: #0f6f7a;
+}
+
+.plans-featured-panel .plans-featured-title {
+    color: #0a4a57;
+}
+
+.plans-featured-panel .plans-featured-rate {
+    color: #0f6f7a;
+}
+
+.plans-featured-panel .plans-featured-text {
+    color: #4f6770;
+}
+
+.plans-featured-panel .plans-featured-stat {
+    color: #0a4a57;
+}
+
+.plans-card {
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.plans-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 48px -16px rgba(8, 39, 44, 0.18);
+}
+
+.plans-card--starter:hover {
+    box-shadow: 0 20px 48px -16px rgba(40, 192, 195, 0.2);
+}
+
+.plans-card--growth:hover {
+    box-shadow: 0 20px 48px -16px rgba(15, 111, 122, 0.22);
+}
+
+.plans-card--premium:hover {
+    box-shadow: 0 20px 48px -16px rgba(255, 149, 0, 0.22);
+}
+
+.plans-card--starter.is-active {
+    border-color: rgba(40, 192, 195, 0.8);
+    box-shadow: 0 0 0 3px rgba(40, 192, 195, 0.15), 0 20px 48px -16px rgba(40, 192, 195, 0.25);
+}
+
+.plans-card--growth.is-active {
+    border-color: rgba(15, 111, 122, 0.7);
+    box-shadow: 0 0 0 3px rgba(40, 192, 195, 0.2), 0 20px 48px -16px rgba(15, 111, 122, 0.25);
+}
+
+.plans-card--premium.is-active {
+    border-color: rgba(255, 165, 0, 0.8);
+    box-shadow: 0 0 0 3px rgba(255, 184, 77, 0.2), 0 20px 48px -16px rgba(255, 149, 0, 0.25);
+}
+
+.plans-chip-button {
+    transition: transform 0.18s ease, border-color 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.plans-chip-button:hover {
+    transform: translateY(-1px);
+}
+
+.plans-chip-button.is-active {
+    background: rgba(40, 192, 195, 0.16);
+    border-color: rgba(15, 111, 122, 0.3);
+    color: var(--plans-brand-deep);
+    box-shadow: 0 0 0 3px rgba(40, 192, 195, 0.12);
+}
+
+.plans-pill-soft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.42rem 0.72rem;
+    border-radius: 999px;
+    border: 1px solid rgba(40, 192, 195, 0.14);
+    background: rgba(233, 248, 247, 0.88);
+    color: #25424c;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.plans-pill-dim {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.42rem 0.68rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.plans-breakdown-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .plans-shell {
+        width: min(100% - 1rem, 100%);
+    }
+
+    .plans-breakdown-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

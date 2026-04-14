@@ -1,0 +1,171 @@
+{
+  "users": [
+    {
+      "id": "ec57061d-99aa-4f66-8316-26bde6dd3d6a",
+      "username": "fullscale1775036050",
+      "name": "Full Scale User",
+      "email": "fullscale1775036050@local.test",
+      "phone": "+15550001234",
+      "country": "United States",
+      "coupon": "LAMALAMA",
+      "couponAccepted": true,
+      "createdAt": "2026-04-01T09:34:10.303Z",
+      "passwordHash": "91ea2e52698e0333fcb70d80b5eab9a2cda901a57fa56038208ad3e48b1d9c9c7065ceac31492059614c85c76a572c639241abe1e867d197611bf8338fbe2270",
+      "passwordSalt": "06a19fc044583842306bbe8e56d4bc89",
+      "role": "user"
+    },
+    {
+      "id": "de4c7229-34ef-4c78-b4a2-8325f1995408",
+      "username": "livefull1775036435",
+      "name": "Live Full User",
+      "email": "livefull1775036435@local.test",
+      "phone": "+15550004321",
+      "country": "United States",
+      "coupon": null,
+      "couponAccepted": false,
+      "createdAt": "2026-04-01T09:40:35.232Z",
+      "passwordHash": "c84f24aa3f788e8b39d2f93f4e779b5b5d3915b5dfb2e3c05b3ef209ba3510b982e1f8da90531d5e2dab026efae22e5f6b266243c17f2e7c055e06cae63a185e",
+      "passwordSalt": "7d3720249e39152739184a9c88916fef",
+      "role": "user"
+    },
+    {
+      "id": "c3254a04-df01-4c91-8880-0dd929b00a7c",
+      "username": "novabitadmin",
+      "role": "admin",
+      "name": "Novabit Admin",
+      "email": "admin@novabit.local",
+      "phone": "+15550000000",
+      "country": "United States",
+      "coupon": null,
+      "couponAccepted": false,
+      "createdAt": "2026-04-08T18:20:17.402Z",
+      "passwordHash": "94b673742781a84f0ccc1355009a6518f923f82e96feefbe7ee55814287318ffd5eb7a0dd39e96655e4573f998a4aefad67f8669bfeb43354f542e41d0971a21",
+      "passwordSalt": "41f5d78d102e9b34646898b82058a0a9"
+    }
+  ],
+  "sessions": [
+    [
+      "096c3d882adf78fdd454618e27444c1e52265a6e72b92543b12bd53dc5dacc64",
+      {
+        "id": "1f9bb827-4898-41a1-ac55-07ae7f308608",
+        "userId": "ec57061d-99aa-4f66-8316-26bde6dd3d6a",
+        "expiresAt": "2026-05-01T09:34:10.372Z",
+        "remember": true
+      }
+    ],
+    [
+      "488b647471ea373d5aa661199d4d9e90f5599eab114d5b1bc2fb5bbb3f24d570",
+      {
+        "id": "82aa7103-a889-4371-b3ea-235f59ba6285",
+        "userId": "de4c7229-34ef-4c78-b4a2-8325f1995408",
+        "expiresAt": "2026-05-01T09:40:35.308Z",
+        "remember": true
+      }
+    ],
+    [
+      "d44a9f49704b605b5785f01166bcd2d66fa94f882308b2b30d26a8946f990394",
+      {
+        "id": "3244cc32-aded-4ff7-bcd5-ec13bb6dd744",
+        "userId": "c3254a04-df01-4c91-8880-0dd929b00a7c",
+        "expiresAt": "2026-04-08T18:54:08.796Z",
+        "remember": false
+      }
+    ]
+  ],
+  "dashboardAccounts": [
+    {
+      "userId": "ec57061d-99aa-4f66-8316-26bde6dd3d6a",
+      "accountRole": "Trading Account",
+      "accountState": "Session active",
+      "verificationStatus": "unverified",
+      "walletConnected": false,
+      "accountBalance": 0,
+      "totalProfit": 0,
+      "totalDeposit": 0,
+      "totalWithdrawal": 0,
+      "bonusBalance": 0,
+      "demoBalance": 100000,
+      "activePlans": 0,
+      "pendingItems": 0,
+      "referralCode": "NOVA-FULLSCALE1775036050",
+      "referralRatePercent": 5,
+      "statementEntries": [
+        {
+          "id": "f93d8d6f-8e62-4d35-a20b-0d9a3a2268aa",
+          "kind": "bonus",
+          "title": "Coupon linked",
+          "description": "Celebrity coupon LAMALAMA was attached to this account.",
+          "amount": 0,
+          "status": "completed",
+          "createdAt": "2026-04-01T09:34:10.303Z"
+        },
+        {
+          "id": "9083ff88-fabf-4418-aa65-401cdc2e1e6b",
+          "kind": "account_created",
+          "title": "Account created",
+          "description": "Your Novabit trading account is ready.",
+          "amount": null,
+          "status": "completed",
+          "createdAt": "2026-04-01T09:34:10.303Z"
+        }
+      ],
+      "tradeRecords": [],
+      "portfolioPositions": [],
+      "updatedAt": "2026-04-01T09:34:10.303Z"
+    },
+    {
+      "userId": "de4c7229-34ef-4c78-b4a2-8325f1995408",
+      "accountRole": "Trading Account",
+      "accountState": "Session active",
+      "verificationStatus": "unverified",
+      "walletConnected": false,
+      "accountBalance": 0,
+      "totalProfit": 0,
+      "totalDeposit": 0,
+      "totalWithdrawal": 0,
+      "bonusBalance": 0,
+      "demoBalance": 100000,
+      "activePlans": 0,
+      "pendingItems": 0,
+      "referralCode": "NOVA-LIVEFULL1775036435",
+      "referralRatePercent": 5,
+      "statementEntries": [
+        {
+          "id": "f1166ac0-696a-4a9a-9f47-0b9ee5a77bf0",
+          "kind": "account_created",
+          "title": "Account created",
+          "description": "Your Novabit trading account is ready.",
+          "amount": null,
+          "status": "completed",
+          "createdAt": "2026-04-01T09:40:35.232Z"
+        }
+      ],
+      "tradeRecords": [],
+      "portfolioPositions": [],
+      "updatedAt": "2026-04-01T09:40:35.232Z"
+    }
+  ],
+  "contactSubmissions": [],
+  "passwordResetRequests": [],
+  "paymentSubmissions": [],
+  "rateLimitBuckets": [
+    [
+      "auth-login:::ffff:127.0.0.1",
+      {
+        "scope": "auth-login",
+        "key": "::ffff:127.0.0.1",
+        "count": 2,
+        "resetAt": "2026-04-08T18:33:39.110Z"
+      }
+    ],
+    [
+      "auth-admin-login:::1",
+      {
+        "scope": "auth-admin-login",
+        "key": "::1",
+        "count": 1,
+        "resetAt": "2026-04-08T18:34:08.749Z"
+      }
+    ]
+  ]
+}

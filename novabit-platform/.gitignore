@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.production
+.env.local
+*.log
+data/platform-store.json
+hts-cache/
+hts-log.txt
+

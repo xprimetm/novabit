@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" class="light bg-gray-300 h-full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novabit Capital - KYC Queue</title>
+    <link href="temp/custom/img/novabit-symbol.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="light-theme.css?v=20260330n">
+    <style>
+        *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#15232b;background:radial-gradient(circle at 8% 0%,rgba(40,192,195,.18),transparent 28%),linear-gradient(180deg,#f7fafb,#eef3f5)}button,input,select{font:inherit}.main{min-height:100vh;padding:1.2rem}.shell{max-width:92rem;margin:0 auto;display:grid;grid-template-columns:260px minmax(0,1fr);gap:1rem;align-items:start}.side,.panel,.card,.gate-card{border:1px solid rgba(40,192,195,.14);background:rgba(255,255,255,.92);box-shadow:0 30px 66px -46px rgba(8,39,44,.34);backdrop-filter:blur(18px) saturate(180%)}.side{position:sticky;top:1.2rem;display:grid;gap:1rem;border-radius:1.4rem;padding:1rem}.brand{display:grid;gap:.7rem;padding:1rem;border-radius:1.1rem;border:1px solid rgba(40,192,195,.14);background:linear-gradient(180deg,#fff,rgba(242,251,250,.96))}.brand img{width:9.3rem}.eyebrow{margin:0;color:#0d7478;font-size:.68rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.nav{display:grid;gap:.28rem}.nav-title{margin:0 .2rem;color:#7a8d96;font-size:.68rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.link{display:flex;align-items:center;gap:.66rem;min-height:2.75rem;padding:.75rem .82rem;border-radius:.9rem;border:1px solid transparent;color:#5b717b;text-decoration:none;font-size:.92rem;font-weight:750}.link:hover{background:rgba(40,192,195,.09);border-color:rgba(40,192,195,.14);color:#142830}.link.active{background:linear-gradient(135deg,#28c0c3,#1e88a8);color:#fff}.dot{width:.6rem;height:.6rem;border-radius:999px;background:currentColor;opacity:.8}.content{display:grid;gap:1rem;min-width:0}.top{display:flex;align-items:center;justify-content:space-between;gap:1rem}.title{display:grid;gap:.24rem}.title h1,.gate-card h1{margin:0;color:#12252d;font-size:clamp(2rem,4vw,3.1rem);line-height:.95;letter-spacing:-.06em}.copy{margin:0;color:#60747d;font-size:.92rem;line-height:1.65}.actions{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:2.65rem;padding:.72rem .95rem;border:0;border-radius:999px;background:linear-gradient(135deg,#28c0c3,#1e88a8);color:#fff;font-size:.82rem;font-weight:900;cursor:pointer}.btn.ghost{border:1px solid rgba(40,192,195,.14);background:rgba(255,255,255,.88);color:#223942}.btn:disabled{opacity:.55;cursor:default}.panel{border-radius:1.45rem;padding:1rem}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem}.card{display:grid;gap:.3rem;border-radius:1.15rem;padding:1rem}.card span{color:#7a8d96;font-size:.68rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.card strong{color:#10242d;font-size:1.7rem;line-height:1;letter-spacing:-.05em}.status{margin:0;padding:.8rem .95rem;border-radius:1rem;border:1px solid rgba(40,192,195,.14);background:rgba(243,252,251,.95);color:#526a74;font-size:.84rem;line-height:1.55}.status.error{border-color:rgba(214,62,77,.18);background:rgba(255,245,246,.96);color:#b02d3c}.status.success{border-color:rgba(49,208,139,.18);background:rgba(242,252,247,.96);color:#188456}.table-wrap{overflow:auto;border-radius:1.1rem;border:1px solid rgba(110,110,115,.1);background:rgba(255,255,255,.78)}table{width:100%;min-width:72rem;border-collapse:collapse}th,td{padding:.8rem .75rem;border-bottom:1px solid rgba(110,110,115,.09);text-align:left;vertical-align:top}th{color:#7a8d96;font-size:.66rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase;background:rgba(247,250,251,.98)}td strong{display:block;color:#172a32;font-size:.9rem;line-height:1.35}td span,td small{display:block;margin-top:.18rem;color:#647882;font-size:.76rem;line-height:1.45}.badge{display:inline-flex;min-height:1.75rem;padding:.34rem .6rem;border-radius:999px;font-size:.66rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.pending{background:rgba(245,185,76,.14);color:#9a6506}.approved{background:rgba(49,208,139,.14);color:#136f4c}.rejected{background:rgba(214,62,77,.12);color:#b02d3c}.row-actions{display:grid;grid-template-columns:minmax(8rem,1fr) minmax(12rem,1.3fr) auto;gap:.45rem;align-items:start}.row-actions select,.row-actions input{width:100%;min-height:2.3rem;border-radius:.75rem;border:1px solid rgba(110,110,115,.14);background:#fff;color:#172a32;padding:0 .68rem;outline:none}.mini{min-height:2.3rem;padding:.55rem .72rem;border:1px solid rgba(40,192,195,.14);border-radius:.75rem;background:#fff;color:#172a32;font-size:.72rem;font-weight:900;cursor:pointer}.mini.primary{border-color:transparent;background:linear-gradient(135deg,#28c0c3,#1e88a8);color:#fff}.empty{display:grid;place-items:center;min-height:11rem;padding:1rem;color:#60747d;text-align:center;line-height:1.6}.gate{max-width:34rem;min-height:calc(100vh - 2.4rem);margin:0 auto;display:grid;place-items:center}.gate-card{width:min(100%,34rem);display:grid;gap:1rem;border-radius:1.55rem;padding:1.25rem}.form{display:grid;gap:.75rem}.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem}.field{display:grid;gap:.42rem}.field span{color:#7a8d96;font-size:.68rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}.field input{width:100%;min-height:3rem;padding:0 .9rem;border-radius:.9rem;border:1px solid rgba(110,110,115,.14);background:rgba(255,255,255,.96);color:#172a32;outline:none}.modal{position:fixed;inset:0;display:grid;place-items:center;padding:1rem;background:rgba(7,20,27,.58);z-index:99999}.modal[hidden]{display:none!important}.dialog{width:min(100%,68rem);display:grid;gap:1rem;border-radius:1.5rem;padding:1rem;background:#fff;box-shadow:0 34px 70px -42px rgba(8,39,44,.5)}.dialog-head{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;align-items:flex-start}.dialog h2{margin:0;font-size:1.25rem;letter-spacing:-.04em}.preview{width:100%;max-height:76vh;object-fit:contain;border-radius:1rem;border:1px solid rgba(110,110,115,.1);background:#f8fafb}@media(max-width:1024px){.shell{grid-template-columns:1fr}.side{position:static}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:720px){.main{padding:.9rem}.cards,.fields{grid-template-columns:1fr}.top{align-items:flex-start;flex-direction:column}.actions,.btn{width:100%}.row-actions{grid-template-columns:1fr}}
+        .review-dialog{width:min(100%,78rem);max-height:94vh;overflow:hidden;padding:1.1rem;background:linear-gradient(180deg,#fff,#f7fbfb)}.review-dialog .dialog-head{align-items:center;border-bottom:1px solid rgba(110,110,115,.1);padding-bottom:.85rem}.review-note{margin:.1rem 0 0;color:#405963;font-size:.84rem;font-weight:800}.preview-shell{display:grid;place-items:center;min-height:34rem;max-height:72vh;overflow:auto;border:1px solid rgba(17,48,58,.12);border-radius:1.25rem;background:linear-gradient(135deg,#eef8f7,#fff);padding:.75rem}.preview,.preview-frame{width:100%;min-height:34rem;max-height:70vh;border:0;border-radius:1rem;background:#fff}.preview{object-fit:contain}.preview-frame{height:70vh}.preview-empty{width:100%;display:grid;place-items:center;gap:.5rem;min-height:18rem;padding:2rem;border-radius:1rem;background:#fff;color:#526a74;text-align:center}.preview-empty strong{color:#172a32;font-size:1.05rem}.preview-empty p{max-width:32rem;margin:0;line-height:1.6}.btn.danger{background:#fff;color:#9f2432;border:1px solid rgba(214,62,77,.18)}@media(max-width:720px){.review-dialog{max-height:96vh;padding:.8rem}.preview-shell{min-height:24rem}.preview,.preview-frame{min-height:24rem;height:62vh}.review-dialog .actions{width:100%;display:grid;grid-template-columns:1fr}.review-dialog .btn{width:100%}}
+        .preview-shell .preview{width:auto;max-width:100%;min-width:0;min-height:0;height:auto;max-height:70vh}
+        .modal.open{display:grid!important;visibility:visible!important;opacity:1!important}.modal.open .dialog{transform:none!important}.preview-shell .preview.is-visible{display:block!important;visibility:visible!important;opacity:1!important}
+        .kyc-table{min-width:58rem}.kyc-table th,.kyc-table td{padding:.58rem .62rem;vertical-align:middle}.kyc-case,.kyc-person,.kyc-identity,.kyc-doc{display:grid;gap:.16rem}.kyc-case strong,.kyc-person strong,.kyc-identity strong,.kyc-doc strong{font-size:.82rem;line-height:1.25}.kyc-meta{color:#6b7f88;font-size:.7rem;line-height:1.35}.kyc-doc-name{max-width:13rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.doc-trigger{width:max-content;min-height:2.05rem;padding:.48rem .72rem;border:0;border-radius:999px;background:linear-gradient(135deg,#28c0c3,#1e88a8);color:#fff;font-size:.68rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}.review-cell{min-width:17rem}.row-actions.compact{grid-template-columns:minmax(6.3rem,.7fr) minmax(8rem,1fr) auto;gap:.35rem}.row-actions.compact select,.row-actions.compact input{min-height:2.05rem;border-radius:.65rem;font-size:.72rem}.mini{min-height:2.05rem;padding:.46rem .62rem;font-size:.68rem}.status-stack{display:flex;align-items:center;gap:.42rem;flex-wrap:wrap}.reviewed-by{font-size:.72rem;color:#60747d}@media(max-width:720px){.kyc-table{min-width:48rem}.review-cell{min-width:14rem}.doc-trigger{width:100%}}
+        .review-dialog{width:min(100%,42rem);max-height:90vh;overflow:auto;border-radius:1.55rem;padding:1.05rem;background:linear-gradient(180deg,#fff,#f7fbfb);border:1px solid rgba(40,192,195,.16)}.review-dialog .dialog-head{align-items:flex-start;border-bottom:1px solid rgba(110,110,115,.1);padding-bottom:.75rem}.preview-shell{min-height:14rem;max-height:58vh;overflow:auto;border-radius:1rem;background:#eef8f7;padding:.65rem}.preview,.preview-frame{width:100%;min-height:14rem;max-height:54vh;border:0;border-radius:.85rem;background:#fff}.preview-frame{height:54vh}.preview-shell .preview{width:auto;max-width:100%;min-width:0;min-height:0;height:auto;max-height:54vh}.preview-empty{min-height:12rem;padding:1.2rem}.review-dialog .actions{gap:.45rem}.review-dialog .btn{min-height:2.35rem;padding:.62rem .85rem;font-size:.75rem}@media(max-width:720px){.review-dialog{width:min(100%,34rem);padding:.85rem}.preview-shell{min-height:12rem}.preview,.preview-frame{min-height:12rem;height:48vh;max-height:48vh}.review-dialog .actions{width:100%;display:grid;grid-template-columns:1fr}.review-dialog .btn{width:100%}}
+        .kyc-preview-overlay{position:fixed!important;inset:0!important;display:none!important;align-items:center!important;justify-content:center!important;padding:1rem!important;background:rgba(7,20,27,.58)!important;z-index:999999!important}.kyc-preview-overlay.is-open{display:flex!important}.kyc-preview-overlay[hidden]{display:none!important}.kyc-preview-overlay .review-dialog{margin:auto!important;position:relative!important}
+    </style>
+    <style>
+        .admin-shell{grid-template-columns:272px minmax(0,1fr)}
+        .admin-sidebar{position:sticky;top:1.2rem;display:flex;flex-direction:column;gap:1rem;height:calc(100vh - 2.4rem);overflow-y:auto;padding:1rem;border-radius:1.55rem;border:1px solid rgba(40,192,195,.14);background:radial-gradient(circle at top right,rgba(40,192,195,.12),transparent 32%),linear-gradient(180deg,rgba(255,255,255,.96),rgba(244,248,250,.98));box-shadow:0 30px 66px -44px rgba(8,39,44,.28);backdrop-filter:blur(18px) saturate(180%)}
+        .admin-sidebar::-webkit-scrollbar{width:.55rem}
+        .admin-sidebar::-webkit-scrollbar-thumb{border-radius:999px;background:rgba(40,192,195,.18)}
+        .admin-brand{display:grid;gap:.8rem;padding:.95rem;border-radius:1.12rem;border:1px solid rgba(40,192,195,.12);background:radial-gradient(circle at top right,rgba(40,192,195,.14),transparent 42%),linear-gradient(180deg,rgba(255,255,255,.98),rgba(243,249,250,.98))}
+        .admin-brand__workspace{display:flex;align-items:center;justify-content:space-between;gap:.8rem}
+        .admin-brand__env{display:inline-flex;align-items:center;padding:.32rem .62rem;border-radius:999px;background:rgba(49,208,139,.12);color:#188456;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+        .admin-brand img{display:block;height:1.7rem;width:auto;opacity:.96}
+        .admin-eyebrow{margin:0;color:#0d7478;font-size:.68rem;font-weight:900;letter-spacing:.18em;text-transform:uppercase}
+        .admin-side-group,.admin-sidebar-section{display:grid;gap:.5rem}
+        .admin-side-group-label,.admin-sidebar-title{margin:0 .2rem;color:#7a8d96;font-size:.67rem;font-weight:900;letter-spacing:.16em;text-transform:uppercase}
+        .admin-sidebar-nav,.admin-role-submenu{display:grid}
+        .admin-sidebar-nav{gap:.22rem}
+        .admin-role-submenu{gap:.22rem;padding:.08rem 0 0 .78rem}
+        .admin-sidebar-link,.admin-sidebar-toggle,.admin-sidebar-sublink{display:flex;align-items:center;gap:.74rem;min-height:2.9rem;padding:.78rem .82rem;border-radius:.95rem;border:1px solid transparent;background:transparent;color:#5b717b;text-decoration:none;font-size:.95rem;font-weight:700;transition:background-color .18s ease,border-color .18s ease,color .18s ease}
+        .admin-sidebar-sublink{min-height:2.55rem;padding:.68rem .76rem;font-size:.88rem;color:#58717d}
+        .admin-sidebar-link svg,.admin-sidebar-toggle svg,.admin-sidebar-sublink svg{flex:0 0 auto;width:1rem;height:1rem;color:rgba(13,105,112,.78)}
+        .admin-sidebar-link:hover,.admin-sidebar-toggle:hover,.admin-sidebar-sublink:hover{color:#142830;background:rgba(40,192,195,.09);border-color:rgba(40,192,195,.12)}
+        .admin-sidebar-link.is-active,.admin-sidebar-toggle.is-active{color:#fff;background:linear-gradient(135deg,#28c0c3,#1e88a8);border-color:rgba(40,192,195,.2);box-shadow:0 18px 34px -24px rgba(40,192,195,.28)}
+        .admin-sidebar-sublink.is-active{color:#142830;background:rgba(40,192,195,.11);border-color:rgba(40,192,195,.14)}
+        .admin-sidebar-link.is-active svg,.admin-sidebar-toggle.is-active svg{color:#fff}
+        .admin-nav__label{flex:1;min-width:0}
+        .admin-nav-badge,.admin-role-badge{display:inline-flex;align-items:center;justify-content:center;min-width:1.72rem;padding:.28rem .52rem;border-radius:999px;font-size:.68rem;font-weight:800;line-height:1}
+        .admin-nav-badge{margin-left:auto}
+        .admin-role-badge{background:rgba(40,192,195,.12);color:#0d6970}
+        .badge-red{background:#ef4444;color:#fff}
+        .badge-amber{background:#f59e0b;color:#fff}
+        .admin-role-menu,.admin-sidebar-collapsible{display:grid;gap:.28rem}
+        .admin-role-toggle,.admin-role-subitem{width:100%;cursor:pointer}
+        .admin-role-toggle{justify-content:flex-start}
+        .admin-role-toggle .admin-role-chevron{margin-left:0;color:#7a8d96}
+        .admin-role-toggle .admin-nav-badge{margin-left:auto}
+        .admin-role-subitem{justify-content:space-between}
+        .admin-sidebar-footer{margin-top:auto;display:grid;gap:.72rem;padding-top:1rem;border-top:1px solid rgba(40,192,195,.12)}
+        .admin-auth-session{display:grid;gap:.8rem;padding:.92rem;border-radius:1.05rem;border:1px solid rgba(40,192,195,.12);background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(242,251,250,.98))}
+        .admin-auth-session strong{display:block;color:#15232b;font-size:.98rem;letter-spacing:-.02em}
+        .admin-auth-session p{margin:.32rem 0 0;color:#60747d;font-size:.78rem;line-height:1.55}
+        .admin-auth-actions{display:grid;grid-template-columns:1fr}
+        .admin-button{display:inline-flex;align-items:center;justify-content:center;min-height:2.65rem;padding:.72rem .95rem;border:0;border-radius:999px;background:linear-gradient(135deg,#28c0c3,#1e88a8);color:#fff;font-size:.82rem;font-weight:900;cursor:pointer;text-decoration:none}
+        .admin-button.ghost{border:1px solid rgba(40,192,195,.14);background:rgba(255,255,255,.88);color:#223942}
+        .admin-signout{display:flex;align-items:center;gap:.75rem;justify-content:flex-start;min-height:3rem;padding:.82rem .9rem;border-radius:1rem;border:1px solid rgba(248,113,113,.16);background:rgba(255,246,247,.95);color:#ef4444;font:inherit;font-weight:700;cursor:pointer;transition:background-color .18s ease,border-color .18s ease}
+        .admin-signout:hover{background:rgba(255,240,242,.98);border-color:rgba(248,113,113,.24)}
+        .admin-signout svg{width:1rem;height:1rem;flex:0 0 auto}
+        .admin-content{display:grid;gap:1rem;min-width:0}
+        @media(max-width:1024px){.admin-shell{grid-template-columns:1fr}.admin-sidebar{position:static;height:auto}}
+        @media(max-width:720px){.admin-sidebar{padding:.92rem}.admin-role-submenu{padding-left:.58rem}.admin-button{width:100%}}
+    </style>
+</head>
+<body>
+    <div class="kyc-preview-overlay" id="doc-modal" hidden><div class="dialog review-dialog" role="dialog" aria-modal="true" aria-labelledby="doc-title"><div class="dialog-head"><div><p class="eyebrow">KYC Document Review</p><h2 id="doc-title">Document preview</h2><p class="copy" id="doc-copy">Review the uploaded identity document before making an approval decision.</p><p class="review-note" id="doc-note">Uploaded ID preview</p></div><div class="actions"><button class="btn ghost" type="button" id="doc-download">Download</button><button class="btn danger" type="button" id="doc-close">Close</button></div></div><div class="preview-shell"><img class="preview" id="doc-img" alt="Identity document preview" hidden><iframe class="preview-frame" id="doc-frame" title="Identity document preview" hidden></iframe><div class="preview-empty" id="doc-empty" hidden><strong>Preview unavailable</strong><p>This file type cannot be rendered inside the browser panel. Use Download to inspect the original upload securely.</p></div></div></div></div>
+    <main class="main">
+        <section class="gate" id="gate">
+            <div class="gate-card">
+                <p class="eyebrow">Admin Access</p>
+                <h1>KYC Review</h1>
+                <p class="copy">Sign in with the admin account to review identity submissions.</p>
+                <form class="form" id="login-form">
+                    <div class="fields">
+                        <label class="field"><span>Admin Username</span><input id="login-id" type="text" autocomplete="username" placeholder="novabitadmin"></label>
+                        <label class="field"><span>Password</span><input id="login-pass" type="password" autocomplete="current-password" placeholder="Enter password"></label>
+                    </div>
+                    <button class="btn" type="submit" id="login-btn">Sign In</button>
+                </form>
+                <p class="status" id="login-status">Sign in to continue.</p>
+            </div>
+        </section>
+        <div class="shell admin-shell" id="shell" hidden>
+            <aside class="admin-sidebar">
+                <section class="admin-brand admin-brand--console admin-brand--rail">
+                    <div class="admin-brand__workspace">
+                        <div><p class="admin-eyebrow">Novabit Admin</p></div>
+                        <span class="admin-brand__env">Live</span>
+                    </div>
+                    <img src="temp/custom/img/novabit-logo-wordmark.png" alt="Novabit Capital">
+                </section>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Overview</p>
+                    <nav class="admin-sidebar-nav" aria-label="Overview">
+                        <a href="admin-dashboard.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h8V3H3v10Z"></path><path d="M13 21h8V11h-8v10Z"></path><path d="M13 3h8v4h-8V3Z"></path><path d="M3 17h8v4H3v-4Z"></path></svg><span class="admin-nav__label">Dashboard</span></a>
+                        <a href="admin-deposits.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M8 13h3"></path></svg><span class="admin-nav__label">Deposit Queue</span></a>
+                        <a href="admin-kyc.html" class="admin-sidebar-link is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">KYC Queue</span></a>
+                        <a href="admin-users.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Users</span></a>
+                        <a href="admin-investors.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Investor Profiles</span></a>
+                        <a href="admin-celebrity.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V7a2 2 0 0 0-2-2h-5"></path><path d="M14 17H6a2 2 0 0 1-2-2v-5"></path><path d="m9 12 2 2 4-4"></path><path d="M8 3h4a2 2 0 0 1 2 2v4H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M3 12h4a2 2 0 0 1 2 2v4H5a2 2 0 0 1-2-2v-4Z"></path></svg><span class="admin-nav__label">Celebrity</span></a>
+                        <a href="admin-activity.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h3l2-5 4 10 2-5h5"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg><span class="admin-nav__label">Activity Monitor</span></a>
+                    </nav>
+                </div>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Approvals</p>
+                    <div class="admin-role-menu admin-sidebar-collapsible is-open">
+                        <button type="button" class="admin-role-toggle admin-sidebar-link admin-sidebar-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path></svg>
+                            <span class="admin-nav__label">Deposit Approvals</span>
+                            <svg class="admin-role-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div class="admin-role-submenu">
+                            <a href="admin-deposits.html?filter=all" class="admin-role-subitem admin-sidebar-sublink">All Proofs</a>
+                            <a href="admin-deposits.html?filter=pending" class="admin-role-subitem admin-sidebar-sublink">Approve Queue</a>
+                            <a href="admin-deposits.html?filter=approved" class="admin-role-subitem admin-sidebar-sublink">Approved</a>
+                            <a href="admin-deposits.html?filter=cancelled" class="admin-role-subitem admin-sidebar-sublink">Cancelled</a>
+                            <a href="admin-deposits.html?filter=rejected" class="admin-role-subitem admin-sidebar-sublink">Rejected</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Operations</p>
+                    <nav class="admin-sidebar-nav" aria-label="Operations">
+                        <a href="admin-treasury.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path></svg><span class="admin-nav__label">Treasury Queue</span></a>
+                        <a href="admin-lifecycle.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">Account Lifecycle</span></a>
+                        <a href="admin-investments.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M6 3h12l1 4H5l1-4Z"></path><path d="M5 7v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M10 11h4"></path></svg><span class="admin-nav__label">Investment States</span></a>
+                        <a href="admin-support.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"></path></svg><span class="admin-nav__label">Risk &amp; Support</span></a>
+                    </nav>
+                </div>
+                <div class="admin-sidebar-footer">
+                    <div class="admin-auth-session">
+                        <div>
+                            <p class="admin-eyebrow">Session</p>
+                            <strong>Novabit Admin</strong>
+                            <p>Refresh the current KYC queue without leaving this page.</p>
+                        </div>
+                        <div class="admin-auth-actions">
+                            <button class="admin-button ghost" type="button" data-sidebar-refresh>Refresh View</button>
+                        </div>
+                    </div>
+                    <button type="button" id="logout-btn" class="admin-signout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M13 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8"></path></svg><span>Sign Out</span></button>
+                </div>
+            </aside>
+            <section class="content admin-content">
+                <div class="top"><div class="title"><p class="eyebrow">Approvals</p><h1>KYC Queue</h1><p class="copy">Review identity details, approve verified users, or reject submissions that need correction.</p></div><div class="actions"><button class="btn ghost" type="button" id="refresh-btn">Refresh Queue</button><button class="btn" type="button" id="pending-btn">Pending Only</button></div></div>
+                <section class="cards"><article class="card"><span>Total</span><strong data-summary="total">0</strong></article><article class="card"><span>Pending</span><strong data-summary="pending">0</strong></article><article class="card"><span>Approved</span><strong data-summary="approved">0</strong></article><article class="card"><span>Rejected</span><strong data-summary="rejected">0</strong></article></section>
+                <p class="status" id="queue-status">Loading KYC submissions.</p>
+                <section class="panel">
+                    <div class="actions" style="justify-content:space-between;margin-bottom:.9rem"><div class="title" style="gap:.12rem"><p class="eyebrow">Identity Review</p><p class="copy" id="queue-count">0 submissions</p></div><select id="queue-filter" aria-label="Filter KYC queue" style="min-height:2.65rem;border-radius:999px;border:1px solid rgba(40,192,195,.14);padding:0 .9rem;background:#fff"><option value="all">All Statuses</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div>
+                    <div class="table-wrap"><table class="kyc-table"><thead><tr><th>Case</th><th>Applicant</th><th>Identity</th><th>Uploaded ID</th><th>Decision</th></tr></thead><tbody id="kyc-body"><tr><td colspan="5"><div class="empty">No KYC submissions loaded yet.</div></td></tr></tbody></table></div>
+                </section>
+            </section>
+        </div>
+    </main>
+    <script>
+        (function () {
+            const api = (!window.location || window.location.protocol === "file:") ? "http://localhost:4000/api/v1" : window.location.origin.replace(/\/+$/, "") + "/api/v1";
+            const gate = document.getElementById("gate");
+            const shell = document.getElementById("shell");
+            const loginForm = document.getElementById("login-form");
+            const loginId = document.getElementById("login-id");
+            const loginPass = document.getElementById("login-pass");
+            const loginBtn = document.getElementById("login-btn");
+            const logoutBtn = document.getElementById("logout-btn");
+            const refreshBtn = document.getElementById("refresh-btn");
+            const sidebarRefreshButtons = Array.from(document.querySelectorAll("[data-sidebar-refresh]"));
+            const pendingBtn = document.getElementById("pending-btn");
+            const loginStatus = document.getElementById("login-status");
+            const queueStatus = document.getElementById("queue-status");
+            const queueFilter = document.getElementById("queue-filter");
+            const queueCount = document.getElementById("queue-count");
+            const tableBody = document.getElementById("kyc-body");
+            const modal = document.getElementById("doc-modal");
+            const docTitle = document.getElementById("doc-title");
+            const docCopy = document.getElementById("doc-copy");
+            const docNote = document.getElementById("doc-note");
+            const docImg = document.getElementById("doc-img");
+            const docFrame = document.getElementById("doc-frame");
+            const docEmpty = document.getElementById("doc-empty");
+            const docDownload = document.getElementById("doc-download");
+            const docClose = document.getElementById("doc-close");
+            const summary = Array.from(document.querySelectorAll("[data-summary]")).reduce(function (map, node) { map[node.getAttribute("data-summary")] = node; return map; }, {});
+            let queue = [];
+            let activeDocumentUrl = "";
+            let activeDocumentName = "novabit-kyc-document";
+            let activeDocumentPreviewUrl = "";
+            let reviewing = false;
+
+            const esc = function (value) {
+                return String(value == null ? "" : value).replace(/[&<>"']/g, function (character) {
+                    return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[character] || character;
+                });
+            };
+
+            const parse = async function (response) {
+                const text = await response.text();
+                if (!text) return {};
+                try { return JSON.parse(text); } catch (_error) { return { message: text }; }
+            };
+
+            const setStatus = function (node, type, message) {
+                if (!node) return;
+                node.textContent = message;
+                node.classList.toggle("error", type === "error");
+                node.classList.toggle("success", type === "success");
+            };
+
+            const setAuthed = function (isAuthed) {
+                if (gate) gate.hidden = Boolean(isAuthed);
+                if (shell) shell.hidden = !isAuthed;
+            };
+
+            const dateText = function (value) {
+                const date = value ? new Date(value) : null;
+                return date && !Number.isNaN(date.getTime()) ? date.toLocaleString() : "Unavailable";
+            };
+
+            const statusText = function (value) {
+                if (value === "approved") return "Approved";
+                if (value === "rejected") return "Rejected";
+                return "Pending";
+            };
+
+            const documentTypeText = function (value) {
+                if (value === "passport") return "International Passport";
+                if (value === "drivers_license") return "Driver's License";
+                if (value === "national_id") return "National ID";
+                if (value === "other") return "Other Valid ID";
+                return "Identity Document";
+            };
+
+            const safeFileName = function (value) {
+                const cleaned = String(value || "novabit-kyc-document").replace(/[<>:"/\\|?*\x00-\x1F]/g, "-").trim();
+                return cleaned || "novabit-kyc-document";
+            };
+
+            const createPreviewUrl = function (dataUrl, mimeType) {
+                if (!dataUrl || dataUrl.indexOf("data:") !== 0 || typeof URL === "undefined" || typeof Blob === "undefined") return dataUrl;
+                const commaIndex = dataUrl.indexOf(",");
+                if (commaIndex < 0 || dataUrl.slice(0, commaIndex).toLowerCase().indexOf(";base64") < 0) return dataUrl;
+                try {
+                    const binary = atob(dataUrl.slice(commaIndex + 1));
+                    const chunks = [];
+                    for (let index = 0; index < binary.length; index += 1024) {
+                        const slice = binary.slice(index, index + 1024);
+                        const bytes = new Uint8Array(slice.length);
+                        for (let offset = 0; offset < slice.length; offset += 1) bytes[offset] = slice.charCodeAt(offset);
+                        chunks.push(bytes);
+                    }
+                    return URL.createObjectURL(new Blob(chunks, { type: mimeType || "application/octet-stream" }));
+                } catch (_error) {
+                    return dataUrl;
+                }
+            };
+
+            const resetDocumentPreview = function () {
+                if (activeDocumentPreviewUrl && activeDocumentPreviewUrl !== activeDocumentUrl && activeDocumentPreviewUrl.indexOf("blob:") === 0 && typeof URL !== "undefined") {
+                    URL.revokeObjectURL(activeDocumentPreviewUrl);
+                }
+                activeDocumentPreviewUrl = "";
+                if (docImg) {
+                    docImg.hidden = true;
+                    docImg.classList.remove("is-visible");
+                    docImg.style.removeProperty("display");
+                    docImg.style.removeProperty("max-width");
+                    docImg.style.removeProperty("max-height");
+                    docImg.removeAttribute("src");
+                }
+                if (docFrame) {
+                    docFrame.hidden = true;
+                    docFrame.style.removeProperty("display");
+                    docFrame.removeAttribute("src");
+                }
+                if (docEmpty) docEmpty.hidden = true;
+            };
+
+            const findKycEntry = function (id) {
+                const targetId = String(id || "");
+                return queue.find(function (entry) { return entry && String(entry.id) === targetId; });
+            };
+
+            const showDocumentModal = function () {
+                if (!modal) return;
+                modal.hidden = false;
+                modal.removeAttribute("hidden");
+                modal.setAttribute("aria-hidden", "false");
+                modal.classList.add("is-open");
+                modal.style.position = "fixed";
+                modal.style.inset = "0";
+                modal.style.display = "flex";
+                modal.style.alignItems = "center";
+                modal.style.justifyContent = "center";
+                modal.style.visibility = "visible";
+                modal.style.opacity = "1";
+                modal.style.zIndex = "999999";
+            };
+
+            const hideDocumentModal = function () {
+                if (!modal) return;
+                modal.hidden = true;
+                modal.setAttribute("hidden", "");
+                modal.setAttribute("aria-hidden", "true");
+                modal.classList.remove("is-open");
+                modal.style.removeProperty("position");
+                modal.style.removeProperty("inset");
+                modal.style.removeProperty("display");
+                modal.style.removeProperty("align-items");
+                modal.style.removeProperty("justify-content");
+                modal.style.removeProperty("visibility");
+                modal.style.removeProperty("opacity");
+                modal.style.removeProperty("z-index");
+            };
+
+            const visibleQueue = function () {
+                const filter = queueFilter ? queueFilter.value : "all";
+                return filter === "all" ? queue.slice() : queue.filter(function (entry) { return entry && entry.status === filter; });
+            };
+
+            const renderSummary = function (data) {
+                const safe = data || {};
+                ["total", "pending", "approved", "rejected"].forEach(function (key) {
+                    if (summary[key]) summary[key].textContent = String(Number(safe[key]) || 0);
+                });
+            };
+
+            const renderQueue = function () {
+                const entries = visibleQueue();
+                if (queueCount) queueCount.textContent = String(entries.length) + (entries.length === 1 ? " submission" : " submissions");
+                if (!tableBody) return;
+                if (!entries.length) {
+                    tableBody.innerHTML = '<tr><td colspan="5"><div class="empty">No KYC submissions match this view.</div></td></tr>';
+                    return;
+                }
+                tableBody.innerHTML = entries.map(function (entry) {
+                    const status = String(entry.status || "pending");
+                    const fullName = [entry.firstName, entry.middleName, entry.lastName].filter(Boolean).join(" ");
+                    const statusMarkup = '<div class="status-stack"><span class="badge ' + esc(status) + '">' + esc(statusText(status)) + '</span><span class="kyc-meta">' + esc(entry.reviewNote || (entry.reviewedAt ? "Reviewed " + dateText(entry.reviewedAt) : "Awaiting review")) + '</span></div>';
+                    const action = status === "pending"
+                        ? '<div class="row-actions compact"><select data-review-status="' + esc(entry.id) + '"><option value="approved">Approve</option><option value="rejected">Reject</option></select><input data-review-note="' + esc(entry.id) + '" type="text" placeholder="Optional note"><button class="mini primary" type="button" data-review-submit="' + esc(entry.id) + '">Apply</button></div>'
+                        : '<span class="reviewed-by">' + esc(entry.reviewedBy || "Admin reviewed") + '</span>';
+                    return '<tr>' +
+                        '<td><div class="kyc-case"><strong>' + esc(entry.reference || "KYC") + '</strong><span class="kyc-meta">' + esc(dateText(entry.createdAt)) + '</span>' + statusMarkup + '</div></td>' +
+                        '<td><div class="kyc-person"><strong>' + esc(entry.userName || entry.userEmail || "Investor") + '</strong><span class="kyc-meta">' + esc(entry.userEmail || entry.email || "No email") + '</span></div></td>' +
+                        '<td><div class="kyc-identity"><strong>' + esc(fullName || "Legal name") + '</strong><span class="kyc-meta">' + esc(entry.phone || "No phone") + '</span><span class="kyc-meta">' + esc(entry.countryOfOrigin || "No country") + '</span></div></td>' +
+                        '<td><div class="kyc-doc"><strong>' + esc(documentTypeText(entry.documentType)) + '</strong><span class="kyc-meta kyc-doc-name" title="' + esc(entry.documentFileName || "Uploaded document") + '">' + esc(entry.documentFileName || "Uploaded document") + '</span><button class="doc-trigger" type="button" data-document-open="' + esc(entry.id) + '">Preview ID</button></div></td>' +
+                        '<td class="review-cell">' + action + '</td>' +
+                    '</tr>';
+                }).join("");
+                Array.prototype.forEach.call(tableBody.querySelectorAll("[data-document-open]"), function (button) {
+                    button.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        openDocumentById(button.getAttribute("data-document-open"));
+                    });
+                });
+            };
+
+            const openDocument = function (entry) {
+                resetDocumentPreview();
+                activeDocumentUrl = entry && entry.documentImageDataUrl ? entry.documentImageDataUrl : "";
+                activeDocumentName = safeFileName(entry && (entry.documentFileName || (entry.reference ? entry.reference + "-identity-document" : "")));
+                const mimeType = String(entry && entry.documentMimeType || "").toLowerCase();
+                activeDocumentPreviewUrl = activeDocumentUrl ? createPreviewUrl(activeDocumentUrl, mimeType) : "";
+                if (docTitle) docTitle.textContent = entry && entry.reference ? entry.reference : "Identity document";
+                if (docCopy) docCopy.textContent = entry ? documentTypeText(entry.documentType) + " / " + (entry.documentFileName || "document") : "Document record was not found in the loaded KYC queue.";
+                if (docNote) docNote.textContent = activeDocumentUrl ? "Review carefully before approval or rejection." : "No uploaded document data was returned for this submission. Refresh the queue or ask the user to resubmit the ID.";
+                if (docDownload) docDownload.disabled = !activeDocumentUrl;
+                showDocumentModal();
+                if (!activeDocumentUrl) {
+                    if (docEmpty) docEmpty.hidden = false;
+                    return;
+                }
+                if (mimeType.indexOf("image/") === 0) {
+                    if (docImg) {
+                        docImg.src = activeDocumentPreviewUrl || activeDocumentUrl;
+                        docImg.hidden = false;
+                        docImg.classList.add("is-visible");
+                        docImg.style.display = "block";
+                        docImg.style.maxWidth = "100%";
+                        docImg.style.maxHeight = "70vh";
+                    }
+                } else if (mimeType === "application/pdf") {
+                    if (docFrame) {
+                        docFrame.src = activeDocumentPreviewUrl || activeDocumentUrl;
+                        docFrame.hidden = false;
+                        docFrame.style.display = "block";
+                    }
+                } else if (docEmpty) {
+                    docEmpty.hidden = false;
+                }
+            };
+
+            const openDocumentById = function (id) {
+                const entry = findKycEntry(id);
+                setStatus(queueStatus, entry ? "" : "error", entry ? "Opening uploaded KYC document." : "KYC document record was not found. Refresh the queue and try again.");
+                openDocument(entry);
+            };
+            window.NovabitOpenKycDocument = openDocumentById;
+
+            const closeDocument = function () {
+                activeDocumentUrl = "";
+                activeDocumentName = "novabit-kyc-document";
+                resetDocumentPreview();
+                if (docDownload) docDownload.disabled = true;
+                hideDocumentModal();
+            };
+
+            const downloadDocument = function () {
+                if (!activeDocumentUrl) return;
+                const anchor = document.createElement("a");
+                anchor.href = activeDocumentUrl;
+                anchor.download = activeDocumentName;
+                anchor.rel = "noopener";
+                document.body.appendChild(anchor);
+                anchor.click();
+                anchor.remove();
+            };
+
+            const setRefreshState = function (isLoading) {
+                if (refreshBtn) {
+                    refreshBtn.disabled = isLoading;
+                    refreshBtn.textContent = isLoading ? "Refreshing..." : "Refresh Queue";
+                }
+                sidebarRefreshButtons.forEach(function (button) {
+                    button.disabled = isLoading;
+                    button.textContent = isLoading ? "Refreshing..." : "Refresh View";
+                });
+            };
+
+            const loadQueue = async function () {
+                setRefreshState(true);
+                try {
+                    setStatus(queueStatus, "", "Loading KYC submissions.");
+                    const response = await fetch(api + "/dashboard/admin/kyc-submissions", { credentials: "include", headers: { Accept: "application/json" } });
+                    if (response.status === 401) {
+                        setAuthed(false);
+                        setStatus(loginStatus, "error", "Admin sign-in is required.");
+                        return;
+                    }
+                    const result = await parse(response);
+                    if (!response.ok || !result.authorized) throw new Error(typeof result.message === "string" ? result.message : "Unable to load KYC queue.");
+                    queue = Array.isArray(result.submissions) ? result.submissions.slice().sort(function (left, right) {
+                        const rank = { pending: 0, rejected: 1, approved: 2 };
+                        const delta = (rank[left.status] ?? 9) - (rank[right.status] ?? 9);
+                        return delta || (new Date(right.createdAt || 0).getTime() - new Date(left.createdAt || 0).getTime());
+                    }) : [];
+                    renderSummary(result.summary);
+                    renderQueue();
+                    setStatus(queueStatus, "success", "KYC queue updated.");
+                } catch (error) {
+                    setStatus(queueStatus, "error", error instanceof Error ? error.message : "Unable to load KYC queue.");
+                } finally {
+                    setRefreshState(false);
+                }
+            };
+
+            const checkSession = async function () {
+                try {
+                    const response = await fetch(api + "/auth/admin/me", { credentials: "include", headers: { Accept: "application/json" } });
+                    const result = await parse(response);
+                    if (response.ok && result.authenticated && result.user && result.user.role === "admin") {
+                        setAuthed(true);
+                        await loadQueue();
+                        return;
+                    }
+                } catch (_error) {}
+                setAuthed(false);
+            };
+
+            const login = async function () {
+                if (loginBtn) loginBtn.disabled = true;
+                try {
+                    const response = await fetch(api + "/auth/admin/login", {
+                        method: "POST",
+                        credentials: "include",
+                        headers: { Accept: "application/json", "Content-Type": "application/json" },
+                        body: JSON.stringify({ emailOrUsername: loginId ? loginId.value.trim() : "", password: loginPass ? loginPass.value : "", remember: true })
+                    });
+                    const result = await parse(response);
+                    if (!response.ok || !result.success) throw new Error(typeof result.message === "string" ? result.message : "Admin sign-in failed.");
+                    if (loginPass) loginPass.value = "";
+                    setAuthed(true);
+                    setStatus(loginStatus, "success", "Admin session active.");
+                    await loadQueue();
+                } catch (error) {
+                    setStatus(loginStatus, "error", error instanceof Error ? error.message : "Admin sign-in failed.");
+                } finally {
+                    if (loginBtn) loginBtn.disabled = false;
+                }
+            };
+
+            const logout = async function () {
+                try {
+                    await fetch(api + "/auth/admin/logout", { method: "POST", credentials: "include", headers: { Accept: "application/json", "Content-Type": "application/json" }, body: "{}" });
+                } catch (_error) {}
+                setAuthed(false);
+            };
+
+            const review = async function (id) {
+                if (reviewing) return;
+                const entry = queue.find(function (item) { return item.id === id; });
+                if (!entry || entry.status !== "pending") return;
+                const statusNode = document.querySelector('[data-review-status="' + id + '"]');
+                const noteNode = document.querySelector('[data-review-note="' + id + '"]');
+                reviewing = true;
+                try {
+                    const response = await fetch(api + "/dashboard/admin/kyc-submissions/" + encodeURIComponent(id) + "/review", {
+                        method: "POST",
+                        credentials: "include",
+                        headers: { Accept: "application/json", "Content-Type": "application/json" },
+                        body: JSON.stringify({ status: statusNode ? statusNode.value : "approved", reviewNote: noteNode ? noteNode.value.trim() : "" })
+                    });
+                    const result = await parse(response);
+                    if (!response.ok || !result.reviewed) throw new Error(typeof result.message === "string" ? result.message : "Unable to review this KYC submission.");
+                    setStatus(queueStatus, "success", "KYC submission reviewed.");
+                    await loadQueue();
+                } catch (error) {
+                    setStatus(queueStatus, "error", error instanceof Error ? error.message : "Unable to review this KYC submission.");
+                } finally {
+                    reviewing = false;
+                }
+            };
+
+            if (loginForm) loginForm.addEventListener("submit", function (event) { event.preventDefault(); void login(); });
+            if (logoutBtn) logoutBtn.addEventListener("click", function () { void logout(); });
+            if (refreshBtn) refreshBtn.addEventListener("click", function () { void loadQueue(); });
+            sidebarRefreshButtons.forEach(function (button) {
+                button.addEventListener("click", function () { void loadQueue(); });
+            });
+            if (queueFilter) queueFilter.addEventListener("change", renderQueue);
+            if (pendingBtn && queueFilter) pendingBtn.addEventListener("click", function () { queueFilter.value = "pending"; renderQueue(); });
+            document.addEventListener("click", function (event) {
+                const target = event.target && event.target.nodeType === 1 ? event.target : event.target && event.target.parentElement;
+                if (!target || typeof target.closest !== "function") return;
+                const documentButton = target.closest("[data-document-open]");
+                if (!documentButton) return;
+                event.preventDefault();
+                event.stopPropagation();
+                openDocumentById(documentButton.getAttribute("data-document-open"));
+            }, true);
+            if (tableBody) tableBody.addEventListener("click", function (event) {
+                const target = event.target && event.target.nodeType === 1 ? event.target : event.target && event.target.parentElement;
+                if (!target || typeof target.closest !== "function") return;
+                const documentButton = target.closest("[data-document-open]");
+                if (documentButton) {
+                    openDocumentById(documentButton.getAttribute("data-document-open"));
+                    return;
+                }
+                const reviewButton = target.closest("[data-review-submit]");
+                if (reviewButton) void review(reviewButton.getAttribute("data-review-submit"));
+            });
+            if (docClose) docClose.addEventListener("click", closeDocument);
+            if (modal) modal.addEventListener("click", function (event) { if (event.target === modal) closeDocument(); });
+            if (docDownload) docDownload.addEventListener("click", downloadDocument);
+            if (docImg) docImg.addEventListener("error", function () {
+                docImg.hidden = true;
+                if (docEmpty) docEmpty.hidden = false;
+                if (docNote) docNote.textContent = "The browser could not preview this file. Use Download to inspect the original upload.";
+            });
+            document.addEventListener("keydown", function (event) { if (event.key === "Escape" && modal && !modal.hidden) closeDocument(); });
+            void checkSession();
+        })();
+    </script>
+</body>
+</html>

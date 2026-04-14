@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="light bg-gray-300 h-full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novabit Capital - Celebrity Coupons</title>
+    <link href="temp/custom/img/novabit-symbol.png" rel="icon" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="light-theme.css?v=20260330n">
+    <link rel="stylesheet" href="admin-people.css?v=20260409b">
+    <link rel="stylesheet" href="admin-celebrity.css?v=20260410d">
+</head>
+<body>
+    <main class="main">
+        <section class="gate" id="gate">
+            <div class="gate-card">
+                <p class="eyebrow">Admin Access</p>
+                <h1>Celebrity Coupons</h1>
+                <p class="copy">Sign in with the admin account to create live celebrity coupons and publish them to the signup flow immediately.</p>
+                <form class="form" id="login-form">
+                    <div class="fields">
+                        <label class="field"><span>Admin Username</span><input id="login-id" type="text" autocomplete="username" placeholder="novabitadmin"></label>
+                        <label class="field"><span>Password</span><input id="login-pass" type="password" autocomplete="current-password" placeholder="Enter password"></label>
+                    </div>
+                    <button class="btn" type="submit" id="login-btn">Sign In</button>
+                </form>
+                <p class="status" id="login-status">Sign in to continue.</p>
+            </div>
+        </section>
+        <div class="shell admin-shell" id="shell" hidden>
+            <aside class="admin-sidebar">
+                <section class="admin-brand admin-brand--console admin-brand--rail">
+                    <div class="admin-brand__workspace">
+                        <div><p class="admin-eyebrow">Novabit Admin</p></div>
+                        <span class="admin-brand__env">Live</span>
+                    </div>
+                    <img src="temp/custom/img/novabit-logo-wordmark.png" alt="Novabit Capital">
+                </section>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Overview</p>
+                    <nav class="admin-nav admin-nav--console admin-sidebar-nav" aria-label="Overview">
+                        <a href="admin-dashboard.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13h8V3H3v10Z"></path><path d="M13 21h8V11h-8v10Z"></path><path d="M13 3h8v4h-8V3Z"></path><path d="M3 17h8v4H3v-4Z"></path></svg><span class="admin-nav__label">Dashboard</span></a>
+                        <a href="admin-deposits.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M5 7v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M8 13h3"></path></svg><span class="admin-nav__label">Deposit Queue</span></a>
+                        <a href="admin-kyc.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">KYC Queue</span></a>
+                        <a href="admin-users.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Users</span></a>
+                        <a href="admin-investors.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><path d="M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"></path><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><span class="admin-nav__label">Investor Profiles</span></a>
+                        <a href="admin-celebrity.html" class="admin-sidebar-link is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V7a2 2 0 0 0-2-2h-5"></path><path d="M14 17H6a2 2 0 0 1-2-2v-5"></path><path d="m9 12 2 2 4-4"></path><path d="M8 3h4a2 2 0 0 1 2 2v4H8a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2Z"></path><path d="M3 12h4a2 2 0 0 1 2 2v4H5a2 2 0 0 1-2-2v-4Z"></path></svg><span class="admin-nav__label">Celebrity</span></a>
+                        <a href="admin-activity.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h3l2-5 4 10 2-5h5"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg><span class="admin-nav__label">Activity Monitor</span></a>
+                    </nav>
+                </div>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Approvals</p>
+                    <div class="admin-role-menu admin-sidebar-collapsible is-open">
+                        <button type="button" class="admin-role-toggle admin-sidebar-link admin-sidebar-toggle">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"></path><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path></svg>
+                            <span class="admin-nav__label">Deposit Approvals</span>
+                            <svg class="admin-role-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"></path></svg>
+                        </button>
+                        <div class="admin-role-submenu admin-sidebar-submenu">
+                            <a href="admin-deposits.html?filter=all" class="admin-role-subitem admin-sidebar-sublink">All Proofs</a>
+                            <a href="admin-deposits.html?filter=pending" class="admin-role-subitem admin-sidebar-sublink">Approve Queue</a>
+                            <a href="admin-deposits.html?filter=approved" class="admin-role-subitem admin-sidebar-sublink">Approved</a>
+                            <a href="admin-deposits.html?filter=cancelled" class="admin-role-subitem admin-sidebar-sublink">Cancelled</a>
+                            <a href="admin-deposits.html?filter=rejected" class="admin-role-subitem admin-sidebar-sublink">Rejected</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="admin-side-group admin-sidebar-section">
+                    <p class="admin-side-group-label admin-sidebar-title">Operations</p>
+                    <nav class="admin-nav admin-nav--console admin-sidebar-nav" aria-label="Operations">
+                        <a href="admin-treasury.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1v22"></path><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path></svg><span class="admin-nav__label">Treasury Queue</span></a>
+                        <a href="admin-lifecycle.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 4v5c0 5-3.5 7.74-7 9-3.5-1.26-7-4-7-9V7l7-4Z"></path><path d="m9 12 2 2 4-4"></path></svg><span class="admin-nav__label">Account Lifecycle</span></a>
+                        <a href="admin-investments.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h18"></path><path d="M6 3h12l1 4H5l1-4Z"></path><path d="M5 7v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7"></path><path d="M10 11h4"></path></svg><span class="admin-nav__label">Investment States</span></a>
+                        <a href="admin-support.html" class="admin-sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z"></path></svg><span class="admin-nav__label">Risk &amp; Support</span></a>
+                    </nav>
+                </div>
+                <div class="admin-sidebar-footer">
+                    <div class="admin-auth-session admin-auth-session--rail">
+                        <div>
+                            <p class="admin-eyebrow">Session</p>
+                            <strong>Novabit Admin</strong>
+                            <p>Refresh the live coupon registry without leaving this page.</p>
+                        </div>
+                        <div class="admin-auth-actions admin-auth-actions--rail">
+                            <button class="admin-button ghost" type="button" data-sidebar-refresh>Refresh View</button>
+                        </div>
+                    </div>
+                    <button type="button" id="logout-btn" class="admin-signout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path><path d="M13 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h8"></path></svg><span>Sign Out</span></button>
+                </div>
+            </aside>
+            <section class="content admin-content">
+                <div class="top">
+                    <div class="title">
+                        <p class="eyebrow">Celebrity</p>
+                        <h1>Celebrity Coupons</h1>
+                        <p class="copy">Create live celebrity coupon codes, track redemptions, and push them to the signup form as soon as they are published.</p>
+                    </div>
+                    <div class="actions">
+                        <button class="btn ghost" type="button" id="refresh-btn">Refresh</button>
+                        <button class="btn" type="button" id="open-create-btn" data-open-coupon-modal>Create Coupon</button>
+                    </div>
+                </div>
+                <section class="cards">
+                    <article class="card"><span>Total coupons</span><strong data-summary="total">0</strong></article>
+                    <article class="card"><span>Active</span><strong data-summary="active">0</strong></article>
+                    <article class="card"><span>Redeemable</span><strong data-summary="redeemable">0</strong></article>
+                    <article class="card"><span>Redemptions</span><strong data-summary="redemptions">0</strong></article>
+                </section>
+                <p class="status" id="coupon-status">Loading celebrity coupons.</p>
+                <section class="panel">
+                    <div class="panel-head">
+                        <div class="panel-title">
+                            <p class="eyebrow">Coupon Registry</p>
+                            <p class="copy" id="coupon-count">0 coupons</p>
+                        </div>
+                    </div>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Celebrity</th>
+                                    <th>Coupon Code</th>
+                                    <th>Status</th>
+                                    <th>Redemptions</th>
+                                    <th>Created</th>
+                                    <th>Expiry / Cap</th>
+                                    <th>Details</th>
+                                </tr>
+                            </thead>
+                            <tbody id="coupon-body"><tr><td colspan="7"><div class="empty">No celebrity coupons loaded yet.</div></td></tr></tbody>
+                        </table>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </main>
+
+    <div class="coupon-modal" id="coupon-modal" hidden>
+        <div class="coupon-dialog" role="dialog" aria-modal="true" aria-labelledby="coupon-modal-title">
+            <div class="coupon-dialog-head">
+                <div>
+                    <h2 id="coupon-modal-title">Create Celebrity Coupon</h2>
+                    <p class="coupon-dialog-copy">Publish a live coupon code that the registration page can validate immediately.</p>
+                </div>
+                <button class="btn ghost" type="button" id="coupon-modal-close">Close</button>
+            </div>
+            <form class="coupon-form" id="coupon-form" novalidate>
+                <div class="coupon-form-grid">
+                    <label class="coupon-field"><span>Celebrity Name</span><input type="text" name="celebrity_name" maxlength="120" placeholder="Celebrity / campaign name" required></label>
+                    <label class="coupon-field"><span>Coupon Code</span><input type="text" id="coupon-code" name="coupon_code" maxlength="32" placeholder="CELEB2026" autocomplete="off" required></label>
+                    <label class="coupon-field"><span>Status</span><select name="status"><option value="active">Active</option><option value="inactive">Inactive</option></select></label>
+                    <label class="coupon-field"><span>Max Redemptions</span><input type="number" name="max_redemptions" min="1" max="1000000" placeholder="Optional"></label>
+                    <label class="coupon-field"><span>Expiry Date</span><input type="date" id="coupon-expiry-date" name="expires_on" required><small class="coupon-field-copy">Required for every new coupon.</small></label>
+                    <label class="coupon-field"><span>Expiry Time</span><input type="time" id="coupon-expiry-time" name="expires_time" step="60" required><small class="coupon-field-copy">Set the exact local time the code should close.</small></label>
+                    <label class="coupon-field coupon-field--full"><span>Offer Details</span><textarea name="offer_details" maxlength="240" placeholder="Optional campaign notes or promo details."></textarea></label>
+                </div>
+                <p class="status" id="coupon-create-status">Create a new celebrity coupon.</p>
+                <div class="coupon-dialog-actions">
+                    <button class="btn ghost" type="button" id="coupon-modal-cancel">Cancel</button>
+                    <button class="btn" type="submit" id="coupon-submit-btn">Create Coupon</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="coupon-popup" id="coupon-popup" hidden>
+        <div class="coupon-popup-head">
+            <div class="coupon-popup-title">
+                <strong id="coupon-popup-name">Coupon successfully created</strong>
+                <p id="coupon-popup-copy">The coupon is now live on the signup page.</p>
+            </div>
+            <span class="coupon-popup-countdown" id="coupon-popup-countdown">30s</span>
+        </div>
+        <div class="coupon-popup-actions">
+            <span class="coupon-meta">Live on frontend</span>
+            <button class="coupon-popup-close" type="button" id="coupon-popup-close">Close</button>
+        </div>
+    </div>
+
+    <script src="admin-celebrity.js?v=20260410c"></script>
+</body>
+</html>
