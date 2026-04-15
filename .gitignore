@@ -43,3 +43,9 @@ hts-cache/
 *.tflite
 *.wasm
 *.store
+
+
+*.mp4
+*.mov
+*.avi
+*.webm
