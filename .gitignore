@@ -11,10 +11,6 @@ node_modules/
 dist/
 build/
 
-videos/
-*.mp4
-*.mov
-*.avi
 resendAPIkey.txt
 WALLETS ADDRESSES.txt
 tools/
@@ -37,7 +33,6 @@ hts-cache/
 
 # Misc
 .claude/
-unpkg.com/
 
 .npm-cache/
 .chrome-admin-test/
